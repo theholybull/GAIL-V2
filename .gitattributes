@@ -1,7 +1,6 @@
 # This file normalizes line endings stored in the repo to LF (Unix/Git).
 # Contributors are still able to use their native line endings locally.
 # More info here: https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
-
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
 # Explicitly declare text files to be normalized on checkin

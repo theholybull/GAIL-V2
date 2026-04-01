@@ -58,6 +58,10 @@ Current GitHub behavior:
 - files under 100 MB can still be pushed
 - files above 50 MB trigger warnings and should be reviewed carefully
 
+Current LFS-tracked file:
+
+- `examples/assets/models/pbr-house.glb`
+
 If the repository starts accumulating more large binaries, move future oversized assets to Git LFS instead of normal Git blobs.
 
 ## Test Output Hygiene

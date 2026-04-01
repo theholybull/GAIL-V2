@@ -150,13 +150,17 @@ These are ephemeral and must be recreated after recovery:
 - local IDE settings
 - temporary logs and caches
 
-## Large Asset Warning
+## Large Asset Handling
 
-This repository contains large binary assets under `examples/assets/`. At least one file exceeds GitHub's recommended 50 MB threshold, though it is still below the 100 MB hard limit:
+This repository contains large example binaries under `examples/assets/`.
+
+Current LFS-tracked asset:
 
 - `examples/assets/models/pbr-house.glb`
 
-This is valid today, but future large asset growth should be handled carefully. If additional large binaries accumulate, evaluate Git LFS before the repo becomes hard to work with.
+That file is intentionally stored through Git LFS so the repository history does not keep carrying the raw blob directly.
+
+If future assets cross GitHub's recommended 50 MB threshold, add them to Git LFS before or during commit history migration instead of keeping them as normal Git blobs.
 
 ## If GitHub Is The Only Surviving Copy
 
