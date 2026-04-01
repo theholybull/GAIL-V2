@@ -42,6 +42,25 @@ git clone https://github.com/theholybull/GAIL-V2.git
 cd GAIL-V2
 ```
 
+Windows note:
+
+On this machine, Git raised a clone-time warning about an active `post-checkout` hook and left checkout incomplete until it was resumed manually.
+
+If that happens during recovery, run:
+
+```powershell
+git restore --source=HEAD :/
+```
+
+Then verify:
+
+```powershell
+git status --short
+git lfs ls-files
+```
+
+An empty `git status --short` result means the checkout is settled cleanly.
+
 ### 2. Install Root Dependencies
 
 ```powershell
