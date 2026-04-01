@@ -94,6 +94,16 @@ Want to play with the code yourself? Edit it on [CodePen](https://codepen.io/pla
 
 A full guide to setting up a local development environment based on the PlayCanvas Engine can be found [here](https://developer.playcanvas.com/user-manual/engine/standalone/).
 
+## Repository Recovery Docs
+
+This fork also includes repository-owned operational docs intended to make recovery and rebuild straightforward after local machine loss:
+
+- [Repository Documentation](./REPOSITORY-DOCUMENTATION.md)
+- [Rebuild And Recovery](./REBUILD-AND-RECOVERY.md)
+- [Repository Map](./REPOSITORY-MAP.md)
+- [Build, Test, And Release](./BUILD-TEST-RELEASE.md)
+- [Asset And Repo Hygiene](./ASSET-AND-REPO-HYGIENE.md)
+
 ## How to build
 
 Ensure you have [Node.js 18+](https://nodejs.org) installed. Then, install all of the required Node.js dependencies:
