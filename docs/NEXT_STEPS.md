@@ -1,5 +1,13 @@
 # Next Steps
 
+Current active execution plan: [EXECUTION_ROADMAP_2026-04-29.md](./EXECUTION_ROADMAP_2026-04-29.md).
+
+Current safety baseline:
+
+- full local lockdown backup: `D:\Gail 2.1\lockdown-backups\working_copy_lockdown_20260429-085311`
+- GitHub source/control snapshot: `backup/d-root-lockdown-20260429`
+- active root: `D:\Gail 2.1\working_copy`
+
 ## Working Rule
 
 For every phase and every new feature:

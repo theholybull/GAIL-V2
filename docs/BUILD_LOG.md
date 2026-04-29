@@ -1,5 +1,26 @@
 # Build Log
 
+## 2026-04-29
+
+### Completed
+
+- created the D-root lockdown backup and documented the backup/forward plan
+- pushed a clean orphan GitHub source/control snapshot to `backup/d-root-lockdown-20260429`
+- added `tools/show-gail-status.ps1` for quick active-root, backend, runtime, and backup status
+- added `tools/run-promotion-gate.ps1` for the repeatable build/test/route-smoke promotion gate
+- added `docs/EXECUTION_ROADMAP_2026-04-29.md` and linked it from `docs/NEXT_STEPS.md`
+- hardened backend regression HTTP requests with a longer timeout for local Ollama/private-provider checks
+- fixed the promotion gate so child-script exit codes are treated as gate failures
+
+### Verification
+
+- quick status reports active root `D:\Gail 2.1\working_copy`
+- backend and supervisor are running from the D-root stack
+- `gail_lite` asset manifest is reachable and avatar-ready
+- promotion gate passed with backup skipped because the full lockdown backup already exists
+- backend regression report `docs/reports/backend-test-report-20260429-100441.md`: `122 passed, 0 failed`
+- promotion gate report `docs/reports/promotion-gate-20260429-100410.md`: `7 passed, 0 failed`
+
 ## 2026-04-28
 
 ### Completed

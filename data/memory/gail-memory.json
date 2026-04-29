@@ -1,6 +1,30 @@
 {
   "entries": [
     {
+      "id": "memory_entry_1777471489819",
+      "title": "Restart memory test-20260429-100441",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-29T14:04:49.819Z",
+      "updatedAt": "2026-04-29T14:04:49.819Z"
+    },
+    {
+      "id": "memory_entry_1777471071849",
+      "title": "Restart memory test-20260429-095742",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-29T13:57:51.849Z",
+      "updatedAt": "2026-04-29T13:57:51.849Z"
+    },
+    {
       "id": "memory_entry_1777467026711",
       "title": "Restart memory test-20260429-085018",
       "body": "This entry should survive the managed backend restart.",

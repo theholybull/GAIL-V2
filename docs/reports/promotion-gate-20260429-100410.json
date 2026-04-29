@@ -1,0 +1,45 @@
+﻿{
+    "runId":  "20260429-100410",
+    "generatedAt":  "2026-04-29T10:05:58",
+    "repoRoot":  "D:\\Gail 2.1\\working_copy",
+    "baseUrl":  "http://127.0.0.1:4180",
+    "passed":  7,
+    "failed":  0,
+    "results":  [
+                    {
+                        "name":  "Create lockdown backup",
+                        "passed":  true,
+                        "details":  "Skipped by operator request."
+                    },
+                    {
+                        "name":  "Build backend",
+                        "passed":  true,
+                        "details":  "Completed."
+                    },
+                    {
+                        "name":  "Build web control panel",
+                        "passed":  true,
+                        "details":  "Completed."
+                    },
+                    {
+                        "name":  "Build PlayCanvas app and validate animations",
+                        "passed":  true,
+                        "details":  "Completed."
+                    },
+                    {
+                        "name":  "Backend regression",
+                        "passed":  true,
+                        "details":  "Completed."
+                    },
+                    {
+                        "name":  "Start D-root backend",
+                        "passed":  true,
+                        "details":  "Completed."
+                    },
+                    {
+                        "name":  "Route smoke",
+                        "passed":  true,
+                        "details":  "Completed."
+                    }
+                ]
+}

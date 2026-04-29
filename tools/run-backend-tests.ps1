@@ -42,6 +42,7 @@ function Invoke-GailRequest {
     UseBasicParsing = $true
     Headers = $requestHeaders
     ContentType = "application/json"
+    TimeoutSec = 180
   }
 
   if ($null -ne $Body) {
