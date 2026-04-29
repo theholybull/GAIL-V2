@@ -1,0 +1,19 @@
+{
+  "profile": "playcanvas_glb",
+  "armature": "VAMP Laurina for G8 Female",
+  "include_review": false,
+  "exported": [
+    {
+      "clip_name": "idle_base_v1",
+      "status": "approved",
+      "target_path": "blender\\animation_master\\exports\\glb\\clips\\approved\\idle\\idle_base_v1.glb",
+      "selection_mode": "fallback_armature_set:VAMP Laurina for G8 Female"
+    },
+    {
+      "clip_name": "listen_base_v1",
+      "status": "approved",
+      "target_path": "blender\\animation_master\\exports\\glb\\clips\\approved\\listen\\listen_base_v1.glb",
+      "selection_mode": "fallback_armature_set:VAMP Laurina for G8 Female"
+    }
+  ]
+}

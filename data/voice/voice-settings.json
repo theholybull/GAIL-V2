@@ -1,0 +1,139 @@
+{
+  "settings": {
+    "mode": "wake_word",
+    "wakeWord": "hey gail",
+    "silenceTimeoutMs": 4200,
+    "autoResumeAfterResponse": true,
+    "sttEngine": "browser-web-speech",
+    "preferredTtsEngine": "openai-gpt-4o-mini-tts",
+    "fallbackTtsEngine": "browser-speech-synthesis",
+    "preferLocalBrowserVoice": true,
+    "openAiVoice": "nova",
+    "openAiInstructions": "Speak with a soft feminine voice and a light UK English accent. Sound warm, calm, and natural. Avoid American pronunciation. Keep delivery gentle, lightly expressive, and conversational. Do not sound robotic, flat, deep, or masculine.",
+    "browserVoiceName": "Microsoft Sonia Online (Natural) - English (United Kingdom)",
+    "avatarVoiceProfiles": {
+      "gail_workwear": {
+        "openAiVoice": "nova",
+        "openAiInstructions": "Speak with a soft feminine voice and a light UK English accent. Sound warm, calm, and natural. Avoid American pronunciation. Keep delivery gentle, lightly expressive, and conversational. Do not sound robotic, flat, deep, or masculine."
+      },
+      "vera_counselor": {
+        "openAiVoice": "shimmer",
+        "openAiInstructions": "Speak with a calming, gentle, professional voice. Sound measured, warm, and grounded."
+      },
+      "cherry_girlfriend": {
+        "openAiVoice": "alloy",
+        "openAiInstructions": "Speak with a warm, sweet, playful feminine voice. Sound affectionate, bright, and naturally expressive."
+      }
+    },
+    "runtime": {
+      "timing": {
+        "speechCooldownMs": 1200,
+        "thinkingFillerDelayMs": 650,
+        "followUpTimeoutMs": 9000,
+        "wakeWordFollowUpTimeoutMs": 7000,
+        "defaultSubmitTimeoutMs": 1400,
+        "followUpSubmitTimeoutMs": 850,
+        "wakeWordSubmitTimeoutMs": 850,
+        "minSubmitTimeoutMs": 450,
+        "maxSubmitTimeoutMs": 3500,
+        "ambientLowConfidenceThreshold": 0.48,
+        "ambientRepeatWindowMs": 10000
+      },
+      "phrases": {
+        "wakeWordAliases": [
+          "gail",
+          "gale",
+          "gael",
+          "gal"
+        ],
+        "wakePrefixes": [
+          "hey",
+          "hi",
+          "hello",
+          "okay",
+          "ok",
+          "yo"
+        ],
+        "wakeAcknowledgements": [
+          "What's up?",
+          "I'm here.",
+          "Right here.",
+          "Yep?",
+          "Go ahead.",
+          "I'm listening.",
+          "Talk to me."
+        ],
+        "thinkingFillers": {
+          "question": [
+            "Let me think that through.",
+            "Good question. One second.",
+            "I'm checking that.",
+            "Let me sort that out.",
+            "Give me a second on that."
+          ],
+          "command": [
+            "On it.",
+            "I'll take care of that.",
+            "Working on it.",
+            "Let me do that.",
+            "Okay, I'm moving on it."
+          ],
+          "statement": [
+            "I hear you.",
+            "I'm with you.",
+            "Got it. Let me think.",
+            "Okay, tracking.",
+            "Right, I follow."
+          ]
+        },
+        "contextFillers": {
+          "followUp": [
+            "Right, continuing from that.",
+            "I'm tracking.",
+            "Yep, still with you."
+          ],
+          "vision": [
+            "I'll take a look.",
+            "Let me check what I can see.",
+            "Looking now."
+          ],
+          "persona": [
+            "Okay, switching gears.",
+            "I'll adjust that."
+          ],
+          "dance": [
+            "Okay, cueing that up.",
+            "I'll get that moving."
+          ],
+          "system": [
+            "Okay, adjusting that.",
+            "I'll update that."
+          ]
+        },
+        "conversationClosers": [
+          "Alright, I'll be here if you need me.",
+          "Okay, just say hey gail if you need anything.",
+          "I'm going quiet for now. Call me anytime.",
+          "Standing by whenever you're ready.",
+          "No worries, I'll be right here."
+        ],
+        "bootGreetings": [
+          "Hey boss, I'm online and ready to go.",
+          "Good to go. Just say hey gail when you need me.",
+          "I'm up. Let me know what you need.",
+          "All systems go. I'm listening for hey gail."
+        ],
+        "ambientSingleWordAllowlist": [
+          "yes",
+          "yeah",
+          "yep",
+          "no",
+          "nope",
+          "stop",
+          "cancel",
+          "quiet"
+        ]
+      }
+    }
+  }
+}

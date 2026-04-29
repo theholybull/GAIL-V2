@@ -1,0 +1,1027 @@
+{
+  "blend_file": "C:\\Users\\jbates\\Desktop\\gail_rig_master.blend",
+  "armature": "VAMP Laurina for G8 Female",
+  "bone_count": 170,
+  "bones": [
+    {
+      "name": "BelowJaw",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "CenterBrow",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "Chin",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "LipBelow",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "LipLowerMiddle",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "LipUpperMiddle",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "MidNoseBridge",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "Nose",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "abdomenLower",
+      "parent": "hip",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "abdomenUpper",
+      "parent": "abdomenLower",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "chestLower",
+      "parent": "abdomenUpper",
+      "use_deform": true,
+      "category": "spine"
+    },
+    {
+      "name": "chestUpper",
+      "parent": "chestLower",
+      "use_deform": true,
+      "category": "spine"
+    },
+    {
+      "name": "head",
+      "parent": "neckUpper",
+      "use_deform": true,
+      "category": "head"
+    },
+    {
+      "name": "hip",
+      "parent": "",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lBigToe",
+      "parent": "lToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lBigToe_2",
+      "parent": "lBigToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lBrowInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lBrowMid",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lBrowOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCarpal1",
+      "parent": "lHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCarpal2",
+      "parent": "lHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCarpal3",
+      "parent": "lHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCarpal4",
+      "parent": "lHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCheekLower",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCheekUpper",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lCollar",
+      "parent": "chestUpper",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEar",
+      "parent": "head",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEye",
+      "parent": "head",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidLower",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidLowerInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidLowerOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidUpper",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidUpperInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lEyelidUpperOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lFoot",
+      "parent": "lShin",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lForearmBend",
+      "parent": "lShldrTwist",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lForearmTwist",
+      "parent": "lForearmBend",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lHand",
+      "parent": "lForearmTwist",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lIndex1",
+      "parent": "lCarpal1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lIndex2",
+      "parent": "lIndex1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lIndex3",
+      "parent": "lIndex2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lJawClench",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "lLipBelowNose",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lLipCorner",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lLipLowerInner",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lLipLowerOuter",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lLipNasolabialCrease",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lLipUpperInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lLipUpperOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lMetatarsals",
+      "parent": "lFoot",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lMid1",
+      "parent": "lCarpal2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lMid2",
+      "parent": "lMid1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lMid3",
+      "parent": "lMid2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lNasolabialLower",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lNasolabialMiddle",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lNasolabialMouthCorner",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lNasolabialUpper",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lNostril",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lPectoral",
+      "parent": "chestLower",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lPinky1",
+      "parent": "lCarpal4",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lPinky2",
+      "parent": "lPinky1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lPinky3",
+      "parent": "lPinky2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lRing1",
+      "parent": "lCarpal3",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lRing2",
+      "parent": "lRing1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lRing3",
+      "parent": "lRing2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lShin",
+      "parent": "lThighTwist",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lShldrBend",
+      "parent": "lCollar",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lShldrTwist",
+      "parent": "lShldrBend",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe1",
+      "parent": "lToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe1_2",
+      "parent": "lSmallToe1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe2",
+      "parent": "lToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe2_2",
+      "parent": "lSmallToe2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe3",
+      "parent": "lToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe3_2",
+      "parent": "lSmallToe3",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe4",
+      "parent": "lToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSmallToe4_2",
+      "parent": "lSmallToe4",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSquintInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lSquintOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lThighBend",
+      "parent": "pelvis",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lThighTwist",
+      "parent": "lThighBend",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lThumb1",
+      "parent": "lHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lThumb2",
+      "parent": "lThumb1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lThumb3",
+      "parent": "lThumb2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lToe",
+      "parent": "lMetatarsals",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "lowerFaceRig",
+      "parent": "lowerJaw",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "lowerJaw",
+      "parent": "head",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "lowerTeeth",
+      "parent": "lowerJaw",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "neckLower",
+      "parent": "chestUpper",
+      "use_deform": true,
+      "category": "neck"
+    },
+    {
+      "name": "neckUpper",
+      "parent": "neckLower",
+      "use_deform": true,
+      "category": "neck"
+    },
+    {
+      "name": "pelvis",
+      "parent": "hip",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rBigToe",
+      "parent": "rToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rBigToe_2",
+      "parent": "rBigToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rBrowInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rBrowMid",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rBrowOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCarpal1",
+      "parent": "rHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCarpal2",
+      "parent": "rHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCarpal3",
+      "parent": "rHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCarpal4",
+      "parent": "rHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCheekLower",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCheekUpper",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rCollar",
+      "parent": "chestUpper",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEar",
+      "parent": "head",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEye",
+      "parent": "head",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidLower",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidLowerInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidLowerOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidUpper",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidUpperInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rEyelidUpperOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rFoot",
+      "parent": "rShin",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rForearmBend",
+      "parent": "rShldrTwist",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rForearmTwist",
+      "parent": "rForearmBend",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rHand",
+      "parent": "rForearmTwist",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rIndex1",
+      "parent": "rCarpal1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rIndex2",
+      "parent": "rIndex1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rIndex3",
+      "parent": "rIndex2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rJawClench",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "rLipBelowNose",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rLipCorner",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rLipLowerInner",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rLipLowerOuter",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rLipNasolabialCrease",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rLipUpperInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rLipUpperOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rMetatarsals",
+      "parent": "rFoot",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rMid1",
+      "parent": "rCarpal2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rMid2",
+      "parent": "rMid1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rMid3",
+      "parent": "rMid2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rNasolabialLower",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rNasolabialMiddle",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rNasolabialMouthCorner",
+      "parent": "lowerFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rNasolabialUpper",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rNostril",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rPectoral",
+      "parent": "chestLower",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rPinky1",
+      "parent": "rCarpal4",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rPinky2",
+      "parent": "rPinky1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rPinky3",
+      "parent": "rPinky2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rRing1",
+      "parent": "rCarpal3",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rRing2",
+      "parent": "rRing1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rRing3",
+      "parent": "rRing2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rShin",
+      "parent": "rThighTwist",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rShldrBend",
+      "parent": "rCollar",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rShldrTwist",
+      "parent": "rShldrBend",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe1",
+      "parent": "rToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe1_2",
+      "parent": "rSmallToe1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe2",
+      "parent": "rToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe2_2",
+      "parent": "rSmallToe2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe3",
+      "parent": "rToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe3_2",
+      "parent": "rSmallToe3",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe4",
+      "parent": "rToe",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSmallToe4_2",
+      "parent": "rSmallToe4",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSquintInner",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rSquintOuter",
+      "parent": "upperFaceRig",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rThighBend",
+      "parent": "pelvis",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rThighTwist",
+      "parent": "rThighBend",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rThumb1",
+      "parent": "rHand",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rThumb2",
+      "parent": "rThumb1",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rThumb3",
+      "parent": "rThumb2",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "rToe",
+      "parent": "rMetatarsals",
+      "use_deform": true,
+      "category": "other"
+    },
+    {
+      "name": "tongue01",
+      "parent": "lowerTeeth",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "tongue02",
+      "parent": "tongue01",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "tongue03",
+      "parent": "tongue02",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "tongue04",
+      "parent": "tongue03",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "upperFaceRig",
+      "parent": "head",
+      "use_deform": true,
+      "category": "face"
+    },
+    {
+      "name": "upperTeeth",
+      "parent": "head",
+      "use_deform": true,
+      "category": "other"
+    }
+  ]
+}

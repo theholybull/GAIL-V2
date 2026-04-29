@@ -1,0 +1,13 @@
+{
+  "blend": "D:\\test_v2.blend",
+  "armature_count": 1,
+  "armatures": [
+    "Victoria 8"
+  ],
+  "actions": [],
+  "notes": [],
+  "outputs": {
+    "target_mapping": "D:\\tools\\mapping_profiles\\test_v2_victoria8_target_custom.mapping.json",
+    "source_mapping_template": "D:\\tools\\mapping_profiles\\test_v2_source_mixamo_idle_template.mapping.json"
+  }
+}

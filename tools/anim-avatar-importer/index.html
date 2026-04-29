@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gail Animation Importer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0e0e12;
+      --bg2:        #16161e;
+      --bg3:        #1e1e2a;
+      --border:     #2e2e42;
+      --accent:     #7c6af7;
+      --accent2:    #4cc9f0;
+      --ok:         #3ddc84;
+      --warn:       #f5a623;
+      --error:      #ff5555;
+      --text:       #dde1f0;
+      --text-dim:   #7878a0;
+      --panel-w:    320px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 13px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Top bar ── */
+    #topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 16px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+      z-index: 100;
+    }
+    #topbar h1 { font-size: 15px; font-weight: 600; color: var(--accent); }
+    #topbar .spacer { flex: 1; }
+    #status-badge {
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+    }
+    #status-badge.ok    { color: var(--ok);    border-color: var(--ok);    }
+    #status-badge.error { color: var(--error); border-color: var(--error); }
+    #topbar a { color: var(--accent2); text-decoration: none; font-size: 12px; }
+    #topbar a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    #layout {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── Left panel: catalog browser ── */
+    #catalog-panel {
+      width: var(--panel-w);
+      min-width: 220px;
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #catalog-toolbar {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .input-row { display: flex; gap: 6px; }
+    #search-input {
+      flex: 1; background: var(--bg3); border: 1px solid var(--border);
+      color: var(--text); padding: 5px 8px; border-radius: 4px; font-size: 12px;
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    select {
+      background: var(--bg3); border: 1px solid var(--border);
+      color: var(--text); padding: 5px 6px; border-radius: 4px; font-size: 12px;
+    }
+    select:focus { outline: none; border-color: var(--accent); }
+
+    #filter-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-chip {
+      padding: 2px 8px; border-radius: 10px; font-size: 11px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--bg3); color: var(--text-dim);
+      user-select: none;
+    }
+    .filter-chip.active      { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .filter-chip.need-fix    { border-color: var(--warn); }
+    .filter-chip.need-fix.active { background: var(--warn); }
+
+    #catalog-stats {
+      font-size: 11px; color: var(--text-dim); padding: 0 10px 6px;
+    }
+
+    #clip-list {
+      flex: 1;
+      overflow-y: auto;
+      list-style: none;
+    }
+    #clip-list::-webkit-scrollbar { width: 6px; }
+    #clip-list::-webkit-scrollbar-track { background: transparent; }
+    #clip-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    .clip-item {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .clip-item:hover  { background: var(--bg3); }
+    .clip-item.active { background: #2a2545; border-left: 3px solid var(--accent); }
+    .clip-item .clip-name {
+      flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      font-size: 12px;
+    }
+    .clip-item .clip-size { font-size: 10px; color: var(--text-dim); }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .dot.ok      { background: var(--ok); }
+    .dot.warn    { background: var(--warn); }
+    .dot.error   { background: var(--error); }
+    .dot.unknown { background: var(--border); }
+
+    /* ── Middle: 3-D preview ── */
+    #preview-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    #preview-toolbar {
+      display: flex; align-items: center; gap: 10px;
+      padding: 6px 12px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    #preview-toolbar .ctrl-label { color: var(--text-dim); font-size: 11px; }
+    #preview-toolbar span.sep { color: var(--border); }
+
+    #canvas-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    #preview-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    #preview-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    /* playback bar */
+    #playback-bar {
+      display: flex; align-items: center; gap: 10px;
+      padding: 6px 12px;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    #btn-play {
+      background: var(--accent); color: #fff; border: none;
+      padding: 4px 14px; border-radius: 4px; cursor: pointer; font-size: 12px;
+    }
+    #btn-play:hover { opacity: 0.85; }
+    #btn-play:disabled { opacity: 0.4; cursor: default; }
+    #time-display { font-size: 11px; color: var(--text-dim); min-width: 70px; }
+    #progress-bar {
+      flex: 1; height: 4px; background: var(--bg3);
+      border-radius: 2px; overflow: hidden; cursor: pointer;
+    }
+    #progress-fill {
+      height: 100%; width: 0%; background: var(--accent);
+      transition: width 0.05s linear;
+    }
+    #speed-select { width: 70px; }
+
+    /* ── Right panel: detail + actions ── */
+    #detail-panel {
+      width: 280px;
+      background: var(--bg2);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #detail-panel h3 {
+      padding: 10px 12px 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    #detail-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px 12px;
+    }
+    #detail-content::-webkit-scrollbar { width: 4px; }
+    #detail-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .detail-row {
+      display: flex; justify-content: space-between;
+      margin-bottom: 5px; font-size: 12px;
+    }
+    .detail-row .lbl { color: var(--text-dim); }
+    .detail-row .val { font-weight: 500; }
+    .detail-row .val.ok    { color: var(--ok);    }
+    .detail-row .val.warn  { color: var(--warn);  }
+    .detail-row .val.error { color: var(--error); }
+
+    .section-title {
+      color: var(--text-dim); font-size: 10px; text-transform: uppercase;
+      letter-spacing: 0.08em; margin: 10px 0 4px;
+    }
+
+    .law-row {
+      display: flex; align-items: flex-start; gap: 6px;
+      margin-bottom: 4px; font-size: 11px;
+    }
+    .law-row .law-icon { font-size: 12px; line-height: 1.4; flex-shrink: 0; }
+    .law-row .law-text { flex: 1; line-height: 1.5; }
+    .law-row .law-text .law-issue { color: var(--error); display: block; font-size: 10px; }
+
+    .action-section { margin-top: 10px; }
+    .btn {
+      display: block; width: 100%; padding: 7px 10px;
+      border: 1px solid var(--border); border-radius: 4px;
+      background: var(--bg3); color: var(--text);
+      font-size: 12px; cursor: pointer; text-align: center; margin-bottom: 6px;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn.primary:hover { opacity: 0.85; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn.danger { border-color: var(--error); color: var(--error); }
+
+    #action-status {
+      font-size: 11px; color: var(--text-dim); margin-top: 6px;
+      min-height: 16px; word-break: break-word;
+    }
+    #action-status.ok    { color: var(--ok);    }
+    #action-status.error { color: var(--error); }
+    #action-status.warn  { color: var(--warn);  }
+
+    /* ── Rebuild overlay ── */
+    #rebuild-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    #rebuild-overlay.visible { display: flex; }
+    #rebuild-overlay .rebuild-box {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 28px 36px; text-align: center; min-width: 320px;
+    }
+    #rebuild-overlay .rebuild-title { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    #rebuild-overlay .rebuild-prog  { color: var(--text-dim); font-size: 12px; }
+    #rebuild-bar {
+      width: 100%; height: 6px; background: var(--bg3); border-radius: 3px;
+      margin-top: 14px; overflow: hidden;
+    }
+    #rebuild-fill { height: 100%; width: 0%; background: var(--accent); border-radius: 3px; }
+
+    /* ── Batch import toolbar ── */
+    #batch-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--bg2); border-top: 2px solid var(--accent);
+      padding: 8px 16px;
+      z-index: 150;
+      align-items: center; gap: 10px;
+    }
+    #batch-bar.visible { display: flex; }
+    #batch-bar .lbl { flex: 1; font-size: 12px; }
+    #batch-bar .btn { width: auto; margin: 0; }
+
+    @media (max-width: 900px) {
+      #detail-panel { display: none; }
+      :root { --panel-w: 260px; }
+    }
+    @media (max-width: 600px) {
+      #catalog-panel { width: 100%; }
+      #preview-panel { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div id="topbar">
+  <h1>🎬 Gail Animation Importer</h1>
+  <span class="spacer"></span>
+  <a href="/avatar-import">Avatar Import →</a>
+  <span id="status-badge">Loading…</span>
+  <button class="btn" id="btn-rebuild" style="width:auto;margin:0;padding:4px 12px;font-size:11px">
+    ↺ Rebuild Catalog
+  </button>
+</div>
+
+<!-- Main layout -->
+<div id="layout">
+
+  <!-- Catalog browser -->
+  <div id="catalog-panel">
+    <div id="catalog-toolbar">
+      <div class="input-row">
+        <input id="search-input" type="text" placeholder="Search clips…" autocomplete="off">
+        <select id="cat-filter">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div id="filter-row">
+        <span class="filter-chip" id="chip-all"  data-f="all"   >All</span>
+        <span class="filter-chip" id="chip-ok"   data-f="ok"    >✓ Pass</span>
+        <span class="filter-chip need-fix" id="chip-fix" data-f="fix">⚠ Needs Fix</span>
+        <span class="filter-chip" id="chip-val"  data-f="val"   >? Unvalidated</span>
+      </div>
+    </div>
+    <div id="catalog-stats">Loading…</div>
+    <ul id="clip-list"></ul>
+  </div>
+
+  <!-- 3-D preview -->
+  <div id="preview-panel">
+    <div id="preview-toolbar">
+      <span class="ctrl-label">Drag to orbit · Scroll to zoom · Right-drag to pan</span>
+      <span class="spacer"></span>
+      <span class="ctrl-label" id="anim-name-label">—</span>
+    </div>
+    <div id="canvas-wrap">
+      <canvas id="preview-canvas"></canvas>
+      <div id="preview-overlay">Select a clip to preview</div>
+    </div>
+    <div id="playback-bar">
+      <button id="btn-play" disabled>▶ Play</button>
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <span id="time-display">0.00 / 0.00 s</span>
+      <select id="speed-select" class="ctrl">
+        <option value="0.25">0.25x</option>
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Detail + actions -->
+  <div id="detail-panel">
+    <h3>Clip Details</h3>
+    <div id="detail-content">
+      <p style="color:var(--text-dim);font-size:12px;margin-top:20px;text-align:center">
+        Select a clip from the list
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Rebuild overlay -->
+<div id="rebuild-overlay">
+  <div class="rebuild-box">
+    <div class="rebuild-title">Building Catalog…</div>
+    <div class="rebuild-prog" id="rebuild-prog-text">Scanning library…</div>
+    <div id="rebuild-bar"><div id="rebuild-fill"></div></div>
+  </div>
+</div>
+
+<!-- Batch import bar -->
+<div id="batch-bar">
+  <span class="lbl" id="batch-label">0 clips selected</span>
+  <button class="btn" id="btn-batch-clear">Clear</button>
+  <button class="btn primary" id="btn-batch-import">Import Selected</button>
+</div>
+
+<!-- Three.js from CDN -->
+<script type="importmap">
+  {
+    "imports": {
+      "three":             "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+      "three/addons/":     "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+    }
+  }
+</script>
+
+<script type="module">
+import * as THREE from "three";
+import { GLTFLoader }      from "three/addons/loaders/GLTFLoader.js";
+import { OrbitControls }   from "three/addons/controls/OrbitControls.js";
+
+// ── Constants ──────────────────────────────────────────────────────
+
+const API = window.location.origin;
+
+// ── State ──────────────────────────────────────────────────────────
+
+let catalog    = [];          // full CatalogEntry[]
+let filtered   = [];          // current list view
+let activeId   = null;        // selected entry id
+let selected   = new Set();   // batch selection (ids)
+let filterMode = "all";       // "all" | "ok" | "fix" | "val"
+let filterCat  = "";          // category filter
+let searchQ    = "";          // search term
+
+// ── Three.js ───────────────────────────────────────────────────────
+
+const canvas  = document.getElementById("preview-canvas");
+const wrap    = document.getElementById("canvas-wrap");
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.shadowMap.enabled = true;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+const scene  = new THREE.Scene();
+scene.background = new THREE.Color(0x0e0e12);
+
+const camera = new THREE.PerspectiveCamera(45, 1, 0.01, 100);
+camera.position.set(0, 1.2, 3.5);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 1.0, 0);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+
+// Lighting
+const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+scene.add(ambient);
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+dirLight.position.set(2, 5, 3);
+scene.add(dirLight);
+
+// Ground grid
+const grid = new THREE.GridHelper(6, 24, 0x2e2e42, 0x1e1e2a);
+scene.add(grid);
+
+// ── Animation mixer ────────────────────────────────────────────────
+
+let mixer   = null;
+let action  = null;
+let clock   = new THREE.Clock();
+let playing = false;
+let duration = 0;
+let currentModel = null;
+
+const loader = new GLTFLoader();
+
+function clearScene() {
+  if (currentModel) {
+    scene.remove(currentModel);
+    currentModel.traverse(obj => {
+      if (obj.geometry) obj.geometry.dispose();
+      if (obj.material) {
+        if (Array.isArray(obj.material)) obj.material.forEach(m => m.dispose());
+        else obj.material.dispose();
+      }
+    });
+    currentModel = null;
+  }
+  if (mixer) { mixer.stopAllAction(); mixer = null; }
+  action   = null;
+  playing  = false;
+  duration = 0;
+  updatePlaybackUI();
+}
+
+async function loadPreview(entry) {
+  clearScene();
+  document.getElementById("preview-overlay").textContent = "Loading…";
+  document.getElementById("preview-overlay").style.display = "flex";
+  document.getElementById("anim-name-label").textContent = entry.name;
+  document.getElementById("btn-play").disabled = true;
+
+  const url = `${API}/api/preview-glb?id=${encodeURIComponent(entry.id)}`;
+  try {
+    const gltf = await new Promise((resolve, reject) => {
+      loader.load(url, resolve, undefined, reject);
+    });
+
+    currentModel = gltf.scene;
+    scene.add(currentModel);
+
+    // Try to fit model to view
+    const box = new THREE.Box3().setFromObject(currentModel);
+    const size = box.getSize(new THREE.Vector3());
+    const center = box.getCenter(new THREE.Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const fitDist = maxDim * 1.8;
+    camera.position.set(center.x, center.y + size.y * 0.3, center.z + fitDist);
+    controls.target.copy(center);
+    controls.update();
+
+    // Skeleton helper
+    currentModel.traverse(obj => {
+      if (obj.isSkinnedMesh || (obj.skeleton)) {
+        const helper = new THREE.SkeletonHelper(obj);
+        helper.material.linewidth = 1;
+        scene.add(helper);
+      }
+    });
+
+    // Set up animation
+    if (gltf.animations.length > 0) {
+      mixer  = new THREE.AnimationMixer(currentModel);
+      action = mixer.clipAction(gltf.animations[0]);
+      action.clampWhenFinished = true;
+      action.loop = THREE.LoopRepeat;
+      action.play();
+      playing  = true;
+      duration = gltf.animations[0].duration;
+      document.getElementById("btn-play").disabled = false;
+      document.getElementById("btn-play").textContent = "⏸ Pause";
+    }
+
+    document.getElementById("preview-overlay").style.display = "none";
+  } catch (err) {
+    document.getElementById("preview-overlay").textContent =
+      "Preview failed: " + err.message;
+    console.error(err);
+  }
+}
+
+// ── Playback controls ──────────────────────────────────────────────
+
+document.getElementById("btn-play").addEventListener("click", () => {
+  if (!action) return;
+  if (playing) {
+    mixer.timeScale = 0;
+    action.paused = true;
+    playing = false;
+    document.getElementById("btn-play").textContent = "▶ Play";
+  } else {
+    action.paused = false;
+    mixer.timeScale = parseFloat(document.getElementById("speed-select").value);
+    playing = true;
+    document.getElementById("btn-play").textContent = "⏸ Pause";
+  }
+});
+
+document.getElementById("speed-select").addEventListener("change", e => {
+  if (mixer) mixer.timeScale = parseFloat(e.target.value);
+});
+
+document.getElementById("progress-bar").addEventListener("click", e => {
+  if (!action || !duration) return;
+  const rect = e.currentTarget.getBoundingClientRect();
+  const t = ((e.clientX - rect.left) / rect.width) * duration;
+  action.time = Math.max(0, Math.min(duration, t));
+});
+
+function updatePlaybackUI() {
+  const t   = action ? action.time   : 0;
+  const dur = duration;
+  const pct = dur > 0 ? (t / dur) * 100 : 0;
+  document.getElementById("progress-fill").style.width = pct + "%";
+  document.getElementById("time-display").textContent =
+    t.toFixed(2) + " / " + dur.toFixed(2) + " s";
+  document.getElementById("btn-play").textContent = playing ? "⏸ Pause" : "▶ Play";
+}
+
+// ── Render loop ────────────────────────────────────────────────────
+
+function resizeRenderer() {
+  const w = wrap.clientWidth;
+  const h = wrap.clientHeight;
+  if (renderer.domElement.width !== w || renderer.domElement.height !== h) {
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  resizeRenderer();
+  const delta = clock.getDelta();
+  if (mixer && playing) mixer.update(delta);
+  controls.update();
+  renderer.render(scene, camera);
+  if (action) updatePlaybackUI();
+}
+animate();
+
+// ── Catalog UI ─────────────────────────────────────────────────────
+
+async function loadCatalog() {
+  try {
+    const r = await fetch(`${API}/api/catalog`);
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const data = await r.json();
+    catalog = data.entries || [];
+    populateCategoryFilter();
+    applyFilters();
+    updateStatusBadge();
+  } catch (e) {
+    document.getElementById("catalog-stats").textContent = "Error: " + e.message;
+    setStatusBadge("error", "Error");
+  }
+}
+
+function populateCategoryFilter() {
+  const sel = document.getElementById("cat-filter");
+  const cats = [...new Set(catalog.map(e => e.category))].sort();
+  cats.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c; opt.textContent = c;
+    sel.appendChild(opt);
+  });
+}
+
+function applyFilters() {
+  filtered = catalog.filter(e => {
+    if (filterCat && e.category !== filterCat) return false;
+    if (searchQ) {
+      const q = searchQ.toLowerCase();
+      if (!e.name.toLowerCase().includes(q) && !e.category.toLowerCase().includes(q)) return false;
+    }
+    if (filterMode === "ok")  return e.valid === true;
+    if (filterMode === "fix") return e.needsCoordFix || e.needsMeshStrip;
+    if (filterMode === "val") return e.valid === null;
+    return true;
+  });
+  renderList();
+  updateStats();
+}
+
+function renderList() {
+  const ul = document.getElementById("clip-list");
+  ul.innerHTML = "";
+  filtered.forEach(entry => {
+    const li = document.createElement("li");
+    li.className = "clip-item" + (entry.id === activeId ? " active" : "");
+    li.dataset.id = entry.id;
+
+    const dot = document.createElement("span");
+    dot.className = "dot " + (
+      entry.valid === true  ? "ok" :
+      entry.valid === false ? "error" :
+      (entry.needsCoordFix || entry.needsMeshStrip) ? "warn" : "unknown"
+    );
+
+    const name = document.createElement("span");
+    name.className = "clip-name";
+    name.textContent = entry.name;
+    name.title = entry.id;
+
+    const size = document.createElement("span");
+    size.className = "clip-size";
+    size.textContent = entry.sizeMB.toFixed(1) + "M";
+
+    // Checkbox for batch select
+    const cb = document.createElement("input");
+    cb.type = "checkbox"; cb.style.accentColor = "var(--accent)";
+    cb.checked = selected.has(entry.id);
+    cb.addEventListener("change", e => {
+      e.stopPropagation();
+      if (cb.checked) selected.add(entry.id);
+      else selected.delete(entry.id);
+      updateBatchBar();
+    });
+
+    li.append(cb, dot, name, size);
+    li.addEventListener("click", e => {
+      if (e.target === cb) return;
+      selectClip(entry);
+    });
+    ul.appendChild(li);
+  });
+}
+
+function updateStats() {
+  const total   = filtered.length;
+  const pass    = filtered.filter(e => e.valid === true).length;
+  const needFix = filtered.filter(e => e.needsCoordFix || e.needsMeshStrip).length;
+  document.getElementById("catalog-stats").textContent =
+    `Showing ${total} clip${total !== 1 ? "s" : ""}`
+    + (pass    ? ` · ${pass} valid`    : "")
+    + (needFix ? ` · ${needFix} need fix` : "");
+}
+
+function updateStatusBadge() {
+  const total  = catalog.length;
+  setStatusBadge(total > 0 ? "ok" : "error",
+    total > 0 ? `${total} clips` : "No catalog");
+}
+
+function setStatusBadge(kind, text) {
+  const el = document.getElementById("status-badge");
+  el.textContent = text;
+  el.className   = kind;
+}
+
+// ── Clip selection ─────────────────────────────────────────────────
+
+function selectClip(entry) {
+  activeId = entry.id;
+  // Re-render list to update active state
+  document.querySelectorAll(".clip-item").forEach(li => {
+    li.classList.toggle("active", li.dataset.id === entry.id);
+  });
+  renderDetail(entry);
+  loadPreview(entry);
+}
+
+function renderDetail(entry) {
+  const c  = document.getElementById("detail-content");
+  c.innerHTML = "";
+
+  const add = (lbl, val, cls) => {
+    const row = document.createElement("div");
+    row.className = "detail-row";
+    row.innerHTML = `<span class="lbl">${lbl}</span><span class="val ${cls||""}">${val}</span>`;
+    c.appendChild(row);
+  };
+
+  add("Category",  entry.category);
+  add("Name",      entry.name);
+  add("Size",      entry.sizeMB.toFixed(2) + " MB",
+    entry.sizeMB > 10 ? "warn" : entry.sizeMB > 50 ? "error" : "");
+  add("Nodes",     entry.nodeCount);
+  add("Meshes",    entry.meshCount, entry.meshCount > 0 ? "warn" : "ok");
+  add("Skins",     entry.skinCount);
+  add("Animations",entry.animCount, entry.animCount === 0 ? "error" : "ok");
+  add("Channels",  entry.channelCount);
+  add("Needs Fix", entry.needsCoordFix ? "Yes (coord space)" : "No",
+    entry.needsCoordFix ? "warn" : "ok");
+  add("Needs Strip",entry.needsMeshStrip ? "Yes (has mesh)" : "No",
+    entry.needsMeshStrip ? "warn" : "ok");
+
+  // Laws section
+  if (entry.laws) {
+    const title = document.createElement("div");
+    title.className = "section-title";
+    title.textContent = "Validation Laws";
+    c.appendChild(title);
+
+    const lawLabels = {
+      law1: "Root rest-pose identity",
+      law2: "Root anim curves identity",
+      law3: "Hip Y in metres",
+      law4: "Required bones present",
+      law5: "Has animation data",
+    };
+    for (const [key, lbl] of Object.entries(lawLabels)) {
+      const law = entry.laws[key];
+      if (!law) continue;
+      const row = document.createElement("div");
+      row.className = "law-row";
+      row.innerHTML = `<span class="law-icon">${law.pass ? "✅" : "❌"}</span>
+        <span class="law-text">${lbl}
+          ${law.issues.map(i => `<span class="law-issue">${i}</span>`).join("")}
+        </span>`;
+      c.appendChild(row);
+    }
+  } else {
+    const note = document.createElement("div");
+    note.className = "section-title";
+    note.textContent = "Not yet validated — click Validate below";
+    c.appendChild(note);
+  }
+
+  // Errors/warnings
+  if (entry.errors && entry.errors.length > 0) {
+    const title2 = document.createElement("div");
+    title2.className = "section-title";
+    title2.textContent = "Errors";
+    c.appendChild(title2);
+    entry.errors.forEach(e => {
+      const p = document.createElement("p");
+      p.style.cssText = "color:var(--error);font-size:11px;margin-bottom:3px";
+      p.textContent = e;
+      c.appendChild(p);
+    });
+  }
+
+  // Actions
+  const actions = document.createElement("div");
+  actions.className = "action-section";
+  actions.innerHTML = `
+    <button class="btn" id="act-validate">🔍 Validate (full scan)</button>
+    <button class="btn primary" id="act-import">⬇ Strip-Fix &amp; Import</button>
+    <div id="action-status"></div>
+  `;
+  c.appendChild(actions);
+
+  document.getElementById("act-validate").addEventListener("click", () => runValidate(entry));
+  document.getElementById("act-import").addEventListener("click",   () => runImport(entry));
+}
+
+// ── Actions ────────────────────────────────────────────────────────
+
+async function runValidate(entry) {
+  setActionStatus("Validating…", "");
+  try {
+    const r = await fetch(`${API}/api/validate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: entry.id }),
+    });
+    const data = await r.json();
+    if (data.error) { setActionStatus(data.error, "error"); return; }
+
+    // Update local catalog entry
+    const idx = catalog.findIndex(e => e.id === entry.id);
+    if (idx >= 0) {
+      Object.assign(catalog[idx], data);
+      if (entry.id === activeId) renderDetail(catalog[idx]);
+    }
+    applyFilters();
+    if (data.valid) setActionStatus("✓ All laws pass", "ok");
+    else setActionStatus(`✗ ${data.errors.length} error(s)`, "error");
+  } catch (e) {
+    setActionStatus("Validate error: " + e.message, "error");
+  }
+}
+
+async function runImport(entry) {
+  setActionStatus("Importing…", "warn");
+  try {
+    const r = await fetch(`${API}/api/import-single`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: entry.id }),
+    });
+    const data = await r.json();
+    if (data.error) { setActionStatus(data.error, "error"); return; }
+    const cls = data.status === "ok" ? "ok" : data.status === "skipped" ? "warn" : "error";
+    setActionStatus(`${data.status}: ${data.message}`, cls);
+  } catch (e) {
+    setActionStatus("Import error: " + e.message, "error");
+  }
+}
+
+function setActionStatus(msg, cls) {
+  const el = document.getElementById("action-status");
+  if (!el) return;
+  el.textContent = msg;
+  el.className   = cls;
+}
+
+// ── Batch import ───────────────────────────────────────────────────
+
+function updateBatchBar() {
+  const bar = document.getElementById("batch-bar");
+  if (selected.size > 0) {
+    bar.classList.add("visible");
+    document.getElementById("batch-label").textContent =
+      `${selected.size} clip${selected.size !== 1 ? "s" : ""} selected`;
+  } else {
+    bar.classList.remove("visible");
+  }
+}
+
+document.getElementById("btn-batch-clear").addEventListener("click", () => {
+  selected.clear();
+  renderList();
+  updateBatchBar();
+});
+
+document.getElementById("btn-batch-import").addEventListener("click", async () => {
+  if (selected.size === 0) return;
+  const ids = [...selected];
+  const lbl = document.getElementById("batch-label");
+  lbl.textContent = "Importing…";
+
+  try {
+    const r = await fetch(`${API}/api/import`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ids }),
+    });
+    const data = await r.json();
+    selected.clear();
+    renderList();
+    updateBatchBar();
+    const s = data.summary;
+    alert(`Import complete: ${s.ok} ok, ${s.skipped} skipped, ${s.errors} errors`);
+  } catch (e) {
+    lbl.textContent = "Error: " + e.message;
+  }
+});
+
+// ── Catalog rebuild ────────────────────────────────────────────────
+
+document.getElementById("btn-rebuild").addEventListener("click", async () => {
+  const overlay = document.getElementById("rebuild-overlay");
+  const prog    = document.getElementById("rebuild-prog-text");
+  const fill    = document.getElementById("rebuild-fill");
+  overlay.classList.add("visible");
+  prog.textContent = "Starting scan…";
+  fill.style.width = "0%";
+
+  try {
+    const r = await fetch(`${API}/api/catalog/rebuild`, { method: "POST" });
+    const reader = r.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      const lines = buf.split("\n");
+      buf = lines.pop();
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        try {
+          const msg = JSON.parse(line);
+          if (msg.progress) {
+            fill.style.width = Math.min(99, msg.progress / 20) + "%"; // rough
+            prog.textContent = `Scanned ${msg.progress} clips…`;
+          }
+          if (msg.done) {
+            fill.style.width = "100%";
+            prog.textContent = `Done — ${msg.done} clips loaded`;
+          }
+        } catch (_) {}
+      }
+    }
+    overlay.classList.remove("visible");
+    catalog = [];
+    await loadCatalog();
+  } catch (e) {
+    overlay.classList.remove("visible");
+    alert("Rebuild failed: " + e.message);
+  }
+});
+
+// ── Filters ────────────────────────────────────────────────────────
+
+document.getElementById("cat-filter").addEventListener("change", e => {
+  filterCat = e.target.value;
+  applyFilters();
+});
+
+document.getElementById("search-input").addEventListener("input", e => {
+  searchQ = e.target.value.trim();
+  applyFilters();
+});
+
+document.querySelectorAll(".filter-chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    filterMode = chip.dataset.f;
+    document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    applyFilters();
+  });
+});
+
+// Default active chip
+document.getElementById("chip-all").classList.add("active");
+
+// ── Boot ───────────────────────────────────────────────────────────
+
+(async () => {
+  // Status check
+  try {
+    const r = await fetch(`${API}/api/status`);
+    const s = await r.json();
+    if (s.catalog) {
+      setStatusBadge("ok", `${s.catalog.total} clips`);
+    } else {
+      setStatusBadge("warn", "No catalog — rebuild");
+    }
+  } catch (e) {
+    setStatusBadge("error", "Server offline");
+    document.getElementById("catalog-stats").textContent = "Cannot reach server on port 8888";
+    return;
+  }
+
+  await loadCatalog();
+})();
+</script>
+</body>
+</html>

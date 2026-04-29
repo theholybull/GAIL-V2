@@ -1,0 +1,83 @@
+{
+  "project": "gail",
+  "source_type": "mixamo",
+  "source_armature_candidates": [
+    "Armature",
+    "mixamo.com",
+    "mixamorig:Hips"
+  ],
+  "body": {
+    "hip": [
+      "Hips"
+    ],
+    "abdomen_lower": [
+      "Spine"
+    ],
+    "abdomen_upper": [
+      "Spine1"
+    ],
+    "chest": [
+      "Spine2"
+    ],
+    "neck": [
+      "Neck"
+    ],
+    "head": [
+      "Head"
+    ],
+    "left_collar": [
+      "LeftShoulder"
+    ],
+    "right_collar": [
+      "RightShoulder"
+    ],
+    "left_shoulder": [
+      "LeftArm"
+    ],
+    "right_shoulder": [
+      "RightArm"
+    ],
+    "left_forearm": [
+      "LeftForeArm"
+    ],
+    "right_forearm": [
+      "RightForeArm"
+    ],
+    "left_hand": [
+      "LeftHand"
+    ],
+    "right_hand": [
+      "RightHand"
+    ],
+    "left_thumb_1": [
+      "LeftHandThumb1"
+    ],
+    "right_thumb_1": [
+      "RightHandThumb1"
+    ],
+    "left_index_1": [
+      "LeftHandIndex1"
+    ],
+    "right_index_1": [
+      "RightHandIndex1"
+    ],
+    "left_mid_1": [
+      "LeftHandMiddle1"
+    ],
+    "right_mid_1": [
+      "RightHandMiddle1"
+    ],
+    "left_thigh": [
+      "LeftUpLeg"
+    ],
+    "right_thigh": [
+      "RightUpLeg"
+    ],
+    "left_shin": [
+      "LeftLeg"
+    ],
+    "right_shin": [
+      "RightLeg"
+    ]
+  }
+}

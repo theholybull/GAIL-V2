@@ -1,0 +1,48 @@
+[
+  {
+    "id": "avatar-assets",
+    "name": "Avatar Assets Export",
+    "path": "tools/export-avatar-assets.ps1",
+    "type": "powershell",
+    "purpose": "Run modular avatar export and publish reports.",
+    "owner": "asset-pipeline",
+    "inputs": [
+      "RuntimeProfile"
+    ],
+    "outputs": [
+      "blender/animation_master/exports/reports/playcanvas_asset_export_report.json"
+    ],
+    "lastStatus": "completed",
+    "lastRunAt": "2026-04-20T18:30:22.922Z",
+    "lastResultId": "script-result-1776709822922"
+  },
+  {
+    "id": "playcanvas-pipeline",
+    "name": "PlayCanvas Pipeline Export",
+    "path": "tools/export-playcanvas-pipeline.ps1",
+    "type": "powershell",
+    "purpose": "Run full pipeline export for runtime delivery.",
+    "owner": "asset-pipeline",
+    "inputs": [
+      "RuntimeProfile",
+      "IncludeReview"
+    ],
+    "outputs": [
+      "blender/animation_master/exports/reports/regular_avatar_build_report.json"
+    ],
+    "lastStatus": "never_run"
+  },
+  {
+    "id": "animoxtend-check",
+    "name": "AnimoXTend Readiness Check",
+    "path": "tools/check-animoxtend-setup.ps1",
+    "type": "powershell",
+    "purpose": "Validate AnimoXTend local setup readiness.",
+    "owner": "pipeline-ops",
+    "inputs": [],
+    "outputs": [
+      "console"
+    ],
+    "lastStatus": "never_run"
+  }
+]

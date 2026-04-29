@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gail Studio</title>
+    <link rel="stylesheet" href="/panel/src/styles/operator-studio-shell.css" />
+  </head>
+  <body data-density="studio">
+    <div id="studio-app" class="studio-app">
+
+      <!-- ─── LEFT SIDEBAR: Nav + Properties ─── -->
+      <aside id="studio-nav" class="studio-nav">
+        <div class="brand">
+          <h1>Gail</h1>
+        </div>
+        <input id="nav-filter" class="search" placeholder="Filter..." />
+        <div id="nav-groups" class="nav-groups"></div>
+
+        <div class="sidebar-props">
+          <div class="sidebar-props-head">
+            <strong id="page-title">Dashboard</strong>
+            <small id="page-subtitle"></small>
+          </div>
+          <form id="settings-form" class="settings-form"></form>
+          <div id="action-list" class="action-list"></div>
+        </div>
+      </aside>
+
+      <!-- ─── MAIN AREA: Toolbar + Viewport + Bottom Dock ─── -->
+      <main class="studio-main">
+
+        <header class="topbar">
+          <div class="topbar-tabs" id="workspace-tabs">
+            <button type="button" class="workspace-tab" data-page-id="avatar-library">Avatar</button>
+            <button type="button" class="workspace-tab" data-page-id="providers-voice">AI &amp; Personas</button>
+            <button type="button" class="workspace-tab" data-page-id="workflow-studio">Workflows</button>
+            <button type="button" class="workspace-tab" data-page-id="system-status">System</button>
+          </div>
+          <div class="topbar-actions">
+            <button id="toggle-nav" type="button" class="ghost mobile-only">Nav</button>
+            <button id="open-help" type="button" class="ghost">Help</button>
+            <button id="open-command" type="button" class="ghost">Cmd</button>
+            <label class="density-wrap">
+              <select id="density-mode">
+                <option value="studio">Studio</option>
+                <option value="compact">Compact</option>
+                <option value="ultra">Ultra</option>
+              </select>
+            </label>
+          </div>
+        </header>
+
+        <!-- ─── 3D VIEWPORT: Always visible ─── -->
+        <section class="viewport-wrap">
+          <iframe id="viewport-iframe"
+                  class="viewport-iframe"
+                  src="http://127.0.0.1:4180/client/work-lite/"
+                  title="Gail 3D Viewport"
+                  allow="camera; microphone"></iframe>
+          <div id="viewport-overlay" class="viewport-overlay">
+            <span class="pill" id="api-health-pill">API: unknown</span>
+            <span class="pill" id="page-route">—</span>
+          </div>
+        </section>
+
+        <!-- ─── BOTTOM DOCK: Tabbed panels ─── -->
+        <section class="bottom-dock" id="bottom-dock">
+          <div class="dock-handle" id="dock-handle">
+            <div class="dock-tabs">
+              <button type="button" class="dock-tab is-active" data-dock="properties">Properties</button>
+              <button type="button" class="dock-tab" data-dock="debug">Debug</button>
+              <button type="button" class="dock-tab" data-dock="workflows">Workflows</button>
+            </div>
+            <button id="dock-collapse" type="button" class="ghost dock-toggle">▼</button>
+          </div>
+
+          <!-- Properties tab -->
+          <div class="dock-panel" id="dock-properties" data-dock="properties">
+            <div id="page-quickstart" class="page-quickstart" style="display:none"></div>
+            <div id="avatar-mini-wrap" class="avatar-mini-wrap is-hidden">
+              <div class="avatar-mini">
+                <div class="avatar-mini-head"></div>
+                <div class="avatar-mini-body"></div>
+              </div>
+              <div>
+                <strong id="avatar-mini-name">Avatar Preview</strong>
+                <div id="avatar-mini-meta" class="panel-desc">Local preview.</div>
+              </div>
+            </div>
+            <div class="dock-columns">
+              <div id="display-list" class="stack"></div>
+              <pre id="working-canvas" class="canvas-block"></pre>
+            </div>
+          </div>
+
+          <!-- Debug tab -->
+          <div class="dock-panel is-hidden" id="dock-debug" data-dock="debug">
+            <pre id="shell-console" class="console-output">[shell] ready</pre>
+          </div>
+
+          <!-- Workflows tab -->
+          <div class="dock-panel is-hidden" id="dock-workflows" data-dock="workflows">
+            <div class="wf-graph" id="wf-graph">
+              <div class="wf-toolbar">
+                <button id="wf-refresh" type="button" class="ghost">Refresh</button>
+                <button id="wf-create" type="button" class="ghost">+ New Workflow</button>
+                <span class="wf-hint">Drag tasks to reorder. Click a node to inspect.</span>
+              </div>
+              <div class="wf-canvas" id="wf-canvas">
+                <div class="wf-empty">No workflows loaded. Click <strong>Refresh</strong> to load.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- Hidden elements for compatibility -->
+    <div style="display:none">
+      <span id="page-state"></span>
+      <span id="page-data-health"></span>
+      <span id="guided-mode-pill"></span>
+      <span id="client-surface-pill"></span>
+      <span id="settings-panel-title"></span>
+      <span id="settings-panel-desc"></span>
+      <span id="inspector-summary"></span>
+      <span id="page-notes-title"></span>
+      <ul id="entity-list"></ul>
+      <ul id="route-list"></ul>
+      <div id="page-help-content"></div>
+      <div id="audit-list"></div>
+      <button id="audit-clear" type="button"></button>
+      <button id="toggle-guided" type="button"></button>
+      <button id="toggle-inspector" type="button"></button>
+      <button id="open-change" type="button"></button>
+      <div id="display-list-legacy"></div>
+      <div id="action-list-legacy"></div>
+
+      <form id="page-notes-form">
+        <input id="page-note-title" />
+        <textarea id="page-note-details"></textarea>
+        <select id="page-note-status">
+          <option value="open">open</option>
+          <option value="deferred">deferred</option>
+          <option value="done">done</option>
+          <option value="rolled-into-build">rolled-into-build</option>
+        </select>
+        <button id="save-page-note" type="button" class="action-btn">Save Page Note</button>
+        <button id="promote-page-note" type="button" class="ghost">Open In Change Request</button>
+      </form>
+      <button id="clear-page-notes" type="button"></button>
+      <div id="page-notes-list"></div>
+    </div>
+
+    <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+    <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog id="command-dialog" class="command-dialog">
+      <form method="dialog" class="command-card">
+        <header>
+          <strong>Command Palette</strong>
+          <button value="cancel" class="ghost" type="submit">Close</button>
+        </header>
+        <input id="command-filter" class="search" placeholder="Type a page or action..." />
+        <div id="command-results" class="command-results"></div>
+      </form>
+    </dialog>
+
+    <dialog id="change-dialog" class="command-dialog">
+      <form method="dialog" class="command-card">
+        <header>
+          <strong>Submit Change Request</strong>
+          <button value="cancel" class="ghost" type="submit">Close</button>
+        </header>
+        <div class="field">
+          <label for="change-page">Page</label>
+          <input id="change-page" readonly />
+        </div>
+        <div class="field">
+          <label for="change-title">Title</label>
+          <input id="change-title" placeholder="Short change title" />
+        </div>
+        <div class="field">
+          <label for="change-details">Details</label>
+          <textarea id="change-details" rows="6" placeholder="Describe what should change and why."></textarea>
+        </div>
+        <div class="action-list">
+          <button id="submit-change" type="button" class="action-btn">Submit To Change Queue</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/panel/src/operator-studio-shell.js"></script>
+  </body>
+</html>

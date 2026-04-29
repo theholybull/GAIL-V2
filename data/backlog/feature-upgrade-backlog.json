@@ -1,0 +1,249 @@
+{
+  "items": [
+    {
+      "id": "feature_request_1776709565136",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "planned",
+      "timestamp": "2026-04-20T18:26:05.136Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1776709566144",
+          "promotedAt": "2026-04-20T18:26:06.143Z"
+        }
+      ],
+      "updatedAt": "2026-04-20T18:26:06.143Z",
+      "linkedTaskId": "task_1776709566144"
+    },
+    {
+      "id": "feature_request_1776708406642",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "planned",
+      "timestamp": "2026-04-20T18:06:46.642Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1776708407759",
+          "promotedAt": "2026-04-20T18:06:47.759Z"
+        }
+      ],
+      "updatedAt": "2026-04-20T18:06:47.759Z",
+      "linkedTaskId": "task_1776708407759"
+    },
+    {
+      "id": "feature_request_1776703418523",
+      "title": "Phase5 feature 20260420-124338",
+      "details": "Verify backlog capture and promotion path.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "critical",
+      "status": "planned",
+      "timestamp": "2026-04-20T16:43:38.523Z",
+      "capturedBy": "phase5-verify",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1776703418571",
+          "promotedAt": "2026-04-20T16:43:38.571Z"
+        }
+      ],
+      "updatedAt": "2026-04-20T16:43:38.571Z",
+      "linkedTaskId": "task_1776703418571"
+    },
+    {
+      "id": "feature_request_1775798593768",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "pending",
+      "timestamp": "2026-04-10T05:23:13.768Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [],
+      "updatedAt": "2026-04-10T05:23:13.768Z"
+    },
+    {
+      "id": "feature_request_1775798046461",
+      "title": "Phase5 feature 20260410-011406",
+      "details": "Verify backlog capture and promotion path.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "critical",
+      "status": "planned",
+      "timestamp": "2026-04-10T05:14:06.461Z",
+      "capturedBy": "phase5-verify",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1775798046497",
+          "promotedAt": "2026-04-10T05:14:06.497Z"
+        }
+      ],
+      "updatedAt": "2026-04-10T05:14:06.497Z",
+      "linkedTaskId": "task_1775798046497"
+    },
+    {
+      "id": "feature_request_1775795892772",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "pending",
+      "timestamp": "2026-04-10T04:38:12.772Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [],
+      "updatedAt": "2026-04-10T04:38:12.772Z"
+    },
+    {
+      "id": "feature_request_1775795675353",
+      "title": "Phase5 feature 20260410-003435",
+      "details": "Verify backlog capture and promotion path.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "critical",
+      "status": "planned",
+      "timestamp": "2026-04-10T04:34:35.353Z",
+      "capturedBy": "phase5-verify",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1775795675458",
+          "promotedAt": "2026-04-10T04:34:35.458Z"
+        }
+      ],
+      "updatedAt": "2026-04-10T04:34:35.458Z",
+      "linkedTaskId": "task_1775795675458"
+    },
+    {
+      "id": "feature_request_1775795188890",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "pending",
+      "timestamp": "2026-04-10T04:26:28.890Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [],
+      "updatedAt": "2026-04-10T04:26:28.890Z"
+    },
+    {
+      "id": "feature_request_1775794894262",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "pending",
+      "timestamp": "2026-04-10T04:21:34.262Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [],
+      "updatedAt": "2026-04-10T04:21:34.262Z"
+    },
+    {
+      "id": "feature_request_1775794583454",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "pending",
+      "timestamp": "2026-04-10T04:16:23.454Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [],
+      "updatedAt": "2026-04-10T04:16:23.454Z"
+    },
+    {
+      "id": "feature_request_1775786863101",
+      "title": "Add feature request button to display menu",
+      "details": "Capture typed and voice suggestions into a promotable backlog.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "normal",
+      "status": "planned",
+      "timestamp": "2026-04-10T02:07:43.101Z",
+      "capturedBy": "studio-shell-operator",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1775786883189",
+          "promotedAt": "2026-04-10T02:08:03.189Z"
+        }
+      ],
+      "updatedAt": "2026-04-10T02:08:03.189Z",
+      "linkedTaskId": "task_1775786883189"
+    },
+    {
+      "id": "feature_request_1775785944360",
+      "title": "Phase5 feature 20260409-215224",
+      "details": "Verify backlog capture and promotion path.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "critical",
+      "status": "planned",
+      "timestamp": "2026-04-10T01:52:24.360Z",
+      "capturedBy": "phase5-verify",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1775785944391",
+          "promotedAt": "2026-04-10T01:52:24.391Z"
+        }
+      ],
+      "updatedAt": "2026-04-10T01:52:24.391Z",
+      "linkedTaskId": "task_1775785944391"
+    },
+    {
+      "id": "feature_request_1775785349050",
+      "title": "Phase5 feature 20260409-214229",
+      "details": "Verify backlog capture and promotion path.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "critical",
+      "status": "planned",
+      "timestamp": "2026-04-10T01:42:29.050Z",
+      "capturedBy": "phase5-verify",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1775785349087",
+          "promotedAt": "2026-04-10T01:42:29.087Z"
+        }
+      ],
+      "updatedAt": "2026-04-10T01:42:29.087Z",
+      "linkedTaskId": "task_1775785349087"
+    },
+    {
+      "id": "feature_request_1775782941080",
+      "title": "Phase5 feature 20260409-210221",
+      "details": "Verify backlog capture and promotion path.",
+      "source": "typed",
+      "stageTarget": "next_round",
+      "priority": "critical",
+      "status": "planned",
+      "timestamp": "2026-04-10T01:02:21.080Z",
+      "capturedBy": "phase5-verify",
+      "promotions": [
+        {
+          "target": "task",
+          "linkedTaskId": "task_1775782941125",
+          "promotedAt": "2026-04-10T01:02:21.125Z"
+        }
+      ],
+      "updatedAt": "2026-04-10T01:02:21.125Z",
+      "linkedTaskId": "task_1775782941125"
+    }
+  ]
+}

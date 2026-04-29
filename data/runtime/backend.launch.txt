@@ -1,0 +1,1 @@
+﻿Backend launcher started backend-supervisor.ps1, which keeps the Node backend running and restarts it if it exits unexpectedly.

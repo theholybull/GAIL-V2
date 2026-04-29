@@ -1,0 +1,7 @@
+{
+    "CC_Base_JawRoot": {
+        "location_0": [{"A26_Jaw_Forward": 0.01}, {"A25_Jaw_Open": 0.001}],
+        "location_2": [{"A27_Jaw_Left": 0.01},{"A28_Jaw_Right": -0.01}],
+        "rotation_euler_2": [{"A25_Jaw_Open": 0.2}]
+    }
+}

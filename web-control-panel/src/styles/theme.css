@@ -1,0 +1,261 @@
+:root {
+  --panel-bg: #efe4d2;
+  --panel-surface: rgba(255, 250, 242, 0.86);
+  --panel-ink: #231b17;
+  --panel-muted: #6f6258;
+  --panel-accent: #9b4d27;
+  --panel-alert: #7d2434;
+  --panel-line: rgba(47, 28, 16, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--panel-ink);
+  background:
+    radial-gradient(circle at top right, rgba(155, 77, 39, 0.18), transparent 24rem),
+    linear-gradient(135deg, #f7efe3 0%, var(--panel-bg) 46%, #e2d0b6 100%);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  background: var(--panel-accent);
+  color: #fff8f2;
+  cursor: pointer;
+}
+
+button.ghost-button {
+  background: transparent;
+  border: 1px solid var(--panel-line);
+  color: var(--panel-ink);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  border: 1px solid var(--panel-line);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--panel-ink);
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  color: var(--panel-muted);
+  font-size: 0.95rem;
+}
+
+.panel-shell {
+  display: grid;
+  grid-template-columns: minmax(18rem, 20rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.panel-sidebar,
+.panel-section {
+  min-width: 0;
+  border: 1px solid var(--panel-line);
+  background: var(--panel-surface);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1rem 3rem rgba(62, 35, 15, 0.08);
+}
+
+.panel-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 24px;
+  position: sticky;
+  top: 1.5rem;
+  height: fit-content;
+}
+
+.panel-main {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel-section {
+  padding: 1.2rem;
+  border-radius: 22px;
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-header h2,
+.brand-block h1 {
+  margin: 0.15rem 0 0;
+}
+
+.brand-block p,
+.status-card {
+  color: var(--panel-muted);
+}
+
+.status-card {
+  border: 1px solid var(--panel-line);
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.status-value {
+  margin: 0.45rem 0 0.85rem;
+  font-size: 1.4rem;
+  color: var(--panel-ink);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--panel-accent);
+}
+
+.grid {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.two-up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.9rem 0;
+}
+
+.data-block,
+.response-log {
+  margin: 0;
+  padding: 0.95rem;
+  border-radius: 18px;
+  background: rgba(34, 23, 18, 0.92);
+  color: #f6ebe1;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.camera-preview {
+  width: 100%;
+  max-width: 28rem;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  border: 1px solid var(--panel-line);
+  background: rgba(34, 23, 18, 0.92);
+  object-fit: cover;
+  margin-bottom: 0.9rem;
+}
+
+.inline-check {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--panel-ink);
+}
+
+.inline-check input {
+  width: auto;
+  margin: 0;
+}
+
+.top-gap {
+  margin-top: 1.8rem;
+}
+
+button,
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+
+button {
+  line-height: 1.2;
+}
+
+.action-row button {
+  white-space: normal;
+}
+
+.grid label,
+.brand-block p,
+.status-card,
+.response-log,
+.data-block {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1080px) {
+  .panel-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .two-up,
+  .three-up {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-shell {
+    gap: 1rem;
+    padding: 0.9rem;
+  }
+
+  .section-header button,
+  .action-row button {
+    width: 100%;
+  }
+}

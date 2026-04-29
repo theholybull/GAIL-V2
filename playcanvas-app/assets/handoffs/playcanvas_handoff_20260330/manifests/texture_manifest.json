@@ -1,0 +1,214 @@
+{
+  "armature": "Victoria 8",
+  "flat_base_color": [
+    0.7200000286102295,
+    0.6800000071525574,
+    0.6499999761581421
+  ],
+  "scope": "ALL",
+  "tiers": {
+    "low": 512,
+    "medium": 1024,
+    "high": 2048
+  },
+  "source_images": [
+    {
+      "image": "3bso_tank.jpg",
+      "material_users": [
+        "Boho Tank.Shape"
+      ]
+    },
+    {
+      "image": "3bso_tanknm.jpg",
+      "material_users": [
+        "Boho Tank.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethlashes_1001.jpg",
+      "material_users": [
+        "Genesis 8 Female Eyelashes.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Tex09.jpg",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Trans.jpg.001",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Trans.jpg.002",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Trans.jpg.003",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Trans.jpg.004",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Scalp Tex09.jpg",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Scalp Trans.jpg",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "Savanna Hair Trans.jpg.005",
+      "material_users": [
+        "Savanna Hair.Shape"
+      ]
+    },
+    {
+      "image": "d2_G8FBaseTorsoMapD_1002 2_G8FBaseTorsoMapD_1002 2_c884a19e-beb",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethtorsos_1002.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethtorson_1002.tif",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethface_1001.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethfaces_1001.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethfacen_1001.tif",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethfacelipss_1001.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethmouth_1005.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "d6_G8FBaseLegsMapD_1003_G8FBaseLegsMapD_1003 2_3c988c3e-0a2c-da",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethlegss_1003.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethlegsn_1003.tif",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethfaceeyemoisturemap_1001.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "d10_G8FBaseArmsMapD_1004_G8FBaseArmsMapD_1004 2_1722632d-c5a4-f",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabetharmss_1004.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabetharmsn_1004.tif",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabetheyes01_1006.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabetheyesn_1006.tif",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabetharms_1004.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethlegs_1003.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethgenitalian_1001.tif",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethgenitalia_1001.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    },
+    {
+      "image": "fwsaelizabethgenitalias_1001.jpg",
+      "material_users": [
+        "Victoria 8.Shape"
+      ]
+    }
+  ]
+}

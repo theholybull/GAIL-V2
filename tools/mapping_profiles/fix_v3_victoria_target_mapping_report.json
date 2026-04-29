@@ -1,0 +1,13 @@
+{
+  "blend": "D:\\test_v3_mapped.blend",
+  "addon_enabled": true,
+  "source_arm": "BufferArmature",
+  "target_arm": "Victoria 8",
+  "source_valid": true,
+  "target_valid": true,
+  "source_msg": "",
+  "target_msg": "",
+  "target_missing_bones": [],
+  "saved_blend": "D:\\test_v3_mapped.blend",
+  "errors": []
+}

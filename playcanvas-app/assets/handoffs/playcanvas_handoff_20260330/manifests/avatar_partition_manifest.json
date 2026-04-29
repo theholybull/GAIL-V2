@@ -1,0 +1,56 @@
+{
+  "armature": "Victoria 8",
+  "parts": [
+    {
+      "object": "Boho Tank.Shape",
+      "bucket": "other",
+      "materials": [
+        "Tank",
+        "Straps"
+      ]
+    },
+    {
+      "object": "Genesis 8 Female Eyelashes.Shape",
+      "bucket": "hair",
+      "materials": [
+        "EyeMoisture_1",
+        "Eyelashes"
+      ]
+    },
+    {
+      "object": "Savanna Hair.Shape",
+      "bucket": "hair",
+      "materials": [
+        "Curls",
+        "Head1",
+        "HeadThin",
+        "Head2",
+        "Scalp",
+        "CurlsThin"
+      ]
+    },
+    {
+      "object": "Victoria 8.Shape",
+      "bucket": "body",
+      "materials": [
+        "Torso",
+        "Face",
+        "Lips",
+        "Teeth",
+        "Ears",
+        "Legs",
+        "EyeSocket",
+        "Mouth",
+        "Arms",
+        "Pupils",
+        "EyeMoisture",
+        "Fingernails",
+        "Cornea",
+        "Irises",
+        "Sclera",
+        "Toenails",
+        "Genitalia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "manifest_version": "v2",
+    "project": "gail",
+    "source_master_file": "blender/animation_master/source/gail_master_v2_direct_mixamo_idle_preview.blend",
+    "armature_object": "Genesis8Female",
+    "avatar_exports": {
+        "gail_primary": {
+            "avatar_id": "gail_primary",
+            "armature_object": "Genesis8Female",
+            "export_mode": "clothing_only",
+            "clothing_sets": [
+                {
+                    "name": "gail_mobile_clothed_high",
+                    "objects": [
+                        "Genesis8Female.Shape",
+                        "Genesis8FemaleEyelashes.Shape",
+                        "Vest_15749.Shape",
+                        "Pants_79375.Shape",
+                        "Boots_38106.Shape",
+                        "Hair_397063.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail_lite/mobile",
+                    "file_name": "gail_mobile_clothed_high.glb"
+                }
+            ]
+        }
+    }
+}

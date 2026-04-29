@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-04-20",
+  "sourceOfTruthRoot": "D:\\Gail 2.1\\working_copy",
+  "activeRepo": {
+    "backendSource": {
+      "latestWrite": "2026-04-16 08:22:29",
+      "latestFile": "backend/api/domain-http-routes.ts"
+    },
+    "shared": {
+      "latestWrite": "2026-04-14 11:11:30",
+      "latestFile": "shared/command-definitions/hardwired-commands.ts"
+    },
+    "webControlPanelSource": {
+      "latestWrite": "2026-04-16 13:56:51",
+      "latestFile": "web-control-panel/src/animation-workbench.js"
+    },
+    "playcanvasAppSource": {
+      "latestWrite": "2026-04-20 10:29:58",
+      "latestFile": "playcanvas-app/src/work-lite-rebuild.ts"
+    },
+    "blenderSource": {
+      "latestWrite": "2026-04-14 11:59:05",
+      "latestFile": "blender/animation_master/manifests/runtime_shape_keys.vera.counselor.json"
+    },
+    "toolsPrimary": {
+      "latestWrite": "2026-04-17 14:52:51",
+      "latestFile": "tools/export_gail_split.py"
+    },
+    "docs": {
+      "latestWrite": "2026-04-20 11:06:28",
+      "latestFile": "docs/CHANGE_LOG.md"
+    },
+    "data": {
+      "latestWrite": "2026-04-20 10:18:35",
+      "latestFile": "data/providers/local-llm-config.json"
+    },
+    "gailAssetPayload": {
+      "latestWrite": "2026-04-17 15:05:00",
+      "latestFiles": [
+        "playcanvas-app/assets/gail/accessories/gail_bundle/gail_bracelets.glb",
+        "playcanvas-app/assets/gail/clothes/gail_top/gail_top.glb",
+        "playcanvas-app/assets/gail/clothes/gail_pants/gail_pants.glb",
+        "playcanvas-app/assets/gail/clothes/gail_sandals/gail_sandals.glb",
+        "playcanvas-app/assets/gail/avatar/base_face/gail_base_avatar.glb"
+      ]
+    }
+  },
+  "sidecarsAndReferences": {
+    "animAvatarImporterSource": {
+      "latestWrite": "2026-04-16 13:41:08",
+      "latestFile": "D:\\Gail 2.1\\anim_avatar_importer\\server.js"
+    },
+    "animAvatarImporterData": {
+      "latestWrite": "2026-04-16 14:11:35",
+      "latestFile": "D:\\Gail 2.1\\anim_avatar_importer\\data\\catalog.json"
+    },
+    "convertedAnimationLibrary": {
+      "latestWrite": "2026-04-01 08:15:28",
+      "latestFile": "D:\\Gail 2.1\\converted_animations_20260401\\README.md"
+    },
+    "animationGuidelines": {
+      "latestWrite": "2026-04-08 13:07:18",
+      "latestFile": "D:\\Gail 2.1\\animation guidelines\\GAIL_SHELL_COMPLETION_CHECKLIST.md"
+    },
+    "gailWorkstreams": {
+      "latestWrite": "2026-04-09 09:30:41",
+      "latestFile": "D:\\Gail_workstreams\\ops-control\\tools\\validate-animoxtend-prereqs.ps1"
+    },
+    "gailV2RecoveryTest": {
+      "latestWrite": "2026-04-04 09:13:48",
+      "latestFile": "D:\\GAIL-V2-recovery-test\\examples\\assets\\models\\SheenChair.txt"
+    },
+    "engineMain": {
+      "latestWrite": "2026-04-01 20:01:55",
+      "latestFile": "D:\\engine-main\\engine-main\\build\\playcanvas.d.ts"
+    }
+  }
+}

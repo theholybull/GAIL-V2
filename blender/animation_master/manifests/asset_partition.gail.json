@@ -1,0 +1,84 @@
+{
+    "manifest_version": "v2",
+    "project": "gail",
+    "source_master_file": "blender/animation_master/source/gail_master_v2_direct_mixamo_idle_preview.blend",
+    "regular_avatar_file": "data/runtime/gail_rig.generated.blend",
+    "armature_object": "Genesis8Female",
+    "avatar_exports": {
+        "gail_primary": {
+            "avatar_id": "gail_primary",
+            "armature_object": "Genesis8Female",
+            "export_mode": "new_avatar",
+            "body_face_group": {
+                "name": "gail_base_avatar",
+                "objects": [
+                    "Genesis8Female.Shape",
+                    "Genesis8FemaleEyelashes.Shape"
+                ],
+                "output_folder": "playcanvas-app/assets/gail/avatar/base_face",
+                "file_name": "gail_base_avatar.glb"
+            },
+            "hair_groups": [
+                {
+                    "name": "meili_hair",
+                    "objects": [
+                        "Hair_397063.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail/hair/meili_hair",
+                    "file_name": "meili_hair.glb"
+                }
+            ],
+            "clothing_groups": [
+                {
+                    "name": "gail_top",
+                    "objects": [
+                        "Vest_15749.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail/clothes/gail_top",
+                    "file_name": "gail_top.glb"
+                },
+                {
+                    "name": "gail_pants",
+                    "objects": [
+                        "Pants_79375.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail/clothes/gail_pants",
+                    "file_name": "gail_pants.glb"
+                },
+                {
+                    "name": "gail_sandals",
+                    "objects": [
+                        "Boots_38106.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail/clothes/gail_sandals",
+                    "file_name": "gail_sandals.glb"
+                }
+            ],
+            "clothing_sets": [
+                {
+                    "name": "gail_mobile_clothed",
+                    "objects": [
+                        "Genesis8Female.Shape",
+                        "Genesis8FemaleEyelashes.Shape",
+                        "Vest_15749.Shape",
+                        "Pants_79375.Shape",
+                        "Boots_38106.Shape",
+                        "Hair_397063.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail_lite/mobile",
+                    "file_name": "gail_mobile_clothed.glb"
+                }
+            ],
+            "accessory_groups": [
+                {
+                    "name": "gail_bracelets",
+                    "objects": [
+                        "Bracelets_944.Shape"
+                    ],
+                    "output_folder": "playcanvas-app/assets/gail/accessories/gail_bracelets",
+                    "file_name": "gail_bracelets.glb"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "profile": "playcanvas_glb",
+  "armature": "Victoria 8",
+  "include_review": false,
+  "exported": [
+    {
+      "clip_name": "idle_base_v1",
+      "status": "approved",
+      "target_path": "blender\\animation_master\\exports\\glb\\clips\\approved\\idle\\idle_base_v1.glb",
+      "selection_mode": "fallback_armature_set:Victoria 8"
+    },
+    {
+      "clip_name": "listen_base_v1",
+      "status": "approved",
+      "target_path": "blender\\animation_master\\exports\\glb\\clips\\approved\\listen\\listen_base_v1.glb",
+      "selection_mode": "fallback_armature_set:Victoria 8"
+    },
+    {
+      "clip_name": "talk_base_v1",
+      "status": "approved",
+      "target_path": "blender\\animation_master\\exports\\glb\\clips\\approved\\talk\\talk_base_v1.glb",
+      "selection_mode": "fallback_armature_set:Victoria 8"
+    },
+    {
+      "clip_name": "ack_nod_small_v1",
+      "status": "approved",
+      "target_path": "blender\\animation_master\\exports\\glb\\clips\\approved\\ack\\ack_nod_small_v1.glb",
+      "selection_mode": "fallback_armature_set:Victoria 8"
+    }
+  ]
+}

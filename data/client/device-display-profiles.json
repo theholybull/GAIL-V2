@@ -1,0 +1,201 @@
+{
+  "selectedDeviceId": "laptop",
+  "profiles": [
+    {
+      "id": "phone",
+      "label": "Phone",
+      "display": {
+        "width": 1080,
+        "height": 1920,
+        "renderScale": 1,
+        "aspectRatio": "9:16",
+        "safeFrame": 0.92
+      },
+      "mesh": {
+        "bodyQuality": "medium",
+        "clothingQuality": "medium",
+        "hairQuality": "medium",
+        "animationLod": "medium"
+      },
+      "staging": {
+        "sceneId": "studio_soft",
+        "avatarTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            180,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "cameraTransform": {
+          "position": [
+            0,
+            1.4,
+            2.4
+          ],
+          "target": [
+            0,
+            1.25,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "shop_kiosk",
+      "label": "Shop Kiosk",
+      "display": {
+        "width": 1920,
+        "height": 1080,
+        "renderScale": 1,
+        "aspectRatio": "16:9",
+        "safeFrame": 0.94
+      },
+      "mesh": {
+        "bodyQuality": "high",
+        "clothingQuality": "high",
+        "hairQuality": "high",
+        "animationLod": "high"
+      },
+      "staging": {
+        "sceneId": "kiosk_clean",
+        "avatarTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            180,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "cameraTransform": {
+          "position": [
+            0,
+            1.45,
+            2.8
+          ],
+          "target": [
+            0,
+            1.25,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "laptop",
+      "label": "Laptop",
+      "display": {
+        "width": 1920,
+        "height": 1200,
+        "renderScale": 1,
+        "aspectRatio": "16:10",
+        "safeFrame": 0.95
+      },
+      "mesh": {
+        "bodyQuality": "high",
+        "clothingQuality": "high",
+        "hairQuality": "medium",
+        "animationLod": "high"
+      },
+      "staging": {
+        "sceneId": "modern_country_home",
+        "avatarTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            180,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "cameraTransform": {
+          "position": [
+            0,
+            1.4,
+            2.6
+          ],
+          "target": [
+            0,
+            1.2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "watch",
+      "label": "Watch",
+      "display": {
+        "width": 390,
+        "height": 390,
+        "renderScale": 1,
+        "aspectRatio": "1:1",
+        "safeFrame": 0.88
+      },
+      "mesh": {
+        "bodyQuality": "low",
+        "clothingQuality": "low",
+        "hairQuality": "low",
+        "animationLod": "low"
+      },
+      "staging": {
+        "sceneId": "minimal_ui",
+        "avatarTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            180,
+            0
+          ],
+          "scale": [
+            0.92,
+            0.92,
+            0.92
+          ]
+        },
+        "cameraTransform": {
+          "position": [
+            0,
+            1.35,
+            2.2
+          ],
+          "target": [
+            0,
+            1.18,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

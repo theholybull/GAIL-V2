@@ -1,0 +1,72 @@
+Running build-backend.ps1
+
+> gail-backend@0.1.0 check
+> tsc -p tsconfig.json --noEmit
+
+
+> gail-backend@0.1.0 build
+> tsc -p tsconfig.json
+
+Running build-control-panel.ps1
+
+> gail-web-control-panel@0.1.0 build
+> tsc -p tsconfig.json
+
+Running build-playcanvas-app.ps1
+
+> gail-playcanvas-app@0.1.0 build
+> tsc -p tsconfig.json
+
+Validating animation GLBs...
+=== Gail Animation Law Validator ===
+
+✓ 27299_stand_and_nod.glb: PASS
+✓ 27775_stand_still.glb: PASS
+✓ 28154_explain.glb: PASS
+✓ ack_nod_small_v1.glb: PASS
+✓ idle.glb: PASS
+✓ idle_base_v1.glb: PASS
+✓ idle__26777_cover_idle.glb: PASS
+✓ listen_base_v1.glb: PASS
+✓ talk_base_v1.glb: PASS
+
+--- Summary: 9 files, 0 errors, 0 warnings ---
+Animation validation passed.
+Gail stack started.
+Node: C:\Program Files\nodejs
+Status: D:\Gail 2.1\working_copy\data\runtime\stack.status.json
+
+Gail Access Status
+------------------
+Auth Mode: open
+Bind Host: 0.0.0.0
+Port: 4180
+
+Local Surfaces
+- operator_panel: http://127.0.0.1:4180/panel/
+- operator_studio_shell: http://127.0.0.1:4180/panel/operator-studio-shell.html
+- work_lite_client: http://127.0.0.1:4180/client/work-lite/
+- display_phone_client: http://127.0.0.1:4180/client/phone/
+- display_proof_client: http://127.0.0.1:4180/client/proof/
+- display_animation_diagnostic: http://127.0.0.1:4180/client/anim-test/
+- health: http://127.0.0.1:4180/health
+- auth_status: http://127.0.0.1:4180/auth/status
+
+LAN Surfaces
+- Host IP: 10.10.10.60
+  operator_panel: http://10.10.10.60:4180/panel/
+  operator_studio_shell: http://10.10.10.60:4180/panel/operator-studio-shell.html
+  work_lite_client: http://10.10.10.60:4180/client/work-lite/
+  display_phone_client: http://10.10.10.60:4180/client/phone/
+  display_proof_client: http://10.10.10.60:4180/client/proof/
+  display_animation_diagnostic: http://10.10.10.60:4180/client/anim-test/
+  health: http://10.10.10.60:4180/health
+  auth_status: http://10.10.10.60:4180/auth/status
+
+Warnings
+- Auth mode is open. This is useful for prototyping, but any device that can reach the host can use the service.
+- The backend is listening on all interfaces. Confirm Windows Firewall only allows the networks you expect.
+
+Recommended next check:
+- Open Operator Studio Shell: http://127.0.0.1:4180/panel/operator-studio-shell.html
+- Open primary display client: http://127.0.0.1:4180/display/

@@ -1,0 +1,18 @@
+{
+  "name": "gail-anim-avatar-importer",
+  "version": "1.0.0",
+  "description": "Gail Animation Viewer, Importer, and Avatar Import Tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test":  "node test/run-tests.js",
+    "build-catalog": "node -e \"require('./lib/catalog').buildCatalog({ onProgress: ({done,current}) => process.stdout.write('\\r' + done + ' ' + current) }); console.log('\\nDone.')\""
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

@@ -1,0 +1,21 @@
+{
+  "blend": "D:\\test_v2.blend",
+  "zip_exists": true,
+  "source_map_exists": true,
+  "target_map_exists": true,
+  "addon_removed": true,
+  "addon_installed": true,
+  "addon_enabled": true,
+  "armatures": [
+    "Victoria 8"
+  ],
+  "source_arm": "Victoria 8",
+  "target_arm": "Victoria 8",
+  "idle_action_created": "idle_probe_v1",
+  "source_mapping_loaded": true,
+  "target_mapping_loaded": true,
+  "source_mapping_valid": true,
+  "target_mapping_valid": true,
+  "saved_blend": "D:\\test_v3_mapped.blend",
+  "errors": []
+}

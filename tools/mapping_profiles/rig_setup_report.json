@@ -1,0 +1,18 @@
+{
+  "blend": "D:\\test_v3_mapped.blend",
+  "target_armature": "Victoria 8",
+  "source_armature": "BufferArmature",
+  "addon_zip": "C:\\Users\\guysi\\Desktop\\blender-4.1.1-windows-x64\\animoxtend-1.2.2.zip",
+  "target_map": "D:\\tools\\mapping_profiles\\animo_target_victoria8_test_v2.json",
+  "output_blend": "D:\\test_v3_mapped_rigsetup.blend",
+  "armatures": [
+    "BufferArmature",
+    "Victoria 8"
+  ],
+  "target_missing_bones": [],
+  "source_valid": true,
+  "target_valid": true,
+  "source_message": "",
+  "target_message": "",
+  "errors": []
+}

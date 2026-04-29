@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "startup": {
+    "primaryCommand": "powershell -ExecutionPolicy Bypass -File .\\tools\\start-gail-stack.ps1",
+    "portableNodePath": "runtime/nodejs",
+    "notes": [
+      "All repo-managed runtime data stays under data/.",
+      "Repo-local Node is preferred when present.",
+      "Machine-level network tools such as Tailscale are optional external dependencies."
+    ]
+  },
+  "services": [
+    {
+      "key": "backend",
+      "label": "Gail Backend",
+      "startScript": "tools/start-backend-background.ps1",
+      "stopScript": "tools/stop-backend.ps1",
+      "healthUrl": "/health",
+      "required": true
+    }
+  ],
+  "externalTools": [
+    {
+      "key": "nodejs",
+      "label": "Node.js",
+      "preferredPortablePath": "runtime/nodejs",
+      "systemFallback": true,
+      "required": true
+    },
+    {
+      "key": "tailscale",
+      "label": "Tailscale",
+      "portable": false,
+      "required": false,
+      "note": "Used for the recommended private remote-access path, but not stored or managed fully from the removable drive."
+    }
+  ]
+}

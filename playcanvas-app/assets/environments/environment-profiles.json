@@ -1,0 +1,27 @@
+{
+  "profiles": [
+    {
+      "id": "brutalist_loft",
+      "label": "Brutalist Loft",
+      "assetPath": "environments/brutalist_loft/brutalist_loft_optimized_2k.glb",
+      "hideGeneratedFloor": true,
+      "boundsIgnoreEntityNames": [
+        "Object_40"
+      ],
+      "boundsIgnoreParentNames": [
+        "Skybox_17"
+      ]
+    },
+    {
+      "id": "modern_country_home",
+      "label": "Modern Country Home",
+      "assetPath": "environments/modern_country_home/modern_country_home_optimized_2k.glb",
+      "dayBackdropImagePath": "environments/backdrops/mountain_lake_stitched_panorama.jpg",
+      "hideGeneratedFloor": true,
+      "tuningStorageVersion": "root-contract-1",
+      "avatarStandEntityNames": [
+        "MCH Floor"
+      ]
+    }
+  ]
+}

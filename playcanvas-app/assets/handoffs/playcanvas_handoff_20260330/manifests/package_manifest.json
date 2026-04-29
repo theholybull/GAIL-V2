@@ -1,0 +1,17 @@
+{
+    "package_name":  "playcanvas_handoff_20260330",
+    "armature":  "Elizabeth",
+    "active_action":  "",
+    "output_root":  "F:\\Gail\\playcanvas-app\\assets\\handoffs\\playcanvas_handoff_20260330",
+    "avatar_parts_manifest":  "F:\\Gail\\playcanvas-app\\assets\\handoffs\\playcanvas_handoff_20260330\\manifests\\avatar_parts_manifest.generated.json",
+    "partition_manifest":  "F:\\Gail\\playcanvas-app\\assets\\handoffs\\playcanvas_handoff_20260330\\manifests\\avatar_partition_manifest.json",
+    "texture_manifest":  "F:\\Gail\\playcanvas-app\\assets\\handoffs\\playcanvas_handoff_20260330\\manifests\\texture_manifest.json",
+    "loop_settings":  {
+                          "start_pose_action":  "pose_idle_confident_v1",
+                          "mid_pose_action":  "",
+                          "end_pose_action":  "pose_idle_confident_v1",
+                          "frame_start":  1,
+                          "frame_mid":  48,
+                          "frame_end":  96
+                      }
+}

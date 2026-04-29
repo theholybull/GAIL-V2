@@ -1,0 +1,797 @@
+{
+  "input": "D:\\Gail 2.1\\brutalist_loft.glb",
+  "output_glb": "D:\\Gail 2.1\\working_copy\\data\\environment\\candidates\\brutalist_loft\\brutalist_loft_optimized_2k.glb",
+  "output_blend": "D:\\Gail 2.1\\working_copy\\data\\environment\\candidates\\brutalist_loft\\brutalist_loft_optimized_2k.blend",
+  "max_texture_size": 2048,
+  "scaled_images": [
+    {
+      "name": "Image_0",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_1",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_11",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_12",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_13",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_14",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_15",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_16",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_17",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_2",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_3",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_5",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Image_7",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "pre": {
+    "stage": "imported",
+    "object_count": 47,
+    "mesh_count": 23,
+    "material_count": 22,
+    "image_count": 20,
+    "total_vertices": 68501,
+    "total_polygons": 91690,
+    "materials": [
+      {
+        "name": "Carpet",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Chair",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Concreate",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "DarkStone",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "DoorPic",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Emissive",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Emissive.001",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Fireplace",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Floor",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Glass",
+        "use_nodes": true,
+        "blend_method": "BLEND"
+      },
+      {
+        "name": "KitchenProps",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Material",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "pillow",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Regal",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "SitzKissen",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "SmallProps",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "SmallTableBaked",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Stohkissen",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Tabe",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "WandLeuchte",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "WindowFrame",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Wood",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      }
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_1",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_10",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_11",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_12",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_13",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_14",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_15",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_16",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_17",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_18",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_19",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_2",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_3",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_4",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "PNG",
+        "packed": true
+      },
+      {
+        "name": "Image_5",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_6",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_7",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_8",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_9",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      }
+    ]
+  },
+  "post": {
+    "stage": "optimized",
+    "object_count": 47,
+    "mesh_count": 23,
+    "material_count": 22,
+    "image_count": 20,
+    "total_vertices": 68501,
+    "total_polygons": 91690,
+    "materials": [
+      {
+        "name": "Carpet",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Chair",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Concreate",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "DarkStone",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "DoorPic",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Emissive",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Emissive.001",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Fireplace",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Floor",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Glass",
+        "use_nodes": true,
+        "blend_method": "BLEND"
+      },
+      {
+        "name": "KitchenProps",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Material",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "pillow",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Regal",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "SitzKissen",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "SmallProps",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "SmallTableBaked",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Stohkissen",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Tabe",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "WandLeuchte",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "WindowFrame",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "Wood",
+        "use_nodes": true,
+        "blend_method": "HASHED"
+      }
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_1",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_10",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_11",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_12",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_13",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_14",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_15",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_16",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_17",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_18",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_19",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_2",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_3",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_4",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "PNG",
+        "packed": true
+      },
+      {
+        "name": "Image_5",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_6",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_7",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_8",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      },
+      {
+        "name": "Image_9",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "CHANNEL_PACKED",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": true
+      }
+    ]
+  }
+}

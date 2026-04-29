@@ -1,0 +1,101 @@
+{
+  "project": "gail",
+  "pose_plan": [
+    {
+      "id": "pose_idle_confident_v1",
+      "label": "Neutral Idle Anchor",
+      "role": "loop_anchor",
+      "family": "neutral_idle",
+      "loop_usage": "seamless",
+      "notes": "Primary start and end pose for seamless standing loops."
+    },
+    {
+      "id": "pose_focused_idle_v1",
+      "label": "Focused Idle Anchor",
+      "role": "loop_anchor",
+      "family": "focused_idle",
+      "loop_usage": "seamless",
+      "notes": "Attentive standing anchor for focused or listening loops."
+    },
+    {
+      "id": "pose_talk_idle_v1",
+      "label": "Talk Idle Anchor",
+      "role": "loop_anchor",
+      "family": "talk_idle",
+      "loop_usage": "seamless",
+      "notes": "Neutral talking anchor that can loop cleanly."
+    },
+    {
+      "id": "pose_prop_ready_v1",
+      "label": "Prop Ready Anchor",
+      "role": "loop_anchor",
+      "family": "prop_ready",
+      "loop_usage": "sequence",
+      "notes": "Prepared stance for prop interactions and transitions."
+    },
+    {
+      "id": "pose_ambient_seated_v1",
+      "label": "Ambient Seated Anchor",
+      "role": "loop_anchor",
+      "family": "ambient_seated",
+      "loop_usage": "seamless",
+      "notes": "Start and end pose for seated ambient loops."
+    },
+    {
+      "id": "pose_backturn_bench_v1",
+      "label": "Back-Turn Bench Anchor",
+      "role": "loop_anchor",
+      "family": "backturn_bench",
+      "loop_usage": "seamless",
+      "notes": "Back-turned bench pose for ambient and off-screen variants."
+    },
+    {
+      "id": "pose_mug_ready_v1",
+      "label": "Mug Ready Anchor",
+      "role": "loop_anchor",
+      "family": "mug_ready",
+      "loop_usage": "sequence",
+      "notes": "Stable hand-ready pose for mug routines."
+    },
+    {
+      "id": "pose_idle_shift_mid_v1",
+      "label": "Idle Shift Midpoint",
+      "role": "loop_midpoint",
+      "family": "neutral_idle",
+      "loop_usage": "short_loop",
+      "notes": "Short-loop midpoint for subtle weight shifts."
+    },
+    {
+      "id": "pose_listen_soft_mid_v1",
+      "label": "Listen Soft Midpoint",
+      "role": "loop_midpoint",
+      "family": "focused_idle",
+      "loop_usage": "short_loop",
+      "notes": "Midpoint for listening loops with a small body shift."
+    },
+    {
+      "id": "pose_talk_emphasis_mid_v1",
+      "label": "Talk Emphasis Midpoint",
+      "role": "loop_midpoint",
+      "family": "talk_idle",
+      "loop_usage": "short_loop",
+      "notes": "Midpoint for talk loops with light emphasis."
+    },
+    {
+      "id": "pose_turn_prep_left_v1",
+      "label": "Turn Prep Left",
+      "role": "sequence_key",
+      "family": "turning",
+      "loop_usage": "sequence",
+      "notes": "Preparation key for larger left-turn animations."
+    },
+    {
+      "id": "pose_turn_prep_right_v1",
+      "label": "Turn Prep Right",
+      "role": "sequence_key",
+      "family": "turning",
+      "loop_usage": "sequence",
+      "notes": "Preparation key for larger right-turn animations."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <title>Gail Phone Client</title>
+    <link rel="stylesheet" href="/client/styles/phone-client.css?v=20260402-phone1" />
+  </head>
+  <body>
+    <main id="phone-client" class="phone-client">
+      <canvas id="phone-avatar-canvas" class="avatar-canvas" aria-label="Gail Avatar"></canvas>
+
+      <section id="phone-chat-shell" class="chat-shell" aria-label="Chat Panel">
+        <header class="chat-header">
+          <h1 class="chat-title">Gail</h1>
+          <button id="phone-chat-toggle" type="button" class="chat-toggle">Full Chat</button>
+        </header>
+        <div id="phone-chat-log" class="chat-log" aria-live="polite"></div>
+        <form id="phone-chat-form" class="chat-form">
+          <label class="sr-only" for="phone-chat-input">Message</label>
+          <textarea
+            id="phone-chat-input"
+            class="chat-input"
+            rows="2"
+            placeholder="Type a message..."
+            autocomplete="off"
+          ></textarea>
+          <button id="phone-chat-send" type="submit" class="chat-send">Send</button>
+        </form>
+      </section>
+    </main>
+    <script type="module">
+      import("/client/phone.js?v=20260402-phone1").catch((error) => {
+        const message = error instanceof Error
+          ? `${error.message}\n\n${error.stack ?? ""}`
+          : String(error);
+        document.body.innerHTML = `
+          <pre style="white-space:pre-wrap;color:#f5f7fb;background:#141822;padding:16px;border-radius:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">${message
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")}</pre>
+        `;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Animation Diagnostic</title>
+  <style>
+    body { margin:0; background:#111; color:#eee; font-family:monospace; display:flex; }
+    #canvas-wrap { flex:1; position:relative; }
+    canvas { width:100%; height:100vh; display:block; }
+    #log { width:420px; height:100vh; overflow-y:auto; padding:8px; font-size:11px; background:#1a1a1a; white-space:pre-wrap; }
+    .err { color:#f66; } .ok { color:#6f6; } .warn { color:#ff6; } .info { color:#6cf; }
+  </style>
+</head>
+<body>
+  <div id="canvas-wrap"><canvas id="c"></canvas></div>
+  <div id="log"></div>
+  <script type="module">
+    import * as pc from "/vendor/playcanvas/build/playcanvas.mjs";
+
+    const logEl = document.getElementById("log");
+    const logMessages = [];
+    function log(msg, cls="") {
+      const d = document.createElement("div");
+      d.className = cls;
+      d.textContent = msg;
+      logEl.appendChild(d);
+      logEl.scrollTop = logEl.scrollHeight;
+      logMessages.push((cls ? `[${cls}] ` : "") + msg);
+      console.log(msg);
+    }
+
+    function reportResults() {
+      fetch("/api/diag-report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ log: logMessages })
+      }).catch(() => {});
+    }
+
+    log("=== ANIMATION DIAGNOSTIC ===", "info");
+
+    const canvas = document.getElementById("c");
+    const app = new pc.Application(canvas, {
+      graphicsDeviceOptions: { alpha: true, antialias: true },
+    });
+    app.setCanvasFillMode(pc.FILLMODE_FILL_WINDOW);
+    app.setCanvasResolution(pc.RESOLUTION_AUTO);
+    app.start();
+
+    // Camera
+    const camEntity = new pc.Entity("camera");
+    camEntity.addComponent("camera", { clearColor: new pc.Color(0.15, 0.15, 0.18), fov: 35 });
+    camEntity.setPosition(0, 1, 3.5);
+    camEntity.lookAt(0, 0.9, 0);
+    app.root.addChild(camEntity);
+
+    // Light
+    const light = new pc.Entity("light");
+    light.addComponent("light", { type: "directional", intensity: 1.2 });
+    light.setEulerAngles(45, 30, 0);
+    app.root.addChild(light);
+    const amb = new pc.Entity("amb");
+    amb.addComponent("light", { type: "directional", intensity: 0.4 });
+    amb.setEulerAngles(-30, -60, 0);
+    app.root.addChild(amb);
+
+    function loadAsset(name, type, url) {
+      return new Promise((resolve, reject) => {
+        const asset = new pc.Asset(name, type, { url });
+        app.assets.add(asset);
+        asset.ready(() => resolve(asset));
+        asset.once("error", (err) => reject(new Error(`${name}: ${err}`)));
+        app.assets.load(asset);
+      });
+    }
+
+    function dumpEntity(entity, depth=0) {
+      const indent = "  ".repeat(depth);
+      const pos = entity.getLocalPosition();
+      const rot = entity.getLocalRotation();
+      const hasRender = entity.render ? " [RENDER]" : "";
+      const hasAnim = entity.anim ? " [ANIM]" : "";
+      const childCount = entity.children.length;
+      log(`${indent}${entity.name}${hasRender}${hasAnim} pos=[${pos.x.toFixed(3)},${pos.y.toFixed(3)},${pos.z.toFixed(3)}] children=${childCount}`);
+      if (depth < 3) {
+        for (const child of entity.children) {
+          dumpEntity(child, depth + 1);
+        }
+      }
+    }
+
+    async function run() {
+      try {
+        // 1. Load avatar
+        log("\n--- Loading avatar GLB ---", "info");
+        const avatarUrl = "/client-assets/gail/avatar/base_face/gail_base_avatar.glb";
+        log("URL: " + avatarUrl);
+        const avatarAsset = await loadAsset("avatar", "container", avatarUrl);
+        log("Avatar container loaded OK", "ok");
+
+        const avatarResource = avatarAsset.resource;
+        log("Animations in avatar container: " + (avatarResource.animations?.length ?? 0));
+        log("instantiateRenderEntity()...");
+
+        const avatarEntity = avatarResource.instantiateRenderEntity();
+        avatarEntity.setLocalEulerAngles(0, 0, 0);
+        avatarEntity.setLocalScale(1, 1, 1);
+        app.root.addChild(avatarEntity);
+        log("Avatar entity created: " + avatarEntity.name, "ok");
+        log("\nAvatar entity hierarchy:");
+        dumpEntity(avatarEntity);
+
+        // Find hip
+        function findByName(entity, name) {
+          if (entity.name === name) return entity;
+          for (const c of entity.children) {
+            const found = findByName(c, name);
+            if (found) return found;
+          }
+          return null;
+        }
+        const hip = findByName(avatarEntity, "hip");
+        if (hip) {
+          log("\nHip found: " + hip.name + " pos=" + hip.getLocalPosition().toString(), "ok");
+        } else {
+          log("\nHip NOT FOUND!", "err");
+        }
+
+        // 2. Show avatar WITHOUT animation first
+        log("\n--- Avatar without animation (should be visible) ---", "info");
+        await new Promise(r => setTimeout(r, 2000));
+        log("If avatar is visible above, the mesh/skin loads correctly.", "info");
+
+        // 3. Load animation
+        log("\n--- Loading animation GLB ---", "info");
+        const animUrl = "/client-assets/animations/idle_base_v1.glb";
+        log("URL: " + animUrl);
+        const animAsset = await loadAsset("idle_anim", "container", animUrl);
+        log("Animation container loaded OK", "ok");
+
+        const animResource = animAsset.resource;
+        log("Animations in container: " + (animResource.animations?.length ?? 0));
+        if (animResource.animations?.length > 0) {
+          const animClip = animResource.animations[0];
+          log("Animation name: " + animClip.name);
+          log("Animation resource type: " + (animClip.resource?.constructor?.name ?? typeof animClip.resource));
+          const track = animClip.resource;
+          if (track) {
+            log("Track name: " + track.name);
+            log("Track duration: " + track.duration?.toFixed(3) + "s");
+            log("Track curves: " + (track._curves?.length ?? "?"));
+
+            // Dump curve paths
+            if (track._curves) {
+              log("\nAnimation curve paths (first 15):");
+              const seen = new Set();
+              for (let i = 0; i < Math.min(track._curves.length, 30); i++) {
+                const curve = track._curves[i];
+                for (const p of (curve._paths || [])) {
+                  const pathStr = (p.entityPath || []).join("/") + "/" + p.component + "/" + (p.propertyPath || []).join("/");
+                  if (!seen.has(pathStr)) {
+                    seen.add(pathStr);
+                    log("  " + pathStr);
+                  }
+                }
+              }
+              log("  ... total curves: " + track._curves.length);
+            }
+          } else {
+            log("No AnimTrack resource!", "err");
+          }
+        } else {
+          log("No animations found in container!", "err");
+        }
+
+        // 4. Wire animation
+        log("\n--- Wiring animation ---", "info");
+        const track = animResource.animations?.[0]?.resource;
+        if (!track) {
+          log("ABORT: No animation track", "err");
+          return;
+        }
+
+        avatarEntity.addComponent("anim", { activate: true, speed: 1 });
+        const animComp = avatarEntity.anim;
+        log("Anim component added to: " + avatarEntity.name, "ok");
+
+        if (hip) {
+          animComp.rootBone = hip;
+          log("rootBone set to: " + hip.name, "ok");
+        }
+
+        animComp.assignAnimation("idle", track);
+        log("Animation assigned to state 'idle'", "ok");
+
+        animComp.baseLayer?.play("idle");
+        log("Playing 'idle'", "ok");
+
+        // 5. Check binding after more time
+        await new Promise(r => setTimeout(r, 2500)); // 2.5s to get past t=1.6 start
+        log("\n--- Post-animation state (t=2.5s) ---", "info");
+
+        // Dump FULL spine chain: hip → abdomenLower → abdomenUpper → chestLower → chestUpper → neckLower → neckUpper → head
+        const spineNames = ["hip", "pelvis", "abdomenLower", "abdomenUpper", "chestLower", "chestUpper", "lCollar", "lShldrBend", "neckLower", "neckUpper", "head", "lThighBend", "lShin", "lFoot"];
+        log("\nBone positions (local → world):");
+        for (const boneName of spineNames) {
+          const bone = findByName(avatarEntity, boneName);
+          if (bone) {
+            const lp = bone.getLocalPosition();
+            const wp = bone.getPosition();
+            const lr = bone.getLocalRotation();
+            const parent = bone.parent ? bone.parent.name : "none";
+            log("  " + boneName + " parent=" + parent + 
+              " local=[" + lp.x.toFixed(4) + "," + lp.y.toFixed(4) + "," + lp.z.toFixed(4) + "]" +
+              " world=[" + wp.x.toFixed(4) + "," + wp.y.toFixed(4) + "," + wp.z.toFixed(4) + "]" + 
+              " rot=[" + lr.x.toFixed(4) + "," + lr.y.toFixed(4) + "," + lr.z.toFixed(4) + "," + lr.w.toFixed(4) + "]");
+          } else {
+            log("  " + boneName + " NOT FOUND!", "err");
+          }
+        }
+
+        // Check mesh instance bounding boxes
+        let renderCount = 0;
+        let skinCount = 0;
+        function countRenders(e) {
+          if (e.render) {
+            renderCount++;
+            if (e.render.meshInstances) {
+              for (const mi of e.render.meshInstances) {
+                if (mi.skinInstance) {
+                  skinCount++;
+                  // Check skin bone count 
+                  log("  SkinInst on " + e.name + ": bones=" + (mi.skinInstance.bones?.length ?? "?"));
+                }
+                const aabb = mi.aabb;
+                if (aabb) {
+                  log("  AABB on " + e.name + ": center=[" + 
+                    aabb.center.x.toFixed(3) + "," + aabb.center.y.toFixed(3) + "," + aabb.center.z.toFixed(3) + 
+                    "] half=[" + aabb.halfExtents.x.toFixed(3) + "," + aabb.halfExtents.y.toFixed(3) + "," + aabb.halfExtents.z.toFixed(3) + "]");
+                }
+              }
+            }
+          }
+          for (const c of e.children) countRenders(c);
+        }
+        countRenders(avatarEntity);
+        log("Render components: " + renderCount);
+        log("Skin instances: " + skinCount);
+
+        // Check anim binder state
+        if (animComp._targets) {
+          log("Anim targets: " + Object.keys(animComp._targets).length);
+          // Show first 5 targets
+          const targetKeys = Object.keys(animComp._targets).slice(0, 5);
+          for (const k of targetKeys) {
+            const t = animComp._targets[k];
+            log("  Target: " + k + " → " + (t?._targetPath ?? "?"));
+          }
+        }
+
+        // Check the anim binder graph
+        const binder = animComp?.animEvaluator?._binder;
+        if (binder) {
+          log("Binder graph: " + (binder.graph?.name ?? "none"));
+          log("Binder nodes count: " + Object.keys(binder.nodes || {}).length);
+          const nodeNames = Object.keys(binder.nodes || {}).slice(0, 10);
+          log("Binder first 10 nodes: " + nodeNames.join(", "));
+        }
+
+        // Add a floor grid for reference
+        const floor = new pc.Entity("floor");
+        floor.addComponent("render", { type: "plane" });
+        floor.setLocalScale(5, 1, 5);
+        floor.setPosition(0, 0, 0);
+        app.root.addChild(floor);
+
+        // Also test: try assigning the track differently - using the entity directly
+        log("\n--- EXPERIMENT: Check if setting rootBone=entity works ---", "info");
+
+        // Wait more and recheck
+        await new Promise(r => setTimeout(r, 3000));
+        if (hip) {
+          const hipPos2 = hip.getLocalPosition();
+          log("Hip local pos at t=5.5s: [" + hipPos2.x.toFixed(4) + ", " + hipPos2.y.toFixed(4) + ", " + hipPos2.z.toFixed(4) + "]");
+        }
+
+        // Check the current animation time
+        if (animComp.baseLayer) {
+          log("Current anim time: " + (animComp.baseLayer.activeStateCurrentTime?.toFixed(3) ?? "?"));
+          log("Current anim playing: " + (animComp.baseLayer.activeState ?? "?"));
+        }
+
+        log("\n--- DONE ---", "info");
+        log("Look at the 3D view. Is the avatar visible?", "warn");
+        log("If yes: animation wiring works, issue is in work-lite-rebuild.ts", "warn");
+        log("If no/mangled: fundamental animation incompatibility", "warn");
+        reportResults();
+
+      } catch (err) {
+        log("ERROR: " + err.message, "err");
+        log(err.stack || "", "err");
+        reportResults();
+      }
+    }
+
+    run();
+  </script>
+</body>
+</html>

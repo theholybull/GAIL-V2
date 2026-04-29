@@ -1,0 +1,292 @@
+{
+  "entries": [
+    {
+      "id": "memory_entry_1777467026711",
+      "title": "Restart memory test-20260429-085018",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-29T12:50:26.711Z",
+      "updatedAt": "2026-04-29T12:50:26.711Z"
+    },
+    {
+      "id": "memory_entry_1777467018553",
+      "title": "Daily Summary — 2026-04-29",
+      "body": "Daily Summary for 2026-04-29\nConversations: 9 sessions, 108 messages\nWorkflows: 22 created, 0 completed, 0 failed",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-29T12:50:18.553Z",
+      "updatedAt": "2026-04-29T12:50:18.553Z"
+    },
+    {
+      "id": "memory_entry_1777378640123",
+      "title": "Daily Summary — 2026-04-28",
+      "body": "Daily Summary for 2026-04-28\nConversations: 4 sessions, 24 messages\nWorkflows: 5 created, 0 completed, 0 failed",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-28T12:17:20.123Z",
+      "updatedAt": "2026-04-28T12:17:20.123Z"
+    },
+    {
+      "id": "memory_entry_1777291912860",
+      "title": "Daily Summary — 2026-04-27",
+      "body": "Daily Summary for 2026-04-27\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-27T12:11:52.860Z",
+      "updatedAt": "2026-04-27T12:11:52.860Z"
+    },
+    {
+      "id": "memory_entry_1777082755371",
+      "title": "Daily Summary — 2026-04-25",
+      "body": "Daily Summary for 2026-04-25\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-25T02:05:55.371Z",
+      "updatedAt": "2026-04-25T02:05:55.371Z"
+    },
+    {
+      "id": "memory_entry_1776992571390",
+      "title": "Daily Summary — 2026-04-24",
+      "body": "Daily Summary for 2026-04-24\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-24T01:02:51.390Z",
+      "updatedAt": "2026-04-24T01:02:51.390Z"
+    },
+    {
+      "id": "memory_entry_1776965007956",
+      "title": "Daily Summary — 2026-04-23",
+      "body": "Daily Summary for 2026-04-23\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-23T17:23:27.956Z",
+      "updatedAt": "2026-04-23T17:23:27.956Z"
+    },
+    {
+      "id": "memory_entry_1776868947061",
+      "title": "Daily Summary — 2026-04-22",
+      "body": "Daily Summary for 2026-04-22\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-22T14:42:27.061Z",
+      "updatedAt": "2026-04-22T14:42:27.061Z"
+    },
+    {
+      "id": "memory_entry_1776703420369",
+      "title": "Restart memory test-20260420-124338",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-20T16:43:40.369Z",
+      "updatedAt": "2026-04-20T16:43:40.369Z"
+    },
+    {
+      "id": "memory_entry_1776687161652",
+      "title": "Daily Summary — 2026-04-20",
+      "body": "Daily Summary for 2026-04-20\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-20T12:12:41.652Z",
+      "updatedAt": "2026-04-20T12:12:41.652Z"
+    },
+    {
+      "id": "memory_entry_1776571408096",
+      "title": "Daily Summary — 2026-04-19",
+      "body": "Daily Summary for 2026-04-19\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-19T04:03:28.096Z",
+      "updatedAt": "2026-04-19T04:03:28.096Z"
+    },
+    {
+      "id": "memory_entry_1776507076496",
+      "title": "Daily Summary — 2026-04-18",
+      "body": "Daily Summary for 2026-04-18\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-18T10:11:16.496Z",
+      "updatedAt": "2026-04-18T10:11:16.496Z"
+    },
+    {
+      "id": "memory_entry_1776450238917",
+      "title": "Daily Summary — 2026-04-17",
+      "body": "Daily Summary for 2026-04-17\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-17T18:23:58.917Z",
+      "updatedAt": "2026-04-17T18:23:58.917Z"
+    },
+    {
+      "id": "memory_entry_1776342221362",
+      "title": "Daily Summary — 2026-04-16",
+      "body": "Daily Summary for 2026-04-16\nConversations: none yesterday",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-16T12:23:41.362Z",
+      "updatedAt": "2026-04-16T12:23:41.362Z"
+    },
+    {
+      "id": "memory_entry_1776181042458",
+      "title": "Restart memory test-20260414-113714",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-14T15:37:22.458Z",
+      "updatedAt": "2026-04-14T15:37:22.458Z"
+    },
+    {
+      "id": "memory_entry_1776137731771",
+      "title": "Daily Summary — 2026-04-14",
+      "body": "Daily Summary for 2026-04-14\nConversations: 4 sessions, 6 messages\nWorkflows: 3 created, 0 completed, 0 failed\nNotes created: 2\nTasks created: 2",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-14T03:35:31.771Z",
+      "updatedAt": "2026-04-14T03:35:31.771Z"
+    },
+    {
+      "id": "memory_entry_1776041569952",
+      "title": "Daily Summary — 2026-04-13",
+      "body": "Daily Summary for 2026-04-13\nConversations: 6 sessions, 126 messages",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-13T00:52:49.950Z",
+      "updatedAt": "2026-04-13T00:52:49.950Z"
+    },
+    {
+      "id": "memory_entry_1776036551158",
+      "title": "Daily Summary — 2026-04-12",
+      "body": "Daily Summary for 2026-04-12\nConversations: 16 sessions, 204 messages",
+      "tags": [
+        "daily-summary",
+        "auto-generated"
+      ],
+      "source": "daily-summary-service",
+      "createdAt": "2026-04-12T23:29:11.158Z",
+      "updatedAt": "2026-04-12T23:29:11.158Z"
+    },
+    {
+      "id": "memory_entry_1775798048576",
+      "title": "Restart memory test-20260410-011406",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-10T05:14:08.576Z",
+      "updatedAt": "2026-04-10T05:14:08.576Z"
+    },
+    {
+      "id": "memory_entry_1775795678645",
+      "title": "Restart memory test-20260410-003436",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-10T04:34:38.645Z",
+      "updatedAt": "2026-04-10T04:34:38.645Z"
+    },
+    {
+      "id": "memory_entry_1775785947134",
+      "title": "Restart memory test-20260409-215224",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-10T01:52:27.134Z",
+      "updatedAt": "2026-04-10T01:52:27.134Z"
+    },
+    {
+      "id": "memory_entry_1775785679599",
+      "title": "Restart memory test-20260409-214757",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-10T01:47:59.599Z",
+      "updatedAt": "2026-04-10T01:47:59.599Z"
+    },
+    {
+      "id": "memory_entry_1775785351967",
+      "title": "Restart memory test-20260409-214229",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-10T01:42:31.967Z",
+      "updatedAt": "2026-04-10T01:42:31.967Z"
+    },
+    {
+      "id": "memory_entry_1775782950915",
+      "title": "Restart memory test-20260409-210221",
+      "body": "This entry should survive the managed backend restart.",
+      "tags": [
+        "restart",
+        "memory"
+      ],
+      "source": "backend-test-restart",
+      "createdAt": "2026-04-10T01:02:30.915Z",
+      "updatedAt": "2026-04-10T01:02:30.915Z"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "manifest_version": "v2",
+  "project": "vera_counselor",
+  "source_master_file": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/vera.blend",
+  "armature_object": "Genesis 8 Female",
+  "avatar_exports": {
+    "private_counselor": {
+      "avatar_id": "private_counselor",
+      "armature_object": "Genesis 8 Female",
+      "export_mode": "new_avatar",
+      "body_face_group": {
+        "name": "vera_base_avatar",
+        "objects": [
+          "Genesis 8 Female.Shape",
+          "Genesis 8 Female Eyelashes.Shape"
+        ],
+        "output_folder": "playcanvas-app/assets/gail/counselor/avatar/base_face",
+        "file_name": "vera_base_avatar.glb"
+      },
+      "hair_groups": [
+        {
+          "name": "vera_hair",
+          "objects": [
+            "Whitney Hair Genesis 8 Female.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/counselor/hair",
+          "file_name": "vera_hair.glb"
+        }
+      ],
+      "clothing_groups": [
+        {
+          "name": "vera_blazer",
+          "objects": [
+            "Formal MEGA Wardrobe Blazer.Shape",
+            "Formal MEGA Wardrobe Blazer Button.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/counselor/clothing",
+          "file_name": "vera_blazer.glb"
+        },
+        {
+          "name": "vera_camisole",
+          "objects": [
+            "G8MW_Camisole.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/counselor/clothing",
+          "file_name": "vera_camisole.glb"
+        },
+        {
+          "name": "vera_jeans",
+          "objects": [
+            "G8MW_SuperJeans.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/counselor/clothing",
+          "file_name": "vera_jeans.glb"
+        },
+        {
+          "name": "vera_heels",
+          "objects": [
+            "Heels Groovy Outfit.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/counselor/clothing",
+          "file_name": "vera_heels.glb"
+        }
+      ],
+      "accessory_groups": []
+    }
+  }
+}

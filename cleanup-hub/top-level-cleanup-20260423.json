@@ -1,0 +1,252 @@
+﻿{
+    "Timestamp":  "2026-04-23T09:44:41",
+    "LegacyRoot":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review",
+    "DeletedItems":  27,
+    "DeletedGB":  66.245,
+    "MovedItems":  15,
+    "MovedGB":  3.5,
+    "Deleted":  [
+                    {
+                        "Path":  "D:\\GAIL-V2-recovery-test\\node_modules",
+                        "Reason":  "old recovery repo dependency cache",
+                        "Bytes":  184445118
+                    },
+                    {
+                        "Path":  "D:\\GAIL-V2-recovery-test\\build",
+                        "Reason":  "old recovery repo build output",
+                        "Bytes":  83092177
+                    },
+                    {
+                        "Path":  "D:\\GAIL-V2-recovery-test\\examples",
+                        "Reason":  "old vendor examples not needed for Gail reference",
+                        "Bytes":  431987894
+                    },
+                    {
+                        "Path":  "D:\\GAIL-V2-recovery-test\\.git",
+                        "Reason":  "old recovery git metadata after remote/current commit recorded",
+                        "Bytes":  379161606
+                    },
+                    {
+                        "Path":  "D:\\engine-main\\engine-main\\node_modules",
+                        "Reason":  "old PlayCanvas engine dependency cache",
+                        "Bytes":  184437756
+                    },
+                    {
+                        "Path":  "D:\\engine-main\\engine-main\\build",
+                        "Reason":  "old PlayCanvas engine build output",
+                        "Bytes":  82305160
+                    },
+                    {
+                        "Path":  "D:\\engine-main\\engine-main\\examples",
+                        "Reason":  "old PlayCanvas engine examples not needed for Gail reference",
+                        "Bytes":  427516407
+                    },
+                    {
+                        "Path":  "D:\\engine-main-github-backup\\playcanvas-engine\\node_modules",
+                        "Reason":  "old PlayCanvas engine dependency cache",
+                        "Bytes":  184437756
+                    },
+                    {
+                        "Path":  "D:\\engine-main-github-backup\\playcanvas-engine\\examples",
+                        "Reason":  "old PlayCanvas engine examples not needed for Gail reference",
+                        "Bytes":  431913135
+                    },
+                    {
+                        "Path":  "D:\\engine-main-github-backup\\playcanvas-engine\\.git",
+                        "Reason":  "old PlayCanvas engine git metadata with dubious ownership",
+                        "Bytes":  449981551
+                    },
+                    {
+                        "Path":  "D:\\Gail_workstreams\\ops-control\\docs\\reports",
+                        "Reason":  "duplicated old backend test reports",
+                        "Bytes":  405904798
+                    },
+                    {
+                        "Path":  "D:\\Gail_workstreams\\playcanvas-base\\docs\\reports",
+                        "Reason":  "duplicated old backend test reports",
+                        "Bytes":  405904798
+                    },
+                    {
+                        "Path":  "D:\\Gail_workstreams\\playcanvas-base\\playcanvas-app\\dist",
+                        "Reason":  "old transitional build output",
+                        "Bytes":  62047
+                    },
+                    {
+                        "Path":  "D:\\Gail_workstreams\\playcanvas-base\\web-control-panel\\dist",
+                        "Reason":  "old transitional build output",
+                        "Bytes":  65076
+                    },
+                    {
+                        "Path":  "D:\\.gradle",
+                        "Reason":  "Gradle cache/wrapper/daemon data; regenerable",
+                        "Bytes":  14948157591
+                    },
+                    {
+                        "Path":  "D:\\Applications\\Applications\\Data\\DAZ 3D\\InstallManager\\Downloads",
+                        "Reason":  "DAZ Install Manager downloaded installer zip cache; installed library preserved",
+                        "Bytes":  51747820105
+                    },
+                    {
+                        "Path":  "D:\\Applications\\Data\\DAZ 3D\\InstallManager\\Downloads",
+                        "Reason":  "DAZ Install Manager downloaded installer zip cache; installed library preserved",
+                        "Bytes":  443406
+                    },
+                    {
+                        "Path":  "D:\\Temp",
+                        "Reason":  "old temp texture/log output",
+                        "Bytes":  25922744
+                    },
+                    {
+                        "Path":  "D:\\avatar",
+                        "Reason":  "empty placeholder avatar text folder",
+                        "Bytes":  0
+                    },
+                    {
+                        "Path":  "D:\\engine-main.zip",
+                        "Reason":  "duplicate old engine zip backup; extracted folder archived",
+                        "Bytes":  378269369
+                    },
+                    {
+                        "Path":  "D:\\engine-main-github-backup.zip",
+                        "Reason":  "duplicate old engine zip backup; extracted folder archived",
+                        "Bytes":  378215339
+                    },
+                    {
+                        "Path":  "D:\\CppProperties.json",
+                        "Reason":  "loose IDE temp file",
+                        "Bytes":  382
+                    },
+                    {
+                        "Path":  "D:\\Gail 2.1\\strip_test.log",
+                        "Reason":  "old temp strip test log",
+                        "Bytes":  689
+                    },
+                    {
+                        "Path":  "D:\\Gail 2.1\\strip_test.log.err",
+                        "Reason":  "old temp strip test error log",
+                        "Bytes":  1149
+                    },
+                    {
+                        "Path":  "D:\\Gail 2.1\\temp_anim_inspect.py",
+                        "Reason":  "old temporary inspection script",
+                        "Bytes":  489
+                    },
+                    {
+                        "Path":  "D:\\Gail 2.1\\temp_inspect.py",
+                        "Reason":  "old temporary inspection script",
+                        "Bytes":  470
+                    },
+                    {
+                        "Path":  "D:\\Gail 2.1\\avatar_gail",
+                        "Reason":  "empty old avatar sidecar folder",
+                        "Bytes":  0
+                    }
+                ],
+    "Moved":  [
+                  {
+                      "From":  "D:\\GAIL-V2-recovery-test",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\reference-projects\\GAIL-V2-recovery-test",
+                      "Category":  "reference-projects",
+                      "Reason":  "old recovery/reference project, not active Gail runtime",
+                      "Bytes":  9865632
+                  },
+                  {
+                      "From":  "D:\\engine-main",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\reference-projects\\engine-main",
+                      "Category":  "reference-projects",
+                      "Reason":  "old PlayCanvas engine reference, not active Gail runtime",
+                      "Bytes":  9576365
+                  },
+                  {
+                      "From":  "D:\\engine-main-github-backup",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\reference-projects\\engine-main-github-backup",
+                      "Category":  "reference-projects",
+                      "Reason":  "old PlayCanvas engine backup reference, not active Gail runtime",
+                      "Bytes":  9596241
+                  },
+                  {
+                      "From":  "D:\\Gail_workstreams",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\reference-projects\\Gail_workstreams",
+                      "Category":  "reference-projects",
+                      "Reason":  "old transitional dual-workstream root",
+                      "Bytes":  1409505548
+                  },
+                  {
+                      "From":  "D:\\playcanvas-app",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\old-assets\\playcanvas-app",
+                      "Category":  "old-assets",
+                      "Reason":  "old standalone PlayCanvas asset payload, superseded by working_copy assets",
+                      "Bytes":  428078388
+                  },
+                  {
+                      "From":  "D:\\avatar_final.fbm",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\old-assets\\avatar_final.fbm",
+                      "Category":  "old-assets",
+                      "Reason":  "old loose exported avatar texture folder",
+                      "Bytes":  182113629
+                  },
+                  {
+                      "From":  "D:\\data",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\old-runtime-data\\data",
+                      "Category":  "old-runtime-data",
+                      "Reason":  "old loose runtime data, not active repo data",
+                      "Bytes":  431492522
+                  },
+                  {
+                      "From":  "D:\\Misc",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\old-assets\\Misc",
+                      "Category":  "old-assets",
+                      "Reason":  "old loose DAZ/GLB assets, not active source root",
+                      "Bytes":  116773530
+                  },
+                  {
+                      "From":  "D:\\Kilo",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\empty-roots\\Kilo",
+                      "Category":  "empty-roots",
+                      "Reason":  "empty top-level folder",
+                      "Bytes":  0
+                  },
+                  {
+                      "From":  "D:\\_recovery",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\empty-roots\\_recovery",
+                      "Category":  "empty-roots",
+                      "Reason":  "empty recovery shell folder",
+                      "Bytes":  0
+                  },
+                  {
+                      "From":  "D:\\Pictures",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\empty-roots\\Pictures",
+                      "Category":  "empty-roots",
+                      "Reason":  "empty top-level folder",
+                      "Bytes":  0
+                  },
+                  {
+                      "From":  "D:\\autonomy_starter_pack.zip",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\loose-files\\autonomy_starter_pack.zip",
+                      "Category":  "loose-files",
+                      "Reason":  "small old starter pack, preserved but moved out of root",
+                      "Bytes":  28919
+                  },
+                  {
+                      "From":  "D:\\Gail 2.1\\Avatars",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\gail2-sidecars\\Avatars",
+                      "Category":  "gail2-sidecars",
+                      "Reason":  "older duplicate avatar source folder; current source is D:\\Avatars",
+                      "Bytes":  444694740
+                  },
+                  {
+                      "From":  "D:\\Gail 2.1\\lucy.blend",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\gail2-sidecars\\lucy.blend",
+                      "Category":  "gail2-sidecars",
+                      "Reason":  "old loose Lucy blend, not current D:\\Avatars source",
+                      "Bytes":  619763724
+                  },
+                  {
+                      "From":  "D:\\Gail 2.1\\animoxtend-1.2.2.zip",
+                      "To":  "D:\\Gail 2.1\\legacy-hold\\20260423-top-level-review\\gail2-sidecars\\animoxtend-1.2.2.zip",
+                      "Category":  "gail2-sidecars",
+                      "Reason":  "old plugin zip preserved outside active root",
+                      "Bytes":  96374966
+                  }
+              ]
+}

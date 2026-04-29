@@ -1,0 +1,6 @@
+{
+  "source_master_file": "blender\\animation_master\\source\\gail_master_v2_direct_mixamo_idle_preview.blend",
+  "output_regular_file": "data\\runtime\\gail_rig.generated.blend",
+  "removed": [],
+  "armature_object": "Genesis8Female"
+}

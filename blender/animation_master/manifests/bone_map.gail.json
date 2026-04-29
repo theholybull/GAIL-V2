@@ -1,0 +1,35 @@
+{
+  "project": "gail",
+  "armature_object": "VAMP Laurina for G8 Female",
+  "body": {
+    "hip": "hip",
+    "abdomen_lower": "abdomenLower",
+    "abdomen_upper": "abdomenUpper",
+    "head": "head",
+    "neck": "neckUpper",
+    "chest": "chestUpper",
+    "left_collar": "lCollar",
+    "right_collar": "rCollar",
+    "left_shoulder": "lShldrBend",
+    "right_shoulder": "rShldrBend",
+    "left_forearm": "lForearmBend",
+    "right_forearm": "rForearmBend",
+    "left_hand": "lHand",
+    "right_hand": "rHand",
+    "left_thumb_1": "lThumb1",
+    "right_thumb_1": "rThumb1",
+    "left_index_1": "lIndex1",
+    "right_index_1": "rIndex1",
+    "left_mid_1": "lMid1",
+    "right_mid_1": "rMid1",
+    "left_thigh": "lThighBend",
+    "right_thigh": "rThighBend",
+    "left_shin": "lShin",
+    "right_shin": "rShin"
+  },
+  "face_meshes": {
+    "body": "VAMP Laurina for G8 Female.Shape",
+    "lashes": "Genesis 8 Female Eyelashes.Shape",
+    "brows": "VAMPLaurinaBrows.Shape"
+  }
+}

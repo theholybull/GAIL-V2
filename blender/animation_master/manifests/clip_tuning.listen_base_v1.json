@@ -1,0 +1,136 @@
+{
+  "clip": "listen_base_v1",
+  "category": "listen",
+  "status": "review",
+  "partition": "body",
+  "loop": true,
+  "base_pose_action": "pose_idle_confident_v1",
+  "baseline_name": "standing_core_v1",
+  "start_anchor_frame": 1,
+  "end_anchor_frame": 88,
+  "frame_start": 1,
+  "frame_end": 88,
+  "bone_map_file": "F:\\Gail\\blender\\animation_master\\manifests\\bone_map.gail.json",
+  "face_actions": {
+    "body": "listen_face_body_v1",
+    "lashes": "listen_face_lashes_v1",
+    "brows": "listen_face_brows_v1"
+  },
+  "body": {
+    "breathing_keys": [
+      { "frame": 1, "chest": [0.0, 0.0], "neck": [0.0, 0.0], "head": [0.0, 0.0] },
+      { "frame": 14, "chest": [0.58, 0.08], "neck": [0.42, 0.05], "head": [-0.18, 0.08] },
+      { "frame": 24, "chest": [0.32, -0.02], "neck": [0.38, 0.02], "head": [0.95, 0.01] },
+      { "frame": 30, "chest": [0.16, -0.08], "neck": [-0.08, -0.03], "head": [-0.72, -0.03] },
+      { "frame": 38, "chest": [0.44, 0.04], "neck": [0.18, 0.02], "head": [0.08, 0.04] },
+      { "frame": 44, "chest": [0.75, 0.06], "neck": [0.52, 0.04], "head": [-0.18, 0.1] },
+      { "frame": 60, "chest": [0.18, -0.1], "neck": [0.18, -0.04], "head": [-0.82, -0.08] },
+      { "frame": 74, "chest": [0.68, 0.04], "neck": [0.48, 0.03], "head": [-0.35, 0.1] },
+      { "frame": 88, "chest": [0.0, 0.0], "neck": [0.0, 0.0], "head": [0.0, 0.0] }
+    ],
+    "hip_keys": [
+      { "frame": 1, "hip": [0.0, 0.0, 0.0], "abdomen_lower": [0.0, 0.0, 0.0], "abdomen_upper": [0.0, 0.0, 0.0] },
+      { "frame": 22, "hip": [0.0, 0.0, 0.22], "abdomen_lower": [0.06, 0.0, 0.12], "abdomen_upper": [0.04, 0.0, 0.06] },
+      { "frame": 44, "hip": [0.0, 0.0, -0.1], "abdomen_lower": [-0.03, 0.0, -0.06], "abdomen_upper": [-0.02, 0.0, -0.03] },
+      { "frame": 66, "hip": [0.0, 0.0, 0.18], "abdomen_lower": [0.05, 0.0, 0.1], "abdomen_upper": [0.03, 0.0, 0.05] },
+      { "frame": 88, "hip": [0.0, 0.0, 0.0], "abdomen_lower": [0.0, 0.0, 0.0], "abdomen_upper": [0.0, 0.0, 0.0] }
+    ],
+    "arm_keys": [
+      {
+        "frame": 1,
+        "left_collar": [0.0, 0.0, 0.0],
+        "right_collar": [0.0, 0.0, 0.0],
+        "left_shoulder": [0.0, 0.0, 0.0],
+        "right_shoulder": [0.0, 0.0, 0.0],
+        "left_forearm": [0.0, 0.0, 0.0],
+        "right_forearm": [0.0, 0.0, 0.0],
+        "left_hand": [0.0, 0.0, 0.0],
+        "right_hand": [0.0, 0.0, 0.0]
+      },
+      {
+        "frame": 22,
+        "left_collar": [0.02, 1.2, -0.8],
+        "right_collar": [0.1, -0.18, 0.9],
+        "left_shoulder": [0.3, 0.18, 0.42],
+        "right_shoulder": [0.16, -0.22, -0.04],
+        "left_forearm": [0.18, 0.04, -0.1],
+        "right_forearm": [0.08, -0.16, -0.02],
+        "left_hand": [0.0, 0.08, 0.34],
+        "right_hand": [0.0, -0.12, -0.22]
+      },
+      {
+        "frame": 44,
+        "left_collar": [-0.04, 1.0, -1.0],
+        "right_collar": [0.0, -0.24, 0.72],
+        "left_shoulder": [0.2, 0.1, 0.28],
+        "right_shoulder": [0.08, -0.28, -0.1],
+        "left_forearm": [0.12, 0.02, -0.12],
+        "right_forearm": [0.02, -0.2, -0.04],
+        "left_hand": [0.0, 0.06, 0.24],
+        "right_hand": [0.0, -0.16, -0.3]
+      },
+      {
+        "frame": 66,
+        "left_collar": [0.0, 1.16, -0.74],
+        "right_collar": [0.08, -0.16, 0.92],
+        "left_shoulder": [0.28, 0.16, 0.36],
+        "right_shoulder": [0.14, -0.2, -0.02],
+        "left_forearm": [0.16, 0.03, -0.08],
+        "right_forearm": [0.06, -0.14, -0.01],
+        "left_hand": [0.0, 0.1, 0.3],
+        "right_hand": [0.0, -0.1, -0.2]
+      },
+      {
+        "frame": 88,
+        "left_collar": [0.0, 0.0, 0.0],
+        "right_collar": [0.0, 0.0, 0.0],
+        "left_shoulder": [0.0, 0.0, 0.0],
+        "right_shoulder": [0.0, 0.0, 0.0],
+        "left_forearm": [0.0, 0.0, 0.0],
+        "right_forearm": [0.0, 0.0, 0.0],
+        "left_hand": [0.0, 0.0, 0.0],
+        "right_hand": [0.0, 0.0, 0.0]
+      }
+    ],
+    "finger_keys": [
+      { "frame": 1, "thumb": 0.4, "index": 0.5, "mid": 0.45, "right_scale": 0.95 },
+      { "frame": 22, "thumb": 0.65, "index": 0.72, "mid": 0.64, "right_scale": 1.0 },
+      { "frame": 44, "thumb": 0.5, "index": 0.56, "mid": 0.5, "right_scale": 0.98 },
+      { "frame": 66, "thumb": 0.68, "index": 0.74, "mid": 0.66, "right_scale": 1.02 },
+      { "frame": 88, "thumb": 0.4, "index": 0.5, "mid": 0.45, "right_scale": 0.95 }
+    ],
+    "leg_keys": [
+      { "frame": 1, "left_thigh_x": 0.0, "left_shin_x": 0.0, "right_thigh_x": 0.0, "right_shin_x": 0.0 },
+      { "frame": 22, "left_thigh_x": 0.12, "left_shin_x": 0.06, "right_thigh_x": -0.1, "right_shin_x": -0.05 },
+      { "frame": 44, "left_thigh_x": 0.04, "left_shin_x": 0.02, "right_thigh_x": -0.03, "right_shin_x": -0.02 },
+      { "frame": 66, "left_thigh_x": 0.1, "left_shin_x": 0.05, "right_thigh_x": -0.08, "right_shin_x": -0.04 },
+      { "frame": 88, "left_thigh_x": 0.0, "left_shin_x": 0.0, "right_thigh_x": 0.0, "right_shin_x": 0.0 }
+    ]
+  },
+  "face": {
+    "neutral_frames": [1, 22, 44, 66, 88],
+    "blink_frames": [18, 58],
+    "blink_close": 0.8,
+    "micro_keys": [
+      { "frame": 10, "brow_l": 0.014, "brow_r": 0.016, "lips": 0.016, "smile_l": 0.012, "smile_r": 0.012, "mouth_l": 0.004, "mouth_r": 0.004, "jaw": 0.006, "squint_l": 0.0, "squint_r": 0.0 },
+      { "frame": 24, "brow_l": -0.004, "brow_r": -0.004, "lips": 0.012, "smile_l": 0.008, "smile_r": 0.008, "mouth_l": 0.002, "mouth_r": 0.002, "jaw": 0.004, "squint_l": 0.045, "squint_r": 0.045 },
+      { "frame": 28, "brow_l": -0.012, "brow_r": -0.012, "lips": 0.01, "smile_l": 0.006, "smile_r": 0.006, "mouth_l": 0.001, "mouth_r": 0.001, "jaw": 0.003, "squint_l": 0.08, "squint_r": 0.08 },
+      { "frame": 34, "brow_l": -0.006, "brow_r": -0.006, "lips": 0.011, "smile_l": 0.007, "smile_r": 0.007, "mouth_l": 0.002, "mouth_r": 0.002, "jaw": 0.003, "squint_l": 0.035, "squint_r": 0.035 },
+      { "frame": 42, "brow_l": 0.012, "brow_r": 0.014, "lips": 0.014, "smile_l": 0.01, "smile_r": 0.01, "mouth_l": 0.003, "mouth_r": 0.003, "jaw": 0.005 },
+      { "frame": 60, "brow_l": -0.008, "brow_r": -0.008, "lips": 0.012, "smile_l": 0.008, "smile_r": 0.008, "mouth_l": 0.002, "mouth_r": 0.002, "jaw": 0.004, "squint_l": 0.03, "squint_r": 0.03 },
+      { "frame": 74, "brow_l": 0.014, "brow_r": 0.016, "lips": 0.015, "smile_l": 0.012, "smile_r": 0.012, "mouth_l": 0.004, "mouth_r": 0.004, "jaw": 0.006 }
+    ],
+    "blink_reaction": {
+      "brow_l": -0.006,
+      "brow_r": -0.006,
+      "lips": 0.016,
+      "smile_l": 0.01,
+      "smile_r": 0.01,
+      "mouth_l": 0.003,
+      "mouth_r": 0.003,
+      "jaw": 0.005,
+      "squint_l": 0.025,
+      "squint_r": 0.025
+    }
+  }
+}

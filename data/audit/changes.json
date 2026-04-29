@@ -1,0 +1,781 @@
+[
+  {
+    "changeId": "change_1776708094511",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776708086389_1",
+    "title": "Build step submission: Compile structured findings",
+    "reason": "Submitted from Build Control Tower for Studio intake workflow 2026-04-20 18:01.",
+    "scope": [
+      "workflow:workflow_1776708084779",
+      "step:workflow_step_1776708086389_1"
+    ],
+    "approvalState": "rejected",
+    "latestSnapshotId": "snapshot_1776708094511",
+    "relatedArtifacts": [
+      "docs/Build plan 4_4/GAIL_BUILD_CONTROL_TOWER_MASTER_CHECKER_PLAN.md",
+      "docs/Build plan 4_4/GAIL_AI_AUTONOMY_AND_VOICE_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T18:01:34.502Z",
+    "updatedAt": "2026-04-20T18:01:37.507Z"
+  },
+  {
+    "changeId": "change_1776707678820",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776707671347_1",
+    "title": "Build step submission: Compile structured findings",
+    "reason": "Submitted from Build Control Tower for Studio intake workflow 2026-04-20 17:54.",
+    "scope": [
+      "workflow:workflow_1776707669864",
+      "step:workflow_step_1776707671347_1"
+    ],
+    "approvalState": "rejected",
+    "latestSnapshotId": "snapshot_1776707678820",
+    "relatedArtifacts": [
+      "docs/Build plan 4_4/GAIL_BUILD_CONTROL_TOWER_MASTER_CHECKER_PLAN.md",
+      "docs/Build plan 4_4/GAIL_AI_AUTONOMY_AND_VOICE_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T17:54:38.797Z",
+    "updatedAt": "2026-04-20T17:54:42.056Z"
+  },
+  {
+    "changeId": "change_1776703417594",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776703417577",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1776703417559",
+      "step:workflow_step_1776703417577"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1776703417594",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T16:43:37.594Z",
+    "updatedAt": "2026-04-20T16:43:37.660Z",
+    "lastApprovedSnapshotId": "snapshot_1776703417594"
+  },
+  {
+    "changeId": "change_1776703414432",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776703414415",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1776703414399",
+      "step:workflow_step_1776703414415"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1776703414432",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T16:43:34.432Z",
+    "updatedAt": "2026-04-20T16:43:34.497Z",
+    "lastApprovedSnapshotId": "snapshot_1776703414432"
+  },
+  {
+    "changeId": "change_1776703411479",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776703411463",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1776703411448",
+      "step:workflow_step_1776703411463"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1776703411479",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T16:43:31.479Z",
+    "updatedAt": "2026-04-20T16:43:31.538Z",
+    "lastApprovedSnapshotId": "snapshot_1776703411479"
+  },
+  {
+    "changeId": "change_1776703408390",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776703408375",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1776703408359",
+      "step:workflow_step_1776703408375"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1776703408390",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T16:43:28.389Z",
+    "updatedAt": "2026-04-20T16:43:28.454Z",
+    "lastApprovedSnapshotId": "snapshot_1776703408390"
+  },
+  {
+    "changeId": "change_1776703405825",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776703405807",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1776703405792",
+      "step:workflow_step_1776703405807"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1776703405825",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T16:43:25.824Z",
+    "updatedAt": "2026-04-20T16:43:25.897Z",
+    "lastApprovedSnapshotId": "snapshot_1776703405825"
+  },
+  {
+    "changeId": "change_1776703404316",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1776703404300",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1776703404281",
+      "step:workflow_step_1776703404300"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1776703404316",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-20T16:43:24.316Z",
+    "updatedAt": "2026-04-20T16:43:24.568Z",
+    "lastApprovedSnapshotId": "snapshot_1776703404316"
+  },
+  {
+    "changeId": "change_1775798045385",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775798045324",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775798045295",
+      "step:workflow_step_1775798045324"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775798045385",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T05:14:05.384Z",
+    "updatedAt": "2026-04-10T05:14:05.466Z",
+    "lastApprovedSnapshotId": "snapshot_1775798045385"
+  },
+  {
+    "changeId": "change_1775798041672",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775798041651",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775798041633",
+      "step:workflow_step_1775798041651"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775798041672",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T05:14:01.671Z",
+    "updatedAt": "2026-04-10T05:14:01.742Z",
+    "lastApprovedSnapshotId": "snapshot_1775798041672"
+  },
+  {
+    "changeId": "change_1775798038227",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775798038203",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775798038123",
+      "step:workflow_step_1775798038203"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775798038227",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T05:13:58.226Z",
+    "updatedAt": "2026-04-10T05:13:58.322Z",
+    "lastApprovedSnapshotId": "snapshot_1775798038227"
+  },
+  {
+    "changeId": "change_1775798034682",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775798034649",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775798034630",
+      "step:workflow_step_1775798034649"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775798034682",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T05:13:54.682Z",
+    "updatedAt": "2026-04-10T05:13:54.795Z",
+    "lastApprovedSnapshotId": "snapshot_1775798034682"
+  },
+  {
+    "changeId": "change_1775798032014",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775798031994",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775798031974",
+      "step:workflow_step_1775798031994"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775798032014",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T05:13:52.014Z",
+    "updatedAt": "2026-04-10T05:13:52.097Z",
+    "lastApprovedSnapshotId": "snapshot_1775798032014"
+  },
+  {
+    "changeId": "change_1775798029741",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775798029712",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775798029691",
+      "step:workflow_step_1775798029712"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775798029741",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T05:13:49.741Z",
+    "updatedAt": "2026-04-10T05:13:50.333Z",
+    "lastApprovedSnapshotId": "snapshot_1775798029741"
+  },
+  {
+    "changeId": "change_1775795674009",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775795673991",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775795673974",
+      "step:workflow_step_1775795673991"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775795674009",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T04:34:34.009Z",
+    "updatedAt": "2026-04-10T04:34:34.082Z",
+    "lastApprovedSnapshotId": "snapshot_1775795674009"
+  },
+  {
+    "changeId": "change_1775795669587",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775795669568",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775795669551",
+      "step:workflow_step_1775795669568"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775795669587",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T04:34:29.587Z",
+    "updatedAt": "2026-04-10T04:34:29.671Z",
+    "lastApprovedSnapshotId": "snapshot_1775795669587"
+  },
+  {
+    "changeId": "change_1775795665509",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775795665491",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775795665474",
+      "step:workflow_step_1775795665491"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775795665509",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T04:34:25.509Z",
+    "updatedAt": "2026-04-10T04:34:25.606Z",
+    "lastApprovedSnapshotId": "snapshot_1775795665509"
+  },
+  {
+    "changeId": "change_1775795661977",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775795661950",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775795661929",
+      "step:workflow_step_1775795661950"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775795661977",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T04:34:21.976Z",
+    "updatedAt": "2026-04-10T04:34:22.076Z",
+    "lastApprovedSnapshotId": "snapshot_1775795661977"
+  },
+  {
+    "changeId": "change_1775795658730",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775795658693",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775795658668",
+      "step:workflow_step_1775795658693"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775795658730",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T04:34:18.730Z",
+    "updatedAt": "2026-04-10T04:34:18.844Z",
+    "lastApprovedSnapshotId": "snapshot_1775795658730"
+  },
+  {
+    "changeId": "change_1775795656005",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775795655979",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775795655959",
+      "step:workflow_step_1775795655979"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775795656005",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T04:34:16.004Z",
+    "updatedAt": "2026-04-10T04:34:16.800Z",
+    "lastApprovedSnapshotId": "snapshot_1775795656005"
+  },
+  {
+    "changeId": "change_1775785943316",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785943298",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785943278",
+      "step:workflow_step_1775785943298"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785943316",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:52:23.316Z",
+    "updatedAt": "2026-04-10T01:52:23.380Z",
+    "lastApprovedSnapshotId": "snapshot_1775785943316"
+  },
+  {
+    "changeId": "change_1775785939992",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785939970",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785939953",
+      "step:workflow_step_1775785939970"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785939992",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:52:19.992Z",
+    "updatedAt": "2026-04-10T01:52:20.056Z",
+    "lastApprovedSnapshotId": "snapshot_1775785939992"
+  },
+  {
+    "changeId": "change_1775785936969",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785936939",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785936918",
+      "step:workflow_step_1775785936939"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785936969",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:52:16.969Z",
+    "updatedAt": "2026-04-10T01:52:17.036Z",
+    "lastApprovedSnapshotId": "snapshot_1775785936969"
+  },
+  {
+    "changeId": "change_1775785933960",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785933931",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785933912",
+      "step:workflow_step_1775785933931"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785933960",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:52:13.959Z",
+    "updatedAt": "2026-04-10T01:52:14.036Z",
+    "lastApprovedSnapshotId": "snapshot_1775785933960"
+  },
+  {
+    "changeId": "change_1775785931790",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785931772",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785931755",
+      "step:workflow_step_1775785931772"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785931790",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:52:11.790Z",
+    "updatedAt": "2026-04-10T01:52:11.856Z",
+    "lastApprovedSnapshotId": "snapshot_1775785931790"
+  },
+  {
+    "changeId": "change_1775785930340",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785930321",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785930303",
+      "step:workflow_step_1775785930321"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785930340",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:52:10.340Z",
+    "updatedAt": "2026-04-10T01:52:10.418Z",
+    "lastApprovedSnapshotId": "snapshot_1775785930340"
+  },
+  {
+    "changeId": "change_1775785348015",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785347997",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785347979",
+      "step:workflow_step_1775785347997"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785348015",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:28.015Z",
+    "updatedAt": "2026-04-10T01:42:28.083Z",
+    "lastApprovedSnapshotId": "snapshot_1775785348015"
+  },
+  {
+    "changeId": "change_1775785344581",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785344559",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785344542",
+      "step:workflow_step_1775785344559"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785344581",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:24.581Z",
+    "updatedAt": "2026-04-10T01:42:24.647Z",
+    "lastApprovedSnapshotId": "snapshot_1775785344581"
+  },
+  {
+    "changeId": "change_1775785341232",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785341215",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785341197",
+      "step:workflow_step_1775785341215"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785341232",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:21.232Z",
+    "updatedAt": "2026-04-10T01:42:21.299Z",
+    "lastApprovedSnapshotId": "snapshot_1775785341232"
+  },
+  {
+    "changeId": "change_1775785338163",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785338145",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785338128",
+      "step:workflow_step_1775785338145"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785338163",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:18.163Z",
+    "updatedAt": "2026-04-10T01:42:18.227Z",
+    "lastApprovedSnapshotId": "snapshot_1775785338163"
+  },
+  {
+    "changeId": "change_1775785335906",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785335887",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785335869",
+      "step:workflow_step_1775785335887"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785335906",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:15.906Z",
+    "updatedAt": "2026-04-10T01:42:15.971Z",
+    "lastApprovedSnapshotId": "snapshot_1775785335906"
+  },
+  {
+    "changeId": "change_1775785334476",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785334457",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785334440",
+      "step:workflow_step_1775785334457"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785334476",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:14.475Z",
+    "updatedAt": "2026-04-10T01:42:14.539Z",
+    "lastApprovedSnapshotId": "snapshot_1775785334476"
+  },
+  {
+    "changeId": "change_1775785327236",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775785327212",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775785327190",
+      "step:workflow_step_1775785327212"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775785327236",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:42:07.235Z",
+    "updatedAt": "2026-04-10T01:42:07.665Z",
+    "lastApprovedSnapshotId": "snapshot_1775785327236"
+  },
+  {
+    "changeId": "change_1775783747950",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775783747922",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775783747906",
+      "step:workflow_step_1775783747922"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775783747950",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:15:47.950Z",
+    "updatedAt": "2026-04-10T01:15:48.012Z",
+    "lastApprovedSnapshotId": "snapshot_1775783747950"
+  },
+  {
+    "changeId": "change_1775783746650",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775783746614",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775783746597",
+      "step:workflow_step_1775783746614"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775783746650",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:15:46.650Z",
+    "updatedAt": "2026-04-10T01:15:46.716Z",
+    "lastApprovedSnapshotId": "snapshot_1775783746650"
+  },
+  {
+    "changeId": "change_1775782940160",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775782940131",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775782940114",
+      "step:workflow_step_1775782940131"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775782940160",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:02:20.160Z",
+    "updatedAt": "2026-04-10T01:02:20.226Z",
+    "lastApprovedSnapshotId": "snapshot_1775782940160"
+  },
+  {
+    "changeId": "change_1775782937051",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775782937011",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775782936990",
+      "step:workflow_step_1775782937011"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775782937051",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:02:17.051Z",
+    "updatedAt": "2026-04-10T01:02:17.112Z",
+    "lastApprovedSnapshotId": "snapshot_1775782937051"
+  },
+  {
+    "changeId": "change_1775782934331",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775782934301",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775782934280",
+      "step:workflow_step_1775782934301"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775782934331",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:02:14.331Z",
+    "updatedAt": "2026-04-10T01:02:14.391Z",
+    "lastApprovedSnapshotId": "snapshot_1775782934331"
+  },
+  {
+    "changeId": "change_1775782931440",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775782931411",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775782931395",
+      "step:workflow_step_1775782931411"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775782931440",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:02:11.440Z",
+    "updatedAt": "2026-04-10T01:02:11.520Z",
+    "lastApprovedSnapshotId": "snapshot_1775782931440"
+  },
+  {
+    "changeId": "change_1775782929497",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775782929463",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775782929445",
+      "step:workflow_step_1775782929463"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775782929497",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:02:09.497Z",
+    "updatedAt": "2026-04-10T01:02:09.571Z",
+    "lastApprovedSnapshotId": "snapshot_1775782929497"
+  },
+  {
+    "changeId": "change_1775782927479",
+    "sourceType": "build_step",
+    "sourceId": "workflow_step_1775782927436",
+    "title": "Build step submission: Summarize working context",
+    "reason": "Phase 1 action smoke submission.",
+    "scope": [
+      "workflow:workflow_1775782927417",
+      "step:workflow_step_1775782927436"
+    ],
+    "approvalState": "reverted",
+    "latestSnapshotId": "snapshot_1775782927479",
+    "relatedArtifacts": [
+      "docs/PROFESSIONAL_SHELL_BUILD_PLAN.md"
+    ],
+    "createdAt": "2026-04-10T01:02:07.479Z",
+    "updatedAt": "2026-04-10T01:02:08.120Z",
+    "lastApprovedSnapshotId": "snapshot_1775782927479"
+  }
+]

@@ -1,0 +1,13 @@
+# Requirements for the addon runtime
+# -----------------------------------
+requests>2,<3
+colorama
+numpy<2
+scipy>=1,<2
+websockets
+# retarget module
+transformations
+# blending module
+# motion module
+pandas>=2,<3
+packaging>=24,<25

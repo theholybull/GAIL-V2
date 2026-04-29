@@ -1,0 +1,402 @@
+{
+  "coreAssetIds": [
+    "base_avatar",
+    "meili_hair",
+    "gail_outfit_top",
+    "gail_outfit_pants",
+    "gail_outfit_sandals",
+    "idle_base_v1"
+  ],
+  "assets": [
+    {
+      "id": "base_avatar",
+      "name": "base avatar glb",
+      "kind": "avatar",
+      "slot": "base",
+      "required": true,
+      "autoLoad": true,
+      "expectedPath": "gail/avatar/base_face/gail_base_avatar.glb",
+      "searchDirectories": [
+        "gail/avatar"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "meili_hair",
+      "name": "meili hair",
+      "kind": "hair",
+      "slot": "hair",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/hair/meili_hair/meili_hair.glb",
+      "searchDirectories": [
+        "gail/hair"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "gail_outfit_bundle",
+      "name": "gail outfit bundle",
+      "kind": "clothing",
+      "slot": "outfit_bundle",
+      "required": false,
+      "autoLoad": false,
+      "expectedPath": "gail/clothes/gail_bundle/gail_clothing.glb",
+      "searchDirectories": [
+        "gail/clothes"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "gail_outfit_top",
+      "name": "gail outfit top",
+      "kind": "clothing",
+      "slot": "upper",
+      "required": true,
+      "autoLoad": true,
+      "expectedPath": "gail/clothes/gail_top/gail_top.glb",
+      "searchDirectories": [
+        "gail/clothes"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "gail_outfit_pants",
+      "name": "gail outfit pants",
+      "kind": "clothing",
+      "slot": "lower",
+      "required": true,
+      "autoLoad": true,
+      "expectedPath": "gail/clothes/gail_pants/gail_pants.glb",
+      "searchDirectories": [
+        "gail/clothes"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "gail_outfit_sandals",
+      "name": "gail outfit sandals",
+      "kind": "clothing",
+      "slot": "footwear",
+      "required": true,
+      "autoLoad": true,
+      "expectedPath": "gail/clothes/gail_sandals/gail_sandals.glb",
+      "searchDirectories": [
+        "gail/clothes"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "gail_accessories_bundle",
+      "name": "gail accessories bundle",
+      "kind": "accessory",
+      "slot": "accessories",
+      "required": false,
+      "autoLoad": false,
+      "expectedPath": "gail/accessories/gail_bundle/gail_accessories.glb",
+      "searchDirectories": [
+        "gail/accessories"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_base_avatar",
+      "name": "Vera avatar",
+      "kind": "avatar",
+      "slot": "private_base",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/counselor/avatar/base_face/vera_base_avatar.glb",
+      "searchDirectories": [
+        "gail/counselor/avatar"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_hair",
+      "name": "Vera hair",
+      "kind": "hair",
+      "slot": "private_hair",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/counselor/hair/vera_hair.glb",
+      "searchDirectories": [
+        "gail/counselor/hair"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_top",
+      "name": "Vera blazer",
+      "kind": "clothing",
+      "slot": "private_top",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/counselor/clothing/vera_blazer.glb",
+      "searchDirectories": [
+        "gail/counselor/clothing"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_pants",
+      "name": "Vera jeans",
+      "kind": "clothing",
+      "slot": "private_pants",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/counselor/clothing/vera_jeans.glb",
+      "searchDirectories": [
+        "gail/counselor/clothing"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_boots",
+      "name": "Vera heels",
+      "kind": "clothing",
+      "slot": "private_boots",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/counselor/clothing/vera_heels.glb",
+      "searchDirectories": [
+        "gail/counselor/clothing"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_camisole",
+      "name": "Vera camisole",
+      "kind": "clothing",
+      "slot": "private_camisole",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/counselor/clothing/vera_camisole.glb",
+      "searchDirectories": [
+        "gail/counselor/clothing"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "girlfriend_base_avatar",
+      "name": "Cherry avatar",
+      "kind": "avatar",
+      "slot": "girlfriend_base",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/girlfriend/avatar/base_face/cherry_base_avatar.glb",
+      "searchDirectories": [
+        "gail/girlfriend/avatar"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "girlfriend_hair",
+      "name": "Cherry hair",
+      "kind": "hair",
+      "slot": "girlfriend_hair",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/girlfriend/hair/cherry_hair.glb",
+      "searchDirectories": [
+        "gail/girlfriend/hair"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "girlfriend_dress",
+      "name": "Cherry dress",
+      "kind": "clothing",
+      "slot": "girlfriend_dress",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/girlfriend/clothing/girlfriend_dress.glb",
+      "searchDirectories": [
+        "gail/girlfriend/clothing"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "girlfriend_shoes",
+      "name": "Cherry shoes",
+      "kind": "clothing",
+      "slot": "girlfriend_shoes",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "gail/girlfriend/clothing/girlfriend_shoes.glb",
+      "searchDirectories": [
+        "gail/girlfriend/clothing"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "private_bracelets",
+      "name": "private bracelets",
+      "kind": "accessory",
+      "slot": "private_accessories",
+      "required": false,
+      "autoLoad": false,
+      "expectedPath": "gail/private/accessories/private_bracelets.glb",
+      "searchDirectories": [
+        "gail/private/accessories"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "idle_base_v1",
+      "name": "idle animation (27775)",
+      "kind": "animation",
+      "slot": "idle",
+      "required": true,
+      "autoLoad": true,
+      "expectedPath": "animations/27775_stand_still.glb",
+      "searchDirectories": [
+        "animations"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "talk_base_v1",
+      "name": "talk animation (28154)",
+      "kind": "animation",
+      "slot": "talk",
+      "required": false,
+      "autoLoad": false,
+      "expectedPath": "animations/28154_explain.glb",
+      "searchDirectories": [
+        "animations"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "listen_base_v1",
+      "name": "listen animation (27299)",
+      "kind": "animation",
+      "slot": "listen",
+      "required": false,
+      "autoLoad": false,
+      "expectedPath": "animations/27299_stand_and_nod.glb",
+      "searchDirectories": [
+        "animations"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "ack_nod_small_v1",
+      "name": "ack animation",
+      "kind": "animation",
+      "slot": "ack",
+      "required": false,
+      "autoLoad": false,
+      "expectedPath": "animations/ack_nod_small_v1.glb",
+      "searchDirectories": [
+        "animations"
+      ],
+      "extensions": [
+        ".glb",
+        ".gltf"
+      ]
+    },
+    {
+      "id": "work_background",
+      "name": "work background",
+      "kind": "background",
+      "slot": "work",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "backgrounds/work-bg.jpg",
+      "searchDirectories": [
+        "backgrounds"
+      ],
+      "extensions": [
+        ".jpg",
+        ".jpeg",
+        ".jfif",
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "id": "private_background",
+      "name": "private background",
+      "kind": "background",
+      "slot": "private",
+      "required": false,
+      "autoLoad": true,
+      "expectedPath": "backgrounds/private-bg.jpg",
+      "searchDirectories": [
+        "backgrounds"
+      ],
+      "extensions": [
+        ".jpg",
+        ".jpeg",
+        ".jfif",
+        ".png",
+        ".webp"
+      ]
+    }
+  ]
+}

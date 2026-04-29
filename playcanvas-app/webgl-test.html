@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html><head><title>WebGL Test</title></head>
+<body style="background:#1a1a2e;color:#eee;font-family:monospace;padding:24px">
+<h1>WebGL Diagnostic</h1>
+<canvas id="c" width="300" height="200" style="border:1px solid #444"></canvas>
+<pre id="out"></pre>
+<script>
+const out = document.getElementById('out');
+const c = document.getElementById('c');
+function log(msg) { out.textContent += msg + '\n'; }
+try {
+  const gl = c.getContext('webgl2') || c.getContext('webgl');
+  if (gl) {
+    log('WebGL: WORKING');
+    log('Renderer: ' + gl.getParameter(gl.RENDERER));
+    log('Vendor: ' + gl.getParameter(gl.VENDOR));
+    log('Version: ' + gl.getParameter(gl.VERSION));
+    gl.clearColor(0.2, 0.8, 0.3, 1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    log('Green square = GPU is rendering');
+  } else {
+    log('WebGL: FAILED - context is null');
+    log('Your browser has disabled WebGL.');
+    log('');
+    log('FIX: Open edge://flags/#ignore-gpu-blocklist');
+    log('Set it to ENABLED, then restart Edge.');
+  }
+} catch(e) { log('WebGL ERROR: ' + e.message); }
+</script></body></html>

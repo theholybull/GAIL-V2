@@ -1,0 +1,19 @@
+{
+  "name": "gail-playcanvas-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "playcanvas": "^2.17.2",
+    "puppeteer": "^24.42.0"
+  },
+  "devDependencies": {
+    "draco3d": "^1.5.7",
+    "playwright": "^1.59.1",
+    "typescript": "^6.0.2"
+  }
+}

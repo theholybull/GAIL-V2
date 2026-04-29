@@ -1,0 +1,73 @@
+{
+  "clip": "ack_nod_small_v1",
+  "category": "ack",
+  "status": "review",
+  "partition": "body",
+  "loop": false,
+  "base_pose_action": "pose_idle_confident_v1",
+  "frame_start": 1,
+  "frame_end": 24,
+  "bone_map_file": "F:\\Gail\\blender\\animation_master\\manifests\\bone_map.gail.json",
+  "compatibility_tags": [
+    "same_start_same_end",
+    "anchor_pose_required",
+    "body_grouped_motion",
+    "anti_drift"
+  ],
+  "body": {
+    "group_keys": [
+      {
+        "frame": 1,
+        "hip": [0.0, 0.0, 0.0],
+        "abdomen_lower": [0.0, 0.0, 0.0],
+        "abdomen_upper": [0.0, 0.0, 0.0],
+        "chest": [0.0, 0.0, 0.0],
+        "neck": [0.0, 0.0, 0.0],
+        "head": [0.0, 0.0, 0.0],
+        "left_collar": [0.0, 0.0, 0.0],
+        "right_collar": [0.0, 0.0, 0.0],
+        "left_shoulder": [0.0, 0.0, 0.0],
+        "right_shoulder": [0.0, 0.0, 0.0]
+      },
+      {
+        "frame": 7,
+        "hip": [0.18, 0.0, 0.16],
+        "abdomen_lower": [0.42, 0.0, 0.28],
+        "abdomen_upper": [0.72, 0.0, 0.32],
+        "chest": [1.15, 0.0, 0.18],
+        "neck": [2.6, 0.0, 0.06],
+        "head": [6.4, 0.0, -0.08],
+        "left_collar": [0.18, 0.18, -0.22],
+        "right_collar": [0.18, -0.18, 0.22],
+        "left_shoulder": [0.32, 0.12, -0.18],
+        "right_shoulder": [0.32, -0.12, 0.18]
+      },
+      {
+        "frame": 13,
+        "hip": [-0.08, 0.0, -0.08],
+        "abdomen_lower": [-0.18, 0.0, -0.14],
+        "abdomen_upper": [-0.32, 0.0, -0.18],
+        "chest": [-0.55, 0.0, -0.12],
+        "neck": [-0.95, 0.0, -0.04],
+        "head": [-2.1, 0.0, 0.04],
+        "left_collar": [-0.08, 0.08, 0.1],
+        "right_collar": [-0.08, -0.08, -0.1],
+        "left_shoulder": [-0.14, 0.05, 0.08],
+        "right_shoulder": [-0.14, -0.05, -0.08]
+      },
+      {
+        "frame": 24,
+        "hip": [0.0, 0.0, 0.0],
+        "abdomen_lower": [0.0, 0.0, 0.0],
+        "abdomen_upper": [0.0, 0.0, 0.0],
+        "chest": [0.0, 0.0, 0.0],
+        "neck": [0.0, 0.0, 0.0],
+        "head": [0.0, 0.0, 0.0],
+        "left_collar": [0.0, 0.0, 0.0],
+        "right_collar": [0.0, 0.0, 0.0],
+        "left_shoulder": [0.0, 0.0, 0.0],
+        "right_shoulder": [0.0, 0.0, 0.0]
+      }
+    ]
+  }
+}

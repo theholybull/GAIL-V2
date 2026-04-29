@@ -1,0 +1,59 @@
+{
+  "manifest_version": "v2",
+  "project": "cherry_girlfriend",
+  "source_master_file": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/Cherry.blend",
+  "armature_object": "Genesis 8 Female",
+  "avatar_exports": {
+    "private_girlfriend": {
+      "avatar_id": "private_girlfriend",
+      "armature_object": "Genesis 8 Female",
+      "export_mode": "new_avatar",
+      "body_face_group": {
+        "name": "cherry_base_avatar",
+        "objects": [
+          "Genesis 8 Female.Shape",
+          "Genesis 8 Female Eyelashes.Shape"
+        ],
+        "output_folder": "playcanvas-app/assets/gail/girlfriend/avatar/base_face",
+        "file_name": "cherry_base_avatar.glb"
+      },
+      "hair_groups": [
+        {
+          "name": "cherry_hair",
+          "objects": [
+            "Voss Hair Genesis 8 Female.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/girlfriend/hair",
+          "file_name": "cherry_hair.glb"
+        }
+      ],
+      "clothing_groups": [
+        {
+          "name": "girlfriend_dress",
+          "objects": [
+            "dForce Wet And Dry Classic Dress.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/girlfriend/clothing",
+          "file_name": "girlfriend_dress.glb"
+        },
+        {
+          "name": "girlfriend_shoes",
+          "objects": [
+            "Wet Dress Shoes.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/girlfriend/clothing",
+          "file_name": "girlfriend_shoes.glb"
+        },
+        {
+          "name": "girlfriend_heels",
+          "objects": [
+            "AS8_HighHeels.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/girlfriend/clothing",
+          "file_name": "girlfriend_heels.glb"
+        }
+      ],
+      "accessory_groups": []
+    }
+  }
+}

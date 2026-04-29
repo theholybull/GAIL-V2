@@ -1,0 +1,26 @@
+{
+  "project": "gail",
+  "baseline_name": "standing_core_v1",
+  "armature_object": "VAMP Laurina for G8 Female",
+  "pose_action": "pose_idle_confident_v1",
+  "start_anchor": {
+    "frame": 1,
+    "label": "standing_start",
+    "notes": "Canonical standing start pose for idle and other standing-family clips."
+  },
+  "end_anchor": {
+    "frame": 96,
+    "label": "standing_end",
+    "notes": "Canonical standing loop close for idle and other standing-family clips."
+  },
+  "face_actions": {
+    "body": "idle_face_body_v1",
+    "lashes": "idle_face_lashes_v1",
+    "brows": "idle_face_brows_v1"
+  },
+  "rules": [
+    "All standing-family clips should preserve the captured standing silhouette at their start anchor unless intentionally diverging.",
+    "Standing-family loop clips should close back to the same standing baseline on their end anchor.",
+    "If a new standing pose is needed, create a new named pose action and a new baseline record instead of mutating this one."
+  ]
+}

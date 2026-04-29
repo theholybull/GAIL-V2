@@ -1,0 +1,20 @@
+﻿{
+    "generated_at":  "2026-04-09T21:37:50",
+    "repo_root":  "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy",
+    "blender_exe":  "C:\\Program Files\\Blender Foundation\\Blender 4.2\\blender.exe",
+    "regular_refresh_skipped":  true,
+    "module_export_skipped":  true,
+    "clip_export_skipped":  false,
+    "include_review":  false,
+    "strict_validation":  false,
+    "dry_run":  false,
+    "copied_client_animation_files":  [
+                                          "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\idle_base_v1.glb",
+                                          "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\idle.glb",
+                                          "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\listen_base_v1.glb",
+                                          "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\talk_base_v1.glb",
+                                          "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\ack_nod_small_v1.glb"
+                                      ],
+    "module_export_report":  "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\blender\\animation_master\\exports\\reports\\playcanvas_asset_export_report.json",
+    "regular_build_report":  "C:\\Users\\bate_\\OneDrive\\Desktop\\Gail 2.1\\working_copy\\blender\\animation_master\\exports\\reports\\regular_avatar_build_report.json"
+}

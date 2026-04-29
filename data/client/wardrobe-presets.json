@@ -1,0 +1,44 @@
+{
+  "activePresetId": "gail_workwear",
+  "presets": [
+    {
+      "id": "gail_workwear",
+      "name": "Gail Workwear",
+      "persona": "normal",
+      "slots": {
+        "base": "base_avatar",
+        "hair": "meili_hair",
+        "upper": "gail_outfit_top",
+        "lower": "gail_outfit_pants",
+        "footwear": "gail_outfit_sandals",
+        "accessories": "gail_accessories_bundle"
+      }
+    },
+    {
+      "id": "lucy_counselor",
+      "name": "Lucy Counselor",
+      "persona": "private_counselor",
+      "slots": {
+        "base": "private_base_avatar",
+        "hair": "private_hair",
+        "upper": "private_top",
+        "lower": "private_pants",
+        "footwear": "private_boots",
+        "accessories": "private_bracelets"
+      }
+    },
+    {
+      "id": "cherry_girlfriend",
+      "name": "Cherry Girlfriend",
+      "persona": "private_girlfriend",
+      "slots": {
+        "base": "girlfriend_base_avatar",
+        "hair": "girlfriend_hair",
+        "upper": "girlfriend_dress",
+        "lower": null,
+        "footwear": "girlfriend_shoes",
+        "accessories": null
+      }
+    }
+  ]
+}

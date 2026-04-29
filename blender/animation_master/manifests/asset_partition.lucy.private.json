@@ -1,0 +1,52 @@
+{
+  "manifest_version": "v2",
+  "project": "lucy_private",
+  "source_master_file": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/lucy.blend",
+  "regular_avatar_file": "data/runtime/lucy_rig.generated.blend",
+  "armature_object": "Ai",
+  "avatar_exports": {
+    "private_counselor": {
+      "avatar_id": "private_counselor",
+      "armature_object": "Ai",
+      "export_mode": "new_avatar",
+      "body_face_group": {
+        "name": "lucy_base_avatar",
+        "objects": [
+          "Ai.Shape",
+          "Genesis 8 Female Eyelashes.Shape"
+        ],
+        "output_folder": "playcanvas-app/assets/gail/private/avatar/base_face",
+        "file_name": "lucy_base_avatar.glb"
+      },
+      "hair_groups": [
+        {
+          "name": "lucy_hair",
+          "objects": [
+            "Meili Hair.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/private/hair/lucy_hair",
+          "file_name": "lucy_hair.glb"
+        }
+      ],
+      "clothing_groups": [
+        {
+          "name": "private_top",
+          "objects": [
+            "G8MW_Camisole.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/private/clothing",
+          "file_name": "private_top.glb"
+        },
+        {
+          "name": "private_pants",
+          "objects": [
+            "G8MW_Shorts.Shape"
+          ],
+          "output_folder": "playcanvas-app/assets/gail/private/clothing",
+          "file_name": "private_pants.glb"
+        }
+      ],
+      "accessory_groups": []
+    }
+  }
+}

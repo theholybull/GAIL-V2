@@ -1,0 +1,371 @@
+[
+  {
+    "id": "change_approval_1776708097562",
+    "changeId": "change_1776708094511",
+    "reviewer": "master_checker",
+    "decision": "reject",
+    "reason": "Requested changes from Build Control Tower review lane.",
+    "timestamp": "2026-04-20T18:01:37.507Z",
+    "snapshotId": "snapshot_1776708094511"
+  },
+  {
+    "id": "change_approval_1776707682230",
+    "changeId": "change_1776707678820",
+    "reviewer": "master_checker",
+    "decision": "reject",
+    "reason": "Requested changes from Build Control Tower review lane.",
+    "timestamp": "2026-04-20T17:54:42.056Z",
+    "snapshotId": "snapshot_1776707678820"
+  },
+  {
+    "id": "change_approval_1776703417636",
+    "changeId": "change_1776703417594",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-20T16:43:37.635Z",
+    "snapshotId": "snapshot_1776703417594"
+  },
+  {
+    "id": "change_approval_1776703414474",
+    "changeId": "change_1776703414432",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-20T16:43:34.473Z",
+    "snapshotId": "snapshot_1776703414432"
+  },
+  {
+    "id": "change_approval_1776703411516",
+    "changeId": "change_1776703411479",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-20T16:43:31.515Z",
+    "snapshotId": "snapshot_1776703411479"
+  },
+  {
+    "id": "change_approval_1776703408432",
+    "changeId": "change_1776703408390",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-20T16:43:28.431Z",
+    "snapshotId": "snapshot_1776703408390"
+  },
+  {
+    "id": "change_approval_1776703405872",
+    "changeId": "change_1776703405825",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-20T16:43:25.871Z",
+    "snapshotId": "snapshot_1776703405825"
+  },
+  {
+    "id": "change_approval_1776703404398",
+    "changeId": "change_1776703404316",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-20T16:43:24.397Z",
+    "snapshotId": "snapshot_1776703404316"
+  },
+  {
+    "id": "change_approval_1775798045437",
+    "changeId": "change_1775798045385",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T05:14:05.434Z",
+    "snapshotId": "snapshot_1775798045385"
+  },
+  {
+    "id": "change_approval_1775798041717",
+    "changeId": "change_1775798041672",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T05:14:01.716Z",
+    "snapshotId": "snapshot_1775798041672"
+  },
+  {
+    "id": "change_approval_1775798038284",
+    "changeId": "change_1775798038227",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T05:13:58.281Z",
+    "snapshotId": "snapshot_1775798038227"
+  },
+  {
+    "id": "change_approval_1775798034764",
+    "changeId": "change_1775798034682",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T05:13:54.763Z",
+    "snapshotId": "snapshot_1775798034682"
+  },
+  {
+    "id": "change_approval_1775798032068",
+    "changeId": "change_1775798032014",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T05:13:52.066Z",
+    "snapshotId": "snapshot_1775798032014"
+  },
+  {
+    "id": "change_approval_1775798030295",
+    "changeId": "change_1775798029741",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T05:13:50.294Z",
+    "snapshotId": "snapshot_1775798029741"
+  },
+  {
+    "id": "change_approval_1775795674057",
+    "changeId": "change_1775795674009",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T04:34:34.055Z",
+    "snapshotId": "snapshot_1775795674009"
+  },
+  {
+    "id": "change_approval_1775795669642",
+    "changeId": "change_1775795669587",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T04:34:29.641Z",
+    "snapshotId": "snapshot_1775795669587"
+  },
+  {
+    "id": "change_approval_1775795665571",
+    "changeId": "change_1775795665509",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T04:34:25.569Z",
+    "snapshotId": "snapshot_1775795665509"
+  },
+  {
+    "id": "change_approval_1775795662047",
+    "changeId": "change_1775795661977",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T04:34:22.045Z",
+    "snapshotId": "snapshot_1775795661977"
+  },
+  {
+    "id": "change_approval_1775795658802",
+    "changeId": "change_1775795658730",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T04:34:18.799Z",
+    "snapshotId": "snapshot_1775795658730"
+  },
+  {
+    "id": "change_approval_1775795656733",
+    "changeId": "change_1775795656005",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T04:34:16.732Z",
+    "snapshotId": "snapshot_1775795656005"
+  },
+  {
+    "id": "change_approval_1775785943357",
+    "changeId": "change_1775785943316",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:52:23.356Z",
+    "snapshotId": "snapshot_1775785943316"
+  },
+  {
+    "id": "change_approval_1775785940033",
+    "changeId": "change_1775785939992",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:52:20.032Z",
+    "snapshotId": "snapshot_1775785939992"
+  },
+  {
+    "id": "change_approval_1775785937012",
+    "changeId": "change_1775785936969",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:52:17.011Z",
+    "snapshotId": "snapshot_1775785936969"
+  },
+  {
+    "id": "change_approval_1775785934008",
+    "changeId": "change_1775785933960",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:52:14.008Z",
+    "snapshotId": "snapshot_1775785933960"
+  },
+  {
+    "id": "change_approval_1775785931831",
+    "changeId": "change_1775785931790",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:52:11.830Z",
+    "snapshotId": "snapshot_1775785931790"
+  },
+  {
+    "id": "change_approval_1775785930396",
+    "changeId": "change_1775785930340",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:52:10.395Z",
+    "snapshotId": "snapshot_1775785930340"
+  },
+  {
+    "id": "change_approval_1775785348059",
+    "changeId": "change_1775785348015",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:28.058Z",
+    "snapshotId": "snapshot_1775785348015"
+  },
+  {
+    "id": "change_approval_1775785344624",
+    "changeId": "change_1775785344581",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:24.623Z",
+    "snapshotId": "snapshot_1775785344581"
+  },
+  {
+    "id": "change_approval_1775785341275",
+    "changeId": "change_1775785341232",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:21.275Z",
+    "snapshotId": "snapshot_1775785341232"
+  },
+  {
+    "id": "change_approval_1775785338203",
+    "changeId": "change_1775785338163",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:18.202Z",
+    "snapshotId": "snapshot_1775785338163"
+  },
+  {
+    "id": "change_approval_1775785335947",
+    "changeId": "change_1775785335906",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:15.946Z",
+    "snapshotId": "snapshot_1775785335906"
+  },
+  {
+    "id": "change_approval_1775785334516",
+    "changeId": "change_1775785334476",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:14.515Z",
+    "snapshotId": "snapshot_1775785334476"
+  },
+  {
+    "id": "change_approval_1775785327641",
+    "changeId": "change_1775785327236",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:42:07.640Z",
+    "snapshotId": "snapshot_1775785327236"
+  },
+  {
+    "id": "change_approval_1775783747997",
+    "changeId": "change_1775783747950",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:15:47.997Z",
+    "snapshotId": "snapshot_1775783747950"
+  },
+  {
+    "id": "change_approval_1775783746702",
+    "changeId": "change_1775783746650",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:15:46.701Z",
+    "snapshotId": "snapshot_1775783746650"
+  },
+  {
+    "id": "change_approval_1775782940212",
+    "changeId": "change_1775782940160",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:02:20.211Z",
+    "snapshotId": "snapshot_1775782940160"
+  },
+  {
+    "id": "change_approval_1775782937097",
+    "changeId": "change_1775782937051",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:02:17.097Z",
+    "snapshotId": "snapshot_1775782937051"
+  },
+  {
+    "id": "change_approval_1775782934377",
+    "changeId": "change_1775782934331",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:02:14.376Z",
+    "snapshotId": "snapshot_1775782934331"
+  },
+  {
+    "id": "change_approval_1775782931500",
+    "changeId": "change_1775782931440",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:02:11.499Z",
+    "snapshotId": "snapshot_1775782931440"
+  },
+  {
+    "id": "change_approval_1775782929556",
+    "changeId": "change_1775782929497",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:02:09.556Z",
+    "snapshotId": "snapshot_1775782929497"
+  },
+  {
+    "id": "change_approval_1775782928077",
+    "changeId": "change_1775782927479",
+    "reviewer": "master_checker",
+    "decision": "approve",
+    "reason": "approved after evidence",
+    "timestamp": "2026-04-10T01:02:08.077Z",
+    "snapshotId": "snapshot_1775782927479"
+  }
+]

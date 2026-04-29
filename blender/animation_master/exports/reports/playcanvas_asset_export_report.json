@@ -1,0 +1,34 @@
+{
+  "profile": "low",
+  "profile_label": "Low / ESP32 Watch",
+  "exports": [
+    {
+      "avatar_id": "gail_primary",
+      "name": "gail_mobile_clothed_low",
+      "type": "clothing_set",
+      "path": "playcanvas-app\\assets\\gail_lite\\mobile\\gail_mobile_clothed_low.glb",
+      "relative_path": null,
+      "objects": [
+        "Genesis8Female.Shape",
+        "Genesis8FemaleEyelashes.Shape",
+        "Vest_15749.Shape",
+        "Pants_79375.Shape",
+        "Boots_38106.Shape",
+        "Hair_397063.Shape"
+      ],
+      "temp_objects": [
+        "Genesis8Female__gail_export_tmp",
+        "Genesis8Female.Shape__gail_export_tmp",
+        "Genesis8FemaleEyelashes.Shape__gail_export_tmp",
+        "Vest_15749.Shape__gail_export_tmp",
+        "Pants_79375.Shape__gail_export_tmp",
+        "Boots_38106.Shape__gail_export_tmp",
+        "Hair_397063.Shape__gail_export_tmp"
+      ],
+      "profile": "Low / ESP32 Watch",
+      "matte_applied": false,
+      "armature_normalized": false
+    }
+  ],
+  "warnings": []
+}

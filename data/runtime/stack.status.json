@@ -1,0 +1,8 @@
+﻿{
+    "startedAt":  "2026-04-24T22:05:55",
+    "baseUrl":  "http://127.0.0.1:4180",
+    "bindHost":  "0.0.0.0",
+    "authMode":  "open",
+    "nodeDir":  "C:\\Program Files\\nodejs",
+    "manifestVersion":  1
+}

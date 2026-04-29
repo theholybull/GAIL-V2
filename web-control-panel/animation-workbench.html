@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gail Animation Workbench</title>
+    <link rel="stylesheet" href="/panel/src/styles/animation-workbench.css" />
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+  <body class="workbench">
+
+    <!-- ── Top bar ────────────────────────────────────────────────────── -->
+    <header class="topbar">
+      <span class="topbar-title">Animation Workbench</span>
+      <div class="topbar-tabs">
+        <button class="top-tab active" data-top-tab="avatar">Avatar</button>
+        <button class="top-tab" data-top-tab="clothing">Clothing</button>
+        <button class="top-tab" data-top-tab="hair">Hair</button>
+        <div class="tab-divider"></div>
+        <button class="top-tab" data-top-tab="animations">Animations</button>
+        <button class="top-tab" data-top-tab="camera">Camera</button>
+        <div class="tab-divider"></div>
+        <button class="top-tab" data-top-tab="import">Import Library</button>
+      </div>
+      <div class="topbar-right">
+        <span id="stateBadge" class="badge"></span>
+        <button id="refreshBtn" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <!-- ── Main area: sidebar + viewport ──────────────────────────────── -->
+    <div class="wb-body">
+
+      <!-- Sidebar (driven by top tabs) -->
+      <aside class="side-panel">
+
+        <div class="tab-pane active" id="top-tab-avatar">
+          <div class="pane-scroll"><div id="avatarList" class="asset-list"></div></div>
+        </div>
+
+        <div class="tab-pane" id="top-tab-clothing">
+          <div class="pane-scroll"><div id="clothingList" class="asset-list"></div></div>
+        </div>
+
+        <div class="tab-pane" id="top-tab-hair">
+          <div class="pane-scroll"><div id="hairList" class="asset-list"></div></div>
+        </div>
+
+        <div class="tab-pane" id="top-tab-animations">
+          <div class="pane-toolbar">
+            <input id="animSearchInput" type="text" placeholder="Search animations..." autocomplete="off" />
+          </div>
+          <div class="pane-scroll"><div id="animList" class="asset-list"></div></div>
+        </div>
+
+        <div class="tab-pane" id="top-tab-camera">
+          <div class="pane-scroll">
+            <div class="camera-presets">
+              <button class="cam-btn" data-preset="front" type="button">Front</button>
+              <button class="cam-btn" data-preset="side" type="button">Side</button>
+              <button class="cam-btn" data-preset="three_quarter" type="button">3/4</button>
+              <button class="cam-btn" data-preset="closeup" type="button">Close-up</button>
+              <button class="cam-btn" data-preset="overhead" type="button">Overhead</button>
+              <button class="cam-btn" data-preset="low" type="button">Low</button>
+            </div>
+            <div class="camera-sliders">
+              <label class="slider-label">Distance
+                <input id="camDistanceInput" type="range" min="0.5" max="10" value="3" step="0.1" />
+              </label>
+              <label class="slider-label">Height offset
+                <input id="camHeightInput" type="range" min="-1" max="3" value="0" step="0.05" />
+              </label>
+              <label class="slider-label">Orbit angle
+                <input id="camOrbitInput" type="range" min="0" max="360" value="0" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Import Library tab ──────────────────────────────── -->
+        <div class="tab-pane" id="top-tab-import">
+          <div class="import-pane-toolbar">
+            <div id="importCategoryChips" class="import-chips"></div>
+            <input id="importSearchInput" type="text" placeholder="Search 1892 clips..." autocomplete="off" />
+          </div>
+          <div class="pane-scroll"><div id="importLibraryList" class="import-lib-list"></div></div>
+          <div class="import-pane-footer">
+            <span id="importLibraryStatus" class="import-lib-status"></span>
+            <button id="importRefreshBtn" type="button">Reload Catalog</button>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Viewport: Three.js canvas -->
+      <div class="viewport-col">
+        <div class="viewport-wrap" id="viewportWrap">
+          <canvas id="viewportCanvas" class="viewport-canvas"></canvas>
+          <div class="vp-hud">
+            <div id="activeSlotSummary" class="vp-slots"></div>
+            <div id="viewportStatus" class="vp-status"></div>
+            <span id="nowPlayingLabel" class="vp-now-playing" hidden></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Bottom sequence strip ──────────────────────────────────────── -->
+    <div class="seq-strip">
+      <div id="sequenceTrack" class="seq-track">
+        <div id="trackEmpty" class="track-empty">Drag animations here to build a sequence</div>
+      </div>
+      <div class="strip-controls">
+        <label class="ctrl-row">FPS<input id="fpsInput" type="number" value="30" min="1" max="120" /></label>
+        <label class="ctrl-row">Gap<input id="gapFramesInput" type="number" value="12" min="0" /></label>
+        <button id="clearSequenceBtn" type="button" class="ghost-btn">Clear</button>
+        <button id="sendToBlenderBtn" type="button" class="accent-btn">Send to Blender</button>
+        <span id="jobBadge" class="badge"></span>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <script type="module" src="/panel/src/animation-workbench.js"></script>
+  </body>
+</html>

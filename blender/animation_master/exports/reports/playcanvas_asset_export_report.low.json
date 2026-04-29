@@ -1,0 +1,79 @@
+{
+  "profile": "low",
+  "profile_label": "Low / ESP32 Watch",
+  "exports": [
+    {
+      "avatar_id": "gail_primary",
+      "name": "meili_hair",
+      "type": "hair",
+      "path": "playcanvas-app\\assets\\gail\\hair\\meili_hair\\meili_hair.glb",
+      "relative_path": null,
+      "objects": [
+        "Savanna Hair.Shape"
+      ],
+      "temp_objects": [],
+      "profile": "Low / ESP32 Watch",
+      "matte_applied": false
+    },
+    {
+      "avatar_id": "gail_primary",
+      "name": "urban_action_vest",
+      "type": "clothing_piece",
+      "path": "playcanvas-app\\assets\\gail\\clothes\\urban_action_vest\\urban_action_vest.glb",
+      "relative_path": null,
+      "objects": [
+        "Boho Tank.Shape"
+      ],
+      "temp_objects": [],
+      "profile": "Low / ESP32 Watch",
+      "matte_applied": false
+    },
+    {
+      "avatar_id": "gail_primary",
+      "name": "urban_action_pants",
+      "type": "clothing_piece",
+      "path": "playcanvas-app\\assets\\gail\\clothes\\urban_action_pants\\urban_action_pants.glb",
+      "relative_path": null,
+      "objects": [
+        "Urban Action Pants.Shape"
+      ],
+      "temp_objects": [],
+      "profile": "Low / ESP32 Watch",
+      "matte_applied": false
+    },
+    {
+      "avatar_id": "gail_primary",
+      "name": "urban_action_bracelets",
+      "type": "accessory",
+      "path": "playcanvas-app\\assets\\gail\\accessories\\urban_action_bracelets\\urban_action_bracelets.glb",
+      "relative_path": null,
+      "objects": [
+        "Urban Action Bracelets.Shape"
+      ],
+      "temp_objects": [],
+      "profile": "Low / ESP32 Watch",
+      "matte_applied": false
+    },
+    {
+      "avatar_id": "gail_primary",
+      "name": "gail_base_avatar",
+      "type": "avatar",
+      "path": "playcanvas-app\\assets\\gail\\avatar\\base_face\\gail_base_avatar.glb",
+      "relative_path": null,
+      "source_objects": [
+        "Victoria 8.Shape",
+        "Genesis 8 Female Eyelashes.Shape"
+      ],
+      "temp_objects": [
+        "Victoria 8.Shape__gail_export_tmp",
+        "Genesis 8 Female Eyelashes.Shape__gail_export_tmp"
+      ],
+      "removed_shape_keys": {
+        "Victoria 8.Shape": [],
+        "Genesis 8 Female Eyelashes.Shape": []
+      },
+      "profile": "Low / ESP32 Watch",
+      "matte_applied": false
+    }
+  ]
+}

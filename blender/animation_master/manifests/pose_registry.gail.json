@@ -1,0 +1,141 @@
+{
+  "project": "gail",
+  "master_file": "F:\\Gail\\gail_rig_master.blend",
+  "armature_object": "VAMP Laurina for G8 Female",
+  "pose_actions": {
+    "pose_idle_confident_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "neutral_idle",
+      "loop_usage": "seamless",
+      "frame": 1,
+      "notes": [
+        "Primary start and end pose for seamless standing loops.",
+        "Capture this from the real posed master file using capture_current_pose_as_action.py.",
+        "Do not infer this pose from frame 1 of any clip."
+      ]
+    },
+    "pose_focused_idle_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "focused_idle",
+      "loop_usage": "seamless",
+      "frame": 1,
+      "notes": [
+        "Attentive standing anchor for focused or listening loops."
+      ]
+    },
+    "pose_talk_idle_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "talk_idle",
+      "loop_usage": "seamless",
+      "frame": 1,
+      "notes": [
+        "Neutral talking anchor that can loop cleanly."
+      ]
+    },
+    "pose_prop_ready_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "prop_ready",
+      "loop_usage": "sequence",
+      "frame": 1,
+      "notes": [
+        "Prepared stance for prop interactions and transitions."
+      ]
+    },
+    "pose_ambient_seated_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "ambient_seated",
+      "loop_usage": "seamless",
+      "frame": 1,
+      "notes": [
+        "Start and end pose for seated ambient loops."
+      ]
+    },
+    "pose_backturn_bench_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "backturn_bench",
+      "loop_usage": "seamless",
+      "frame": 1,
+      "notes": [
+        "Back-turned bench pose for ambient and off-screen variants."
+      ]
+    },
+    "pose_mug_ready_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_anchor",
+      "family": "mug_ready",
+      "loop_usage": "sequence",
+      "frame": 1,
+      "notes": [
+        "Stable hand-ready pose for mug routines."
+      ]
+    },
+    "pose_idle_shift_mid_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_midpoint",
+      "family": "neutral_idle",
+      "loop_usage": "short_loop",
+      "frame": 1,
+      "notes": [
+        "Short-loop midpoint for subtle weight shifts."
+      ]
+    },
+    "pose_listen_soft_mid_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_midpoint",
+      "family": "focused_idle",
+      "loop_usage": "short_loop",
+      "frame": 1,
+      "notes": [
+        "Midpoint for listening loops with a small body shift."
+      ]
+    },
+    "pose_talk_emphasis_mid_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "loop_midpoint",
+      "family": "talk_idle",
+      "loop_usage": "short_loop",
+      "frame": 1,
+      "notes": [
+        "Midpoint for talk loops with light emphasis."
+      ]
+    },
+    "pose_turn_prep_left_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "sequence_key",
+      "family": "turning",
+      "loop_usage": "sequence",
+      "frame": 1,
+      "notes": [
+        "Preparation key for larger left-turn animations."
+      ]
+    },
+    "pose_turn_prep_right_v1": {
+      "status": "capture_next",
+      "type": "base_pose",
+      "role": "sequence_key",
+      "family": "turning",
+      "loop_usage": "sequence",
+      "frame": 1,
+      "notes": [
+        "Preparation key for larger right-turn animations."
+      ]
+    }
+  }
+}

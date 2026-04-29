@@ -1,0 +1,204 @@
+{
+  "mappings": [
+    {
+      "id": "command_mapping_1776703416207",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260420-124336",
+      "normalizedPhrase": "phase2 show tasks 20260420 124336",
+      "createdAt": "2026-04-20T16:43:36.207Z",
+      "updatedAt": "2026-04-20T16:43:36.207Z"
+    },
+    {
+      "id": "command_mapping_1776703413089",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260420-124333",
+      "normalizedPhrase": "phase2 show tasks 20260420 124333",
+      "createdAt": "2026-04-20T16:43:33.089Z",
+      "updatedAt": "2026-04-20T16:43:33.089Z"
+    },
+    {
+      "id": "command_mapping_1776703410133",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260420-124330",
+      "normalizedPhrase": "phase2 show tasks 20260420 124330",
+      "createdAt": "2026-04-20T16:43:30.133Z",
+      "updatedAt": "2026-04-20T16:43:30.133Z"
+    },
+    {
+      "id": "command_mapping_1776703409501",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260420-124329",
+      "normalizedPhrase": "phase2 show tasks 20260420 124329",
+      "createdAt": "2026-04-20T16:43:29.501Z",
+      "updatedAt": "2026-04-20T16:43:29.501Z"
+    },
+    {
+      "id": "command_mapping_1775798043883",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-011403",
+      "normalizedPhrase": "phase2 show tasks 20260410 011403",
+      "createdAt": "2026-04-10T05:14:03.883Z",
+      "updatedAt": "2026-04-10T05:14:03.883Z"
+    },
+    {
+      "id": "command_mapping_1775798040230",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-011400",
+      "normalizedPhrase": "phase2 show tasks 20260410 011400",
+      "createdAt": "2026-04-10T05:14:00.230Z",
+      "updatedAt": "2026-04-10T05:14:00.230Z"
+    },
+    {
+      "id": "command_mapping_1775798036610",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-011356",
+      "normalizedPhrase": "phase2 show tasks 20260410 011356",
+      "createdAt": "2026-04-10T05:13:56.610Z",
+      "updatedAt": "2026-04-10T05:13:56.610Z"
+    },
+    {
+      "id": "command_mapping_1775798035927",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-011355",
+      "normalizedPhrase": "phase2 show tasks 20260410 011355",
+      "createdAt": "2026-04-10T05:13:55.927Z",
+      "updatedAt": "2026-04-10T05:13:55.927Z"
+    },
+    {
+      "id": "command_mapping_1775795672085",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-003432",
+      "normalizedPhrase": "phase2 show tasks 20260410 003432",
+      "createdAt": "2026-04-10T04:34:32.085Z",
+      "updatedAt": "2026-04-10T04:34:32.085Z"
+    },
+    {
+      "id": "command_mapping_1775795667817",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-003427",
+      "normalizedPhrase": "phase2 show tasks 20260410 003427",
+      "createdAt": "2026-04-10T04:34:27.817Z",
+      "updatedAt": "2026-04-10T04:34:27.817Z"
+    },
+    {
+      "id": "command_mapping_1775795663101",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260410-003423",
+      "normalizedPhrase": "phase2 show tasks 20260410 003423",
+      "createdAt": "2026-04-10T04:34:23.101Z",
+      "updatedAt": "2026-04-10T04:34:23.101Z"
+    },
+    {
+      "id": "command_mapping_1775791309476",
+      "commandKey": "show_tasks",
+      "phrase": "show my tasks",
+      "normalizedPhrase": "show my tasks",
+      "createdAt": "2026-04-10T03:21:49.476Z",
+      "updatedAt": "2026-04-10T03:21:49.476Z"
+    },
+    {
+      "id": "command_mapping_1775785941963",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-215221",
+      "normalizedPhrase": "phase2 show tasks 20260409 215221",
+      "createdAt": "2026-04-10T01:52:21.963Z",
+      "updatedAt": "2026-04-10T01:52:21.963Z"
+    },
+    {
+      "id": "command_mapping_1775785938645",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-215218",
+      "normalizedPhrase": "phase2 show tasks 20260409 215218",
+      "createdAt": "2026-04-10T01:52:18.645Z",
+      "updatedAt": "2026-04-10T01:52:18.645Z"
+    },
+    {
+      "id": "command_mapping_1775785935034",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-215215",
+      "normalizedPhrase": "phase2 show tasks 20260409 215215",
+      "createdAt": "2026-04-10T01:52:15.034Z",
+      "updatedAt": "2026-04-10T01:52:15.034Z"
+    },
+    {
+      "id": "command_mapping_1775785346664",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-214226",
+      "normalizedPhrase": "phase2 show tasks 20260409 214226",
+      "createdAt": "2026-04-10T01:42:26.664Z",
+      "updatedAt": "2026-04-10T01:42:26.664Z"
+    },
+    {
+      "id": "command_mapping_1775785343238",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-214223",
+      "normalizedPhrase": "phase2 show tasks 20260409 214223",
+      "createdAt": "2026-04-10T01:42:23.238Z",
+      "updatedAt": "2026-04-10T01:42:23.238Z"
+    },
+    {
+      "id": "command_mapping_1775785339277",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-214219",
+      "normalizedPhrase": "phase2 show tasks 20260409 214219",
+      "createdAt": "2026-04-10T01:42:19.277Z",
+      "updatedAt": "2026-04-10T01:42:19.277Z"
+    },
+    {
+      "id": "command_mapping_1775785327265",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-214207",
+      "normalizedPhrase": "phase2 show tasks 20260409 214207",
+      "createdAt": "2026-04-10T01:42:07.265Z",
+      "updatedAt": "2026-04-10T01:42:07.265Z"
+    },
+    {
+      "id": "command_mapping_1775785267021",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-214107",
+      "normalizedPhrase": "phase2 show tasks 20260409 214107",
+      "createdAt": "2026-04-10T01:41:07.021Z",
+      "updatedAt": "2026-04-10T01:41:07.021Z"
+    },
+    {
+      "id": "command_mapping_1775785154801",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-213914",
+      "normalizedPhrase": "phase2 show tasks 20260409 213914",
+      "createdAt": "2026-04-10T01:39:14.801Z",
+      "updatedAt": "2026-04-10T01:39:14.801Z"
+    },
+    {
+      "id": "command_mapping_1775782938889",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-210218",
+      "normalizedPhrase": "phase2 show tasks 20260409 210218",
+      "createdAt": "2026-04-10T01:02:18.889Z",
+      "updatedAt": "2026-04-10T01:02:18.889Z"
+    },
+    {
+      "id": "command_mapping_1775782935796",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-210215",
+      "normalizedPhrase": "phase2 show tasks 20260409 210215",
+      "createdAt": "2026-04-10T01:02:15.796Z",
+      "updatedAt": "2026-04-10T01:02:15.796Z"
+    },
+    {
+      "id": "command_mapping_1775782933063",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-210213",
+      "normalizedPhrase": "phase2 show tasks 20260409 210213",
+      "createdAt": "2026-04-10T01:02:13.063Z",
+      "updatedAt": "2026-04-10T01:02:13.063Z"
+    },
+    {
+      "id": "command_mapping_1775782932444",
+      "commandKey": "show_tasks",
+      "phrase": "phase2 show tasks 20260409-210212",
+      "normalizedPhrase": "phase2 show tasks 20260409 210212",
+      "createdAt": "2026-04-10T01:02:12.444Z",
+      "updatedAt": "2026-04-10T01:02:12.444Z"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "project": "gail",
+  "entries": [
+    {
+      "import_id": "imp_2026_03_18_mixamo_listen_001",
+      "date": "2026-03-18",
+      "source_type": "mixamo",
+      "vendor": "Mixamo",
+      "source_file": "F:\\Gail\\blender\\animation_master\\source\\imports\\raw\\mixamo\\Y_Bot_Listening.fbx",
+      "source_clip": "mixamo.com",
+      "target_clip": "listen_base_v1",
+      "retarget_scene_object": "src_mixamo_listen_001",
+      "retargeted_by": "manual_retarget_pass_01",
+      "cleanup_pass": "cleanup_2026_03_18",
+      "keep_source_archive": true,
+      "notes": "Used only for timing and torso rhythm. Hands and neck were substantially reauthored."
+    },
+    {
+      "import_id": "imp_2026_03_18_marketplace_idle_001",
+      "date": "2026-03-18",
+      "source_type": "marketplace",
+      "vendor": "Example Marketplace",
+      "source_file": "F:\\Gail\\blender\\animation_master\\source\\imports\\raw\\marketplace\\female_idle_pack.fbx",
+      "source_clip": "Idle_03",
+      "target_clip": "idle_variant_01_v1",
+      "retarget_scene_object": "src_market_idle_001",
+      "retargeted_by": "manual_retarget_pass_02",
+      "cleanup_pass": "cleanup_2026_03_18",
+      "keep_source_archive": false,
+      "notes": "Discard source armature after bake and registry confirmation."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "source_master_file": "C:\\Users\\jbates\\Desktop\\idle pose.blend",
+  "output_regular_file": "C:\\Users\\jbates\\Desktop\\gail_rig.blend",
+  "removed": [
+    "object:Boho Summer Shoes.Shape",
+    "object:Meili Hair.Shape",
+    "object:Urban Action Boots.Shape",
+    "object:Urban Action Bracelets (2).Shape",
+    "object:Urban Action Bracelets (3).Shape",
+    "object:Urban Action Bracelets.Shape",
+    "object:Urban Action Pants.Shape",
+    "object:Urban Action Vest.Shape"
+  ],
+  "armature_object": "VAMP Laurina for G8 Female"
+}

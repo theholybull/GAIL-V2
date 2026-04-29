@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gail.local/schemas/animation-manifest.schema.json",
+  "title": "Gail Animation Manifest",
+  "type": "object",
+  "required": [
+    "manifest_version",
+    "project",
+    "master_file",
+    "armature",
+    "export_profiles",
+    "clips"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "pattern": "^v[0-9]+$"
+    },
+    "project": {
+      "type": "string",
+      "const": "gail"
+    },
+    "master_file": {
+      "type": "string"
+    },
+    "armature": {
+      "type": "object",
+      "required": [
+        "object_name",
+        "data_name",
+        "lock_contract"
+      ],
+      "properties": {
+        "object_name": {
+          "type": "string"
+        },
+        "data_name": {
+          "type": "string"
+        },
+        "lock_contract": {
+          "type": "boolean"
+        }
+      }
+    },
+    "export_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "format",
+          "path_root",
+          "collection"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "glb"
+            ]
+          },
+          "path_root": {
+            "type": "string"
+          },
+          "collection": {
+            "type": "string"
+          },
+          "include_statuses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "clips": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "clip_name",
+          "category",
+          "version",
+          "status",
+          "owner",
+          "partition",
+          "frame_start",
+          "frame_end",
+          "loop",
+          "source",
+          "export"
+        ]
+      }
+    }
+  }
+}

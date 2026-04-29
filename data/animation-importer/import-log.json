@@ -1,0 +1,32 @@
+[
+  {
+    "status": "ok",
+    "sourceId": "idle/26777_cover_idle",
+    "sourcePath": "D:\\Gail 2.1\\converted_animations_20260401\\idle\\26777_cover_idle.glb",
+    "targetPath": "D:\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\idle__26777_cover_idle.glb",
+    "targetName": "idle__26777_cover_idle.glb",
+    "sizeMB": 1.65,
+    "message": "Import complete",
+    "importedAt": "2026-04-20T19:06:24.325Z"
+  },
+  {
+    "status": "ok",
+    "sourceId": "idle/26965_stand_still",
+    "sourcePath": "D:\\Gail 2.1\\converted_animations_20260401\\idle\\26965_stand_still.glb",
+    "targetPath": "D:\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\idle__26965_stand_still.glb",
+    "targetName": "idle__26965_stand_still.glb",
+    "sizeMB": 1.71,
+    "message": "Import complete",
+    "importedAt": "2026-04-20T19:19:06.062Z"
+  },
+  {
+    "status": "ok",
+    "sourceId": "idle/27375_stand_still",
+    "sourcePath": "D:\\Gail 2.1\\working_copy\\data\\animation-library\\converted_animations_20260401\\idle\\27375_stand_still.glb",
+    "targetPath": "D:\\Gail 2.1\\working_copy\\playcanvas-app\\assets\\animations\\idle__27375_stand_still.glb",
+    "targetName": "idle__27375_stand_still.glb",
+    "sizeMB": 1.67,
+    "message": "Import complete",
+    "importedAt": "2026-04-20T19:21:30.606Z"
+  }
+]

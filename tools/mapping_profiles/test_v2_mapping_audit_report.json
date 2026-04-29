@@ -1,0 +1,14 @@
+{
+  "blend": "D:\\test_v2.blend",
+  "addon_enable": "ok",
+  "addon_reinstall": "not-run",
+  "armatures": [],
+  "source_rig": "",
+  "target_rig": "",
+  "scores": {},
+  "idle_action_selected": "",
+  "outputs": {},
+  "errors": [
+    "retarget imports failed: ImportError(\"cannot import name 'auto_load' from partially initialized module 'animoxtend' (most likely due to a circular import) (C:\\\\Users\\\\guysi\\\\AppData\\\\Roaming\\\\Blender Foundation\\\\Blender\\\\4.1\\\\scripts\\\\addons\\\\animoxtend\\\\__init__.py)\")"
+  ]
+}

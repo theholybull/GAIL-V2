@@ -1,0 +1,186 @@
+{
+  "clip": "talk_base_v1",
+  "category": "talk",
+  "status": "review",
+  "partition": "body",
+  "loop": true,
+  "base_pose_action": "pose_idle_confident_v1",
+  "baseline_name": "standing_core_v1",
+  "start_anchor_frame": 1,
+  "end_anchor_frame": 72,
+  "frame_start": 1,
+  "frame_end": 72,
+  "bone_map_file": "F:\\Gail\\blender\\animation_master\\manifests\\bone_map.gail.json",
+  "face_actions": {
+    "body": "talk_face_body_v1",
+    "lashes": "talk_face_lashes_v1",
+    "brows": "talk_face_brows_v1"
+  },
+  "body": {
+    "breathing_keys": [
+      { "frame": 1, "chest": [0.0, 0.0], "neck": [0.0, 0.0], "head": [0.0, 0.0] },
+      { "frame": 7, "chest": [1.8, 0.28], "neck": [0.52, 0.1], "head": [-0.18, 0.18] },
+      { "frame": 15, "chest": [0.24, -0.14], "neck": [0.08, -0.05], "head": [0.54, -0.08] },
+      { "frame": 23, "chest": [2.15, 0.32], "neck": [0.62, 0.12], "head": [-0.08, 0.22] },
+      { "frame": 31, "chest": [0.34, -0.16], "neck": [0.12, -0.06], "head": [0.46, -0.08] },
+      { "frame": 42, "chest": [1.96, 0.28], "neck": [0.56, 0.1], "head": [-0.02, 0.18] },
+      { "frame": 53, "chest": [0.18, -0.12], "neck": [0.06, -0.05], "head": [0.38, -0.06] },
+      { "frame": 63, "chest": [1.62, 0.22], "neck": [0.46, 0.08], "head": [0.02, 0.14] },
+      { "frame": 72, "chest": [0.0, 0.0], "neck": [0.0, 0.0], "head": [0.0, 0.0] }
+    ],
+    "hip_keys": [
+      { "frame": 1, "hip": [0.0, 0.0, 0.0], "hip_loc": [0.0, 0.0, 0.0], "abdomen_lower": [0.0, 0.0, 0.0], "abdomen_lower_loc": [0.0, 0.0, 0.0], "abdomen_upper": [0.0, 0.0, 0.0], "abdomen_upper_loc": [0.0, 0.0, 0.0] },
+      { "frame": 8, "hip": [0.22, 0.0, 0.0], "hip_loc": [0.0, 0.02, 0.0], "abdomen_lower": [0.42, 0.04, 0.0], "abdomen_lower_loc": [0.0, 0.01, 0.0], "abdomen_upper": [0.28, 0.04, 0.0], "abdomen_upper_loc": [0.0, 0.005, 0.0] },
+      { "frame": 18, "hip": [-0.1, 0.0, 0.0], "hip_loc": [0.0, -0.012, 0.0], "abdomen_lower": [-0.22, -0.03, 0.0], "abdomen_lower_loc": [0.0, -0.006, 0.0], "abdomen_upper": [-0.14, -0.03, 0.0], "abdomen_upper_loc": [0.0, -0.003, 0.0] },
+      { "frame": 30, "hip": [0.28, 0.0, 0.0], "hip_loc": [0.0, 0.028, 0.0], "abdomen_lower": [0.52, 0.06, 0.0], "abdomen_lower_loc": [0.0, 0.014, 0.0], "abdomen_upper": [0.36, 0.06, 0.0], "abdomen_upper_loc": [0.0, 0.007, 0.0] },
+      { "frame": 44, "hip": [-0.08, 0.0, 0.0], "hip_loc": [0.0, -0.01, 0.0], "abdomen_lower": [-0.18, -0.03, 0.0], "abdomen_lower_loc": [0.0, -0.005, 0.0], "abdomen_upper": [-0.12, -0.03, 0.0], "abdomen_upper_loc": [0.0, -0.002, 0.0] },
+      { "frame": 58, "hip": [0.18, 0.0, 0.0], "hip_loc": [0.0, 0.018, 0.0], "abdomen_lower": [0.34, 0.04, 0.0], "abdomen_lower_loc": [0.0, 0.008, 0.0], "abdomen_upper": [0.24, 0.04, 0.0], "abdomen_upper_loc": [0.0, 0.004, 0.0] },
+      { "frame": 72, "hip": [0.0, 0.0, 0.0], "abdomen_lower": [0.0, 0.0, 0.0], "abdomen_upper": [0.0, 0.0, 0.0] }
+    ],
+    "arm_keys": [
+      {
+        "frame": 1,
+        "left_collar": [0.0, 0.0, 0.0],
+        "right_collar": [0.0, 0.0, 0.0],
+        "left_shoulder": [0.0, 0.0, 0.0],
+        "right_shoulder": [0.0, 0.0, 0.0],
+        "left_forearm": [0.0, 0.0, 0.0],
+        "right_forearm": [0.0, 0.0, 0.0],
+        "left_hand": [0.0, 0.0, 0.0],
+        "right_hand": [0.0, 0.0, 0.0]
+      },
+      {
+        "frame": 8,
+        "left_collar": [0.16, 2.8, -1.9],
+        "right_collar": [0.18, -0.18, 1.02],
+        "left_shoulder": [1.46, 1.08, 2.44],
+        "right_shoulder": [0.34, -0.24, 0.1],
+        "left_forearm": [0.98, 0.34, -0.06],
+        "right_forearm": [0.18, -0.1, 0.1],
+        "left_hand": [0.0, 0.5, 2.08],
+        "right_hand": [0.0, 0.08, 0.22],
+        "left_shoulder_loc": [0.0, 0.006, 0.012],
+        "left_forearm_loc": [0.0, 0.012, 0.018],
+        "left_hand_loc": [0.0, 0.018, 0.028],
+        "right_hand_loc": [0.0, -0.008, 0.01]
+      },
+      {
+        "frame": 18,
+        "left_collar": [-0.02, 1.5, -1.4],
+        "right_collar": [0.34, -0.42, 1.66],
+        "left_shoulder": [0.62, 0.34, 0.82],
+        "right_shoulder": [1.22, -0.94, -0.32],
+        "left_forearm": [0.34, 0.1, -0.18],
+        "right_forearm": [0.86, -0.58, -0.18],
+        "left_hand": [0.0, 0.14, 0.62],
+        "right_hand": [0.0, -0.34, -1.1],
+        "right_shoulder_loc": [0.0, 0.006, 0.014],
+        "right_forearm_loc": [0.0, 0.012, 0.02],
+        "left_hand_loc": [0.0, 0.004, 0.008],
+        "right_hand_loc": [0.0, -0.026, 0.03]
+      },
+      {
+        "frame": 30,
+        "left_collar": [0.2, 3.0, -1.7],
+        "right_collar": [0.16, -0.14, 1.0],
+        "left_shoulder": [1.62, 1.22, 2.72],
+        "right_shoulder": [0.4, -0.2, 0.12],
+        "left_forearm": [1.08, 0.4, 0.02],
+        "right_forearm": [0.22, -0.06, 0.12],
+        "left_hand": [0.0, 0.62, 2.3],
+        "right_hand": [0.0, 0.1, 0.22],
+        "left_shoulder_loc": [0.0, 0.01, 0.018],
+        "left_forearm_loc": [0.0, 0.016, 0.026],
+        "left_hand_loc": [0.0, 0.024, 0.038],
+        "right_hand_loc": [0.0, -0.004, 0.01]
+      },
+      {
+        "frame": 44,
+        "left_collar": [0.02, 1.42, -1.18],
+        "right_collar": [0.22, -0.28, 1.26],
+        "left_shoulder": [0.7, 0.38, 0.92],
+        "right_shoulder": [1.08, -0.84, -0.22],
+        "left_forearm": [0.42, 0.12, -0.06],
+        "right_forearm": [0.7, -0.48, -0.1],
+        "left_hand": [0.0, 0.2, 0.72],
+        "right_hand": [0.0, -0.28, -0.94],
+        "right_shoulder_loc": [0.0, 0.008, 0.018],
+        "right_forearm_loc": [0.0, 0.012, 0.02],
+        "left_hand_loc": [0.0, 0.006, 0.01],
+        "right_hand_loc": [0.0, -0.022, 0.026]
+      },
+      {
+        "frame": 58,
+        "left_collar": [0.12, 2.2, -1.28],
+        "right_collar": [0.14, -0.12, 0.94],
+        "left_shoulder": [1.24, 0.9, 1.92],
+        "right_shoulder": [0.3, -0.16, 0.1],
+        "left_forearm": [0.8, 0.28, 0.08],
+        "right_forearm": [0.18, -0.04, 0.08],
+        "left_hand": [0.0, 0.42, 1.68],
+        "right_hand": [0.0, 0.1, 0.2],
+        "left_shoulder_loc": [0.0, 0.008, 0.014],
+        "left_forearm_loc": [0.0, 0.014, 0.02],
+        "left_hand_loc": [0.0, 0.02, 0.03],
+        "right_hand_loc": [0.0, -0.004, 0.008]
+      },
+      {
+        "frame": 72,
+        "left_collar": [0.0, 0.0, 0.0],
+        "right_collar": [0.0, 0.0, 0.0],
+        "left_shoulder": [0.0, 0.0, 0.0],
+        "right_shoulder": [0.0, 0.0, 0.0],
+        "left_forearm": [0.0, 0.0, 0.0],
+        "right_forearm": [0.0, 0.0, 0.0],
+        "left_hand": [0.0, 0.0, 0.0],
+        "right_hand": [0.0, 0.0, 0.0]
+      }
+    ],
+    "finger_keys": [
+      { "frame": 1, "thumb": 0.55, "index": 0.62, "mid": 0.56, "right_scale": 0.95 },
+      { "frame": 8, "thumb": 1.14, "index": 1.24, "mid": 1.1, "right_scale": 1.02 },
+      { "frame": 18, "thumb": 0.78, "index": 0.88, "mid": 0.8, "right_scale": 0.98 },
+      { "frame": 30, "thumb": 1.22, "index": 1.34, "mid": 1.18, "right_scale": 1.06 },
+      { "frame": 44, "thumb": 0.82, "index": 0.92, "mid": 0.84, "right_scale": 1.0 },
+      { "frame": 58, "thumb": 1.06, "index": 1.16, "mid": 1.04, "right_scale": 1.02 },
+      { "frame": 72, "thumb": 0.55, "index": 0.62, "mid": 0.56, "right_scale": 0.95 }
+    ],
+    "leg_keys": [
+      { "frame": 1, "left_thigh_x": 0.0, "left_shin_x": 0.0, "right_thigh_x": 0.0, "right_shin_x": 0.0 },
+      { "frame": 8, "left_thigh_x": 0.24, "left_shin_x": 0.12, "right_thigh_x": -0.18, "right_shin_x": -0.1 },
+      { "frame": 18, "left_thigh_x": 0.02, "left_shin_x": 0.01, "right_thigh_x": -0.02, "right_shin_x": -0.02 },
+      { "frame": 30, "left_thigh_x": 0.28, "left_shin_x": 0.14, "right_thigh_x": -0.22, "right_shin_x": -0.12 },
+      { "frame": 44, "left_thigh_x": 0.04, "left_shin_x": 0.02, "right_thigh_x": -0.04, "right_shin_x": -0.02 },
+      { "frame": 58, "left_thigh_x": 0.18, "left_shin_x": 0.08, "right_thigh_x": -0.14, "right_shin_x": -0.08 },
+      { "frame": 72, "left_thigh_x": 0.0, "left_shin_x": 0.0, "right_thigh_x": 0.0, "right_shin_x": 0.0 }
+    ]
+  },
+  "face": {
+    "neutral_frames": [1, 18, 36, 54, 72],
+    "blink_frames": [14, 50],
+    "blink_close": 0.78,
+    "micro_keys": [
+      { "frame": 6, "brow_l": 0.012, "brow_r": 0.014, "lips": 0.03, "smile_l": 0.018, "smile_r": 0.016, "mouth_l": 0.01, "mouth_r": 0.008, "jaw": 0.02, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": -0.016, "eyes_up": 0.008 },
+      { "frame": 12, "brow_l": 0.018, "brow_r": 0.014, "lips": 0.05, "smile_l": 0.02, "smile_r": 0.016, "mouth_l": 0.018, "mouth_r": 0.01, "jaw": 0.04, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": 0.018, "eyes_up": 0.004 },
+      { "frame": 20, "brow_l": 0.006, "brow_r": 0.01, "lips": 0.026, "smile_l": 0.012, "smile_r": 0.014, "mouth_l": 0.006, "mouth_r": 0.01, "jaw": 0.018, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": -0.012, "eyes_up": -0.004 },
+      { "frame": 28, "brow_l": 0.016, "brow_r": 0.02, "lips": 0.054, "smile_l": 0.018, "smile_r": 0.022, "mouth_l": 0.008, "mouth_r": 0.018, "jaw": 0.042, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": 0.02, "eyes_up": 0.006 },
+      { "frame": 40, "brow_l": 0.008, "brow_r": 0.012, "lips": 0.03, "smile_l": 0.014, "smile_r": 0.016, "mouth_l": 0.006, "mouth_r": 0.01, "jaw": 0.02, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": -0.014, "eyes_up": -0.002 },
+      { "frame": 48, "brow_l": 0.018, "brow_r": 0.014, "lips": 0.052, "smile_l": 0.02, "smile_r": 0.016, "mouth_l": 0.018, "mouth_r": 0.01, "jaw": 0.04, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": 0.016, "eyes_up": 0.004 },
+      { "frame": 60, "brow_l": 0.01, "brow_r": 0.014, "lips": 0.032, "smile_l": 0.016, "smile_r": 0.018, "mouth_l": 0.008, "mouth_r": 0.012, "jaw": 0.022, "squint_l": 0.0, "squint_r": 0.0, "eyes_side": -0.01, "eyes_up": -0.004 }
+    ],
+    "blink_reaction": {
+      "brow_l": 0.01,
+      "brow_r": 0.01,
+      "lips": 0.032,
+      "smile_l": 0.016,
+      "smile_r": 0.016,
+      "mouth_l": 0.008,
+      "mouth_r": 0.008,
+      "jaw": 0.02,
+      "squint_l": 0.0,
+      "squint_r": 0.0,
+      "eyes_side": 0.0,
+      "eyes_up": 0.0
+    }
+  }
+}

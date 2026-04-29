@@ -1,0 +1,140 @@
+// Gail one-at-a-time current animation preset exporter for DAZ Studio
+(function(){
+	function text( s ){ return (typeof qsTr != "undefined" ? qsTr(s) : s); }
+	function sanitize( s ){
+		return String(s).replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "").toLowerCase();
+	}
+	function ensureDir( sPath ){
+		var oDir = new QDir();
+		if( !oDir.exists( sPath ) ){
+			oDir.mkpath( sPath );
+		}
+	}
+	function writeTextFile( sPath, sText ){
+		var oFile = new QFile( sPath );
+		if( !oFile.open( QIODevice.WriteOnly | QIODevice.Text ) ){
+			throw new Error( "Could not write file: " + sPath );
+		}
+		var oStream = new QTextStream( oFile );
+		oStream.writeString( sText );
+		oStream.flush();
+		oFile.close();
+	}
+	function jsonEscape( s ){
+		return String(s).replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\r/g, "\\r").replace(/\n/g, "\\n");
+	}
+	function writeMetadata( sPath, oData ){
+		var aKeys = [];
+		for( var key in oData ){ aKeys.push(key); }
+		var aLines = ["{"];
+		for( var i = 0; i < aKeys.length; i += 1 ){
+			var k = aKeys[i];
+			var v = oData[k];
+			var serialized = (typeof v == "boolean" || typeof v == "number") ? String(v) : "\"" + jsonEscape(v) + "\"";
+			aLines.push( '  "' + jsonEscape(k) + '": ' + serialized + (i < aKeys.length - 1 ? "," : "") );
+		}
+		aLines.push("}");
+		writeTextFile( sPath, aLines.join("\n") );
+	}
+	function inheritsType( oObject, aTypeNames ){
+		if( !oObject || typeof( oObject.inherits ) != "function" ){ return false; }
+		for( var i = 0; i < aTypeNames.length; i += 1 ){
+			if( oObject.inherits( aTypeNames[i] ) ){ return true; }
+		}
+		return false;
+	}
+	function getRootNode( oNode ){
+		if( oNode && inheritsType( oNode, ["DzBone"] ) ){
+			return oNode.getSkeleton();
+		}
+		return oNode;
+	}
+	function getNodeNames( oNode, bRecurse ){
+		if( !oNode ){ return []; }
+		var aNames = [ oNode.name ];
+		if( bRecurse ){
+			for( var i = 0; i < oNode.getNumNodeChildren(); i += 1 ){
+				aNames = aNames.concat( getNodeNames( oNode.getNodeChild(i), true ) );
+			}
+		}
+		return aNames;
+	}
+	function setElementPropertyOptions( oSettings, sElementSettingsKey, sElementName, aPropNames ){
+		var oElementsSettings = oSettings.getSettingsValue( sElementSettingsKey );
+		if( !oElementsSettings ){ oElementsSettings = oSettings.setSettingsValue( sElementSettingsKey ); }
+		var oElementSettings = oElementsSettings.getSettingsValue( sElementName );
+		if( !oElementSettings ){ oElementSettings = oElementsSettings.setSettingsValue( sElementName ); }
+		for( var i = 0; i < aPropNames.length; i += 1 ){
+			oElementSettings.setStringValue( String(i), aPropNames[i] );
+		}
+	}
+	function setNodePropertyOptions( oSettings, sNodeName, aPropNames ){
+		setElementPropertyOptions( oSettings, "NodeNames", sNodeName, aPropNames );
+	}
+
+	var oRootNode = getRootNode( Scene.getPrimarySelection() );
+	if( !oRootNode ){
+		MessageBox.warning( text("Select the figure first."), text("Gail Export"), text("&OK") );
+		return;
+	}
+
+	var sLabel = oRootNode.getLabel ? oRootNode.getLabel() : oRootNode.name;
+	var sSlug = sanitize( sLabel || "animation" );
+	var sRoot = "F:/Gail/blender/animation_master/source/exports/daz/animations/" + sSlug;
+	ensureDir( sRoot );
+
+	var oAssetIOMgr = App.getAssetIOMgr();
+	var nFilter = oAssetIOMgr.findFilter( "DzPoseAssetFilter" );
+	if( nFilter < 0 ){
+		MessageBox.critical( text("DzPoseAssetFilter was not found."), text("Gail Export"), text("&OK") );
+		return;
+	}
+	var oFilter = oAssetIOMgr.getFilter( nFilter );
+	if( !oFilter ){
+		MessageBox.critical( text("DzPoseAssetFilter was not found."), text("Gail Export"), text("&OK") );
+		return;
+	}
+
+	var oRange = Scene.getPlayRange();
+	var nStep = Scene.getTimeStep().valueOf();
+	if( nStep <= 0 ){ nStep = 1; }
+	var nStartFrame = Math.round( oRange.start.valueOf() / nStep );
+	var nEndFrame = Math.round( oRange.end.valueOf() / nStep );
+
+	var oSettings = new DzFileIOSettings();
+	oFilter.getDefaultOptions( oSettings );
+	oFilter.getOptions( oSettings, false, "" );
+	oSettings.setStringValue( "RootLabel", oRootNode.getLabel() );
+	oSettings.setBoolValue( "SaveCurFrame", false );
+	oSettings.setIntValue( "StartFrame", nStartFrame );
+	oSettings.setIntValue( "EndFrame", nEndFrame );
+	oSettings.setBoolValue( "CompressOutput", false );
+	oSettings.setBoolValue( "RunSilent", true );
+	oSettings.setBoolValue( "BypassFilter", false );
+
+	var aNodeNames = getNodeNames( oRootNode, true );
+	for( var i = 0; i < aNodeNames.length; i += 1 ){
+		setNodePropertyOptions( oSettings, aNodeNames[i], [ "XRotate", "YRotate", "ZRotate" ] );
+	}
+	setNodePropertyOptions( oSettings, oRootNode.name, [ "XTranslate", "YTranslate", "ZTranslate" ] );
+
+	var sFile = sRoot + "/" + sSlug + "_anim";
+	var oError = oAssetIOMgr.doSaveWithOptions( oFilter, oSettings, false, sFile, sRoot, "" );
+	if( oError.valueOf() != 0x00000000 ){
+		MessageBox.critical( text("Animation preset export failed."), text("Gail Export"), text("&OK") );
+		oFilter.deleteLater();
+		return;
+	}
+
+	writeMetadata( sRoot + "/" + sSlug + "_anim.json", {
+		assetType: "animation",
+		label: sLabel,
+		nodeName: oRootNode.name,
+		exportPath: sFile + ".duf",
+		format: "duf_animation_preset",
+		startFrame: nStartFrame,
+		endFrame: nEndFrame
+	} );
+	MessageBox.information( text("Animation preset exported to:\n" + sFile + ".duf"), text("Gail Export"), text("&OK") );
+	oFilter.deleteLater();
+})();

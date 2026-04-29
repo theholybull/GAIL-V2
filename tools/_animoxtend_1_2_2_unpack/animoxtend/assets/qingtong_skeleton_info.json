@@ -1,0 +1,68 @@
+{
+    "bmap_inherit_character": "qingtong",
+    "config_inherit_character": "qingtong",
+    "skeleton_file": "qingtong_skeleton.fbx",
+    "skeleton_npz_file": "qingtong_skeleton.npz",
+    "skeleton_info": {
+        "arm_chain_length": 3,
+        "chest_name": "skeleton_0_Spine3",
+        "shoulders_name": ["skeleton_0_LeftShoulder", "skeleton_0_RightShoulder"],
+        "right_arm": ["skeleton_0_RightArm", "skeleton_0_RightForeArm", "skeleton_0_RightHand"],
+        "left_arm": ["skeleton_0_LeftArm", "skeleton_0_LeftForeArm", "skeleton_0_LeftHand"],
+        "right_leg": ["skeleton_0_RightUpLeg", "skeleton_0_RightLeg", "skeleton_0_RightFoot"],
+        "left_leg": ["skeleton_0_LeftUpLeg", "skeleton_0_LeftLeg", "skeleton_0_LeftFoot"],
+        "root_substr": "hips",
+        "left_foot": ["skeleton_0_LeftToeBase", "skeleton_0_LeftToeBaseEnd"],
+        "right_foot": ["skeleton_0_RightToeBase", "skeleton_0_RightToeBaseEnd"],
+    
+
+        "use_hand": false,
+        "skeleton_idx": [0,1,2,3,4,5,6,7,8,24,25,26,27,28,29,30,46,47,48,49,50,51,52,53,54,55],
+
+        "w_hand_parents":[-1, 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,  8, 12, 13,  8, 15,
+                            16,  8, 18, 19,  8, 21, 22,  4, 24, 25,  4, 27, 28, 29, 30, 31, 32,
+                            30, 34, 35, 30, 37, 38, 30, 40, 41, 30, 43, 44,  0, 46, 47, 48, 49,
+                            0, 51, 52, 53, 54],
+
+        "wo_hand_parents":[-1,  0,  1,  2,  3,  4,  5,  6,  7,  4,  9, 10,  4, 12, 13, 14, 0,
+        16, 17, 18, 19,  0, 21, 22, 23, 24],
+
+        "joint_names":["skeleton_0_Hips", "skeleton_0_Spine", "skeleton_0_Spine1",
+                        "skeleton_0_Spine2", "skeleton_0_Spine3",
+                        "skeleton_0_RightShoulder", "skeleton_0_RightArm",
+                        "skeleton_0_RightForeArm", "skeleton_0_RightHand",
+                        "RightHandMiddle1", "RightHandMiddle2", "RightHandMiddle3",
+                        "RightHandRing1", "RightHandRing2", "RightHandRing3",
+                        "RightHandPinky1", "RightHandPinky2", "RightHandPinky3",
+                        "RightHandThumb1", "RightHandThumb2", "RightHandThumb3",
+                        "RightHandIndex1", "RightHandIndex2", "RightHandIndex3",
+                        "skeleton_0_Neck", "skeleton_0_Head", "skeleton_0_HeadEnd",
+                        "skeleton_0_LeftShoulder", "skeleton_0_LeftArm",
+                        "skeleton_0_LeftForeArm", "skeleton_0_LeftHand", "LeftHandThumb1",
+                        "LeftHandThumb2", "LeftHandThumb3", "LeftHandIndex1",
+                        "LeftHandIndex2", "LeftHandIndex3", "LeftHandMiddle1",
+                        "LeftHandMiddle2", "LeftHandMiddle3", "LeftHandRing1",
+                        "LeftHandRing2", "LeftHandRing3", "LeftHandPinky1",
+                        "LeftHandPinky2", "LeftHandPinky3", "skeleton_0_LeftUpLeg",
+                        "skeleton_0_LeftLeg", "skeleton_0_LeftFoot",
+                        "skeleton_0_LeftToeBase", "skeleton_0_LeftToeBaseEnd",
+                        "skeleton_0_RightUpLeg", "skeleton_0_RightLeg",
+                        "skeleton_0_RightFoot", "skeleton_0_RightToeBase",
+                        "skeleton_0_RightToeBaseEnd"],
+
+        "sk_names": ["skeleton_0_Hips", "skeleton_0_Spine", "skeleton_0_Spine1",
+            "skeleton_0_Spine2", "skeleton_0_Spine3",
+            "skeleton_0_RightShoulder", "skeleton_0_RightArm",
+            "skeleton_0_RightForeArm", "skeleton_0_RightHand",
+            
+            "skeleton_0_Neck", "skeleton_0_Head", "skeleton_0_HeadEnd",
+            "skeleton_0_LeftShoulder", "skeleton_0_LeftArm",
+            "skeleton_0_LeftForeArm", "skeleton_0_LeftHand", 
+            
+            "skeleton_0_LeftUpLeg","skeleton_0_LeftLeg", "skeleton_0_LeftFoot",
+            "skeleton_0_LeftToeBase", "skeleton_0_LeftToeBaseEnd",
+            "skeleton_0_RightUpLeg", "skeleton_0_RightLeg",
+            "skeleton_0_RightFoot", "skeleton_0_RightToeBase",
+            "skeleton_0_RightToeBaseEnd"]
+    }
+}

@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#06080d" />
+  <title>Gail Mobile</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bot: env(safe-area-inset-bottom, 0px);
+      --accent: #c8a368;
+      --panel: rgba(8, 10, 16, 0.92);
+      --panel-border: rgba(255, 255, 255, 0.1);
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #05070d;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #app {
+      position: fixed;
+      inset: 0;
+      background: #05070d;
+      overflow: hidden;
+    }
+
+    #badge {
+      position: fixed;
+      top: 6px;
+      left: 8px;
+      z-index: 30;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 4px 6px;
+      pointer-events: none;
+    }
+
+    #scene-shell {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: calc(100% - 33.34dvh);
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    #scene-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      max-height: 100%;
+      background: #111;
+      overflow: hidden;
+    }
+
+    #scene-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.04) saturate(1.05);
+    }
+
+    #avatar-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.24s ease;
+    }
+
+    #avatar-canvas.ready {
+      opacity: 1;
+    }
+
+    #avatar-loading {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 50% 38%, rgba(20, 23, 34, 0.82), rgba(3, 5, 9, 0.9));
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #avatar-loading.hidden {
+      display: none;
+    }
+
+    #scene-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.06) 0%,
+        rgba(0, 0, 0, 0.0) 35%,
+        rgba(0, 0, 0, 0.52) 62%,
+        rgba(0, 0, 0, 0.86) 80%,
+        rgba(0, 0, 0, 0.94) 100%
+      );
+      pointer-events: none;
+    }
+
+    #silent-toggle {
+      position: fixed;
+      top: calc(10px + var(--safe-top));
+      left: 12px;
+      z-index: 20;
+      width: 34px;
+      height: 34px;
+      border-radius: 17px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.44);
+      color: rgba(255, 255, 255, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-appearance: none;
+    }
+
+    #silent-toggle.on {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(26, 16, 6, 0.64);
+    }
+
+    #quality-select {
+      position: fixed;
+      top: calc(10px + var(--safe-top));
+      left: 54px;
+      z-index: 20;
+      height: 34px;
+      border-radius: 17px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.44);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 12px;
+      padding: 0 10px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    #cam-preview {
+      display: none;
+      position: fixed;
+      top: calc(10px + var(--safe-top));
+      right: 12px;
+      z-index: 20;
+      width: 110px;
+      height: 82px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(200, 163, 104, 0.78);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.42);
+      background: #000;
+    }
+
+    #cam-preview video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleX(-1);
+    }
+
+    #chat-shell {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 15;
+      height: 33.34dvh;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      transition: bottom 0.15s;
+    }
+
+    #chat-log {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 12px 8px;
+      -webkit-overflow-scrolling: touch;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 13%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 13%);
+    }
+
+    #chat-log::-webkit-scrollbar { display: none; }
+
+    .msg {
+      max-width: 84%;
+      border-radius: 16px;
+      padding: 10px 13px;
+      line-height: 1.4;
+      font-size: 15px;
+      word-break: break-word;
+    }
+
+    .msg.user {
+      align-self: flex-end;
+      border-bottom-right-radius: 5px;
+      background: rgba(50, 39, 74, 0.88);
+      border: 1px solid rgba(200, 163, 104, 0.25);
+    }
+
+    .msg.gail {
+      align-self: flex-start;
+      border-bottom-left-radius: 5px;
+      background: rgba(13, 14, 20, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .typing span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin: 0 2px;
+      animation: dot 1.2s infinite;
+    }
+
+    .typing span:nth-child(2) { animation-delay: 0.2s; }
+    .typing span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes dot {
+      0%, 80%, 100% { opacity: 0.2; }
+      40% { opacity: 1; }
+    }
+
+    #composer {
+      display: flex;
+      gap: 8px;
+      padding: 8px 10px calc(10px + var(--safe-bot));
+      background: var(--panel);
+      border-top: 1px solid var(--panel-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    #chat-input {
+      flex: 1;
+      min-height: 40px;
+      max-height: 96px;
+      resize: none;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.35;
+      padding: 9px 12px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    #chat-send {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      border: 0;
+      background: linear-gradient(135deg, #c8a368, #8f78b9);
+      color: #fff;
+      font-size: 16px;
+      -webkit-appearance: none;
+    }
+
+    #chat-send:disabled { opacity: 0.35; }
+
+    #warn {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: calc(33.34dvh + 8px);
+      z-index: 40;
+      background: rgba(97, 25, 25, 0.9);
+      border: 1px solid rgba(197, 92, 92, 0.6);
+      color: #ffcece;
+      border-radius: 14px;
+      padding: 7px 12px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    #warn.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <main id="app">
+    <div id="badge">Standalone Mobile Portrait v1</div>
+
+    <section id="scene-shell" aria-label="Avatar Scene">
+      <div id="scene-frame">
+        <img id="scene-bg" src="/gail-mobile/assets/backgrounds/background.jfif" alt="Background" />
+        <canvas id="avatar-canvas"></canvas>
+        <div id="avatar-loading">Loading Gail...</div>
+        <div id="scene-fade"></div>
+      </div>
+    </section>
+
+    <button id="silent-toggle" aria-label="Silent mode">🔔</button>
+
+    <select id="quality-select" aria-label="Avatar quality">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <section id="cam-preview" aria-label="Camera preview">
+      <video id="cam-video" autoplay playsinline muted></video>
+    </section>
+
+    <section id="chat-shell" aria-label="Chat">
+      <div id="chat-log"></div>
+      <form id="composer">
+        <textarea id="chat-input" rows="1" placeholder="Message Gail..."></textarea>
+        <button id="chat-send" type="submit" disabled>➤</button>
+      </form>
+    </section>
+
+    <div id="warn"></div>
+  </main>
+
+  <script type="module">
+    const DEFAULT_ASSET_ROOT = "gail";
+    const OPTIMIZED_GAIL_ASSET_ROOT = "gail_lite";
+    const CLIENT_ASSET_VERSION_SALT = "20260424-env-backdrop33-mobile";
+    const CLIENT_QUERY = new URLSearchParams(window.location.search);
+    const EXPLICIT_ASSET_ROOT = CLIENT_QUERY.get("assetRoot")?.trim() || "";
+    const DISABLE_LITE_ASSET_ROOT = CLIENT_QUERY.get("disableLiteAssetRoot") === "1";
+    const QUALITY_COOKIE_KEY = "gail_mobile_avatar_quality";
+    const DEFAULT_QUALITY = "low";
+    const VALID_QUALITIES = new Set(["low", "medium", "high"]);
+    const IDLE_ANIM_URL = "/gail-mobile/assets/animations/27775_stand_still.glb";
+    const TALK_ANIM_URL = "/gail-mobile/assets/animations/28154_explain.glb";
+    const LISTEN_ANIM_URL = "/gail-mobile/assets/animations/27299_stand_and_nod.glb";
+    const MOBILE_STAGE_AVATAR_POSITION = [0, 0, 0];
+    const MOBILE_STAGE_AVATAR_ROTATION = [0, 0, 0];
+    const MOBILE_STAGE_AVATAR_SCALE = [1, 1, 1];
+    const MOBILE_STAGE_CAMERA_POSITION = [0, 1.55, 2.8];
+    const MOBILE_STAGE_CAMERA_TARGET = [0, 1.2, 0];
+    const SENSITIVE_FACE_MATERIAL_NAME_PATTERN = /eye|cornea|moisture|iris|sclera|pupil|socket|lash|brow/i;
+    const MATERIAL_PROFILE_BY_USAGE = {
+      body: {
+        glossCap: 0.01,
+        shininessCap: 5,
+        specularityCap: 0.02,
+        specularColor: 0.02,
+        allowNormalMap: false,
+      },
+      clothing: {
+        glossCap: 0.035,
+        shininessCap: 18,
+        specularityCap: 0.05,
+        specularColor: 0.045,
+        allowNormalMap: true,
+      },
+      accessory: {
+        glossCap: 0.05,
+        shininessCap: 22,
+        specularityCap: 0.055,
+        specularColor: 0.05,
+        allowNormalMap: true,
+      },
+      hair: {
+        glossCap: 0.04,
+        shininessCap: 14,
+        specularityCap: 0.03,
+        specularColor: 0.03,
+        allowNormalMap: true,
+      },
+    };
+
+    const canvas = document.getElementById("avatar-canvas");
+    const avatarLoading = document.getElementById("avatar-loading");
+    const sceneFrame = document.getElementById("scene-frame");
+    const silentToggle = document.getElementById("silent-toggle");
+    const qualitySelect = document.getElementById("quality-select");
+    const camPreview = document.getElementById("cam-preview");
+    const camVideo = document.getElementById("cam-video");
+    const chatShell = document.getElementById("chat-shell");
+    const chatLog = document.getElementById("chat-log");
+    const composer = document.getElementById("composer");
+    const chatInput = document.getElementById("chat-input");
+    const chatSend = document.getElementById("chat-send");
+    const warn = document.getElementById("warn");
+
+    const SESSION_KEY = "gail_mobile_clean_session";
+
+    async function fetchJson(url) {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Request failed (${response.status}) for ${url}`);
+      }
+      return await response.json();
+    }
+
+    function resolveEffectiveAssetRoot(serverAssetRoot) {
+      if (EXPLICIT_ASSET_ROOT) {
+        return EXPLICIT_ASSET_ROOT;
+      }
+      if (!DISABLE_LITE_ASSET_ROOT && serverAssetRoot === DEFAULT_ASSET_ROOT) {
+        return OPTIMIZED_GAIL_ASSET_ROOT;
+      }
+      return serverAssetRoot || DEFAULT_ASSET_ROOT;
+    }
+
+    async function resolveAssetRoot() {
+      if (EXPLICIT_ASSET_ROOT) {
+        return EXPLICIT_ASSET_ROOT;
+      }
+      try {
+        const settings = await fetchJson("/client/runtime-settings");
+        return resolveEffectiveAssetRoot(settings.activeAssetRoot?.trim() || DEFAULT_ASSET_ROOT);
+      } catch {
+        return resolveEffectiveAssetRoot(DEFAULT_ASSET_ROOT);
+      }
+    }
+
+    function pickBundleAsset(assets, id, kind, slot) {
+      return assets.find((asset) => asset.id === id)
+        ?? assets.find((asset) => asset.kind === kind && asset.slot === slot)
+        ?? assets.find((asset) => asset.kind === kind);
+    }
+
+    function toClientAssetUrl(resolvedPath) {
+      const normalized = String(resolvedPath || "").replaceAll("\\", "/");
+      const marker = "playcanvas-app/assets/";
+      const index = normalized.indexOf(marker);
+      if (index < 0) {
+        throw new Error(`Unable to resolve client asset URL for ${resolvedPath}`);
+      }
+      return `/client-assets/${normalized.slice(index + marker.length)}`;
+    }
+
+    function toVersionedClientAssetUrl(asset) {
+      if (!asset?.resolvedPath) {
+        throw new Error("Missing resolvedPath for asset URL.");
+      }
+      const baseUrl = toClientAssetUrl(asset.resolvedPath);
+      const version = encodeURIComponent(`${CLIENT_ASSET_VERSION_SALT}-${asset.id || "asset"}-${asset.fileSizeBytes || 0}`);
+      return `${baseUrl}?v=${version}`;
+    }
+
+    function isNonGailAsset(asset) {
+      const id = String(asset?.id || "").toLowerCase();
+      const slot = String(asset?.slot || "").toLowerCase();
+      const blockedPrefixes = ["girlfriend_", "private_", "cherry_", "vera_"];
+      return blockedPrefixes.some((prefix) => id.startsWith(prefix) || slot.startsWith(prefix.replace("_", "")));
+    }
+
+    function getDisplayAssets(manifest, bodyAssetId) {
+      const coreAssetIds = new Set(manifest?.coreAssetIds ?? []);
+      const renderableAssets = (manifest?.assets ?? []).filter((asset) => {
+        if (!asset?.resolvedPath || asset.id === bodyAssetId || asset.present === false) {
+          return false;
+        }
+        if (isNonGailAsset(asset)) {
+          return false;
+        }
+        if (!(asset.kind === "clothing" || asset.kind === "accessory" || asset.kind === "hair")) {
+          return false;
+        }
+        return asset.autoLoad === true || asset.required === true || coreAssetIds.has(asset.id);
+      });
+
+      const deduped = new Map();
+      for (const asset of renderableAssets) {
+        deduped.set(asset.resolvedPath, asset);
+      }
+
+      const byPriority = (asset) => {
+        if (asset.kind === "clothing") return 0;
+        if (asset.kind === "accessory") return 1;
+        if (asset.kind === "hair") return 2;
+        return 3;
+      };
+
+      return [...deduped.values()].sort((left, right) => byPriority(left) - byPriority(right));
+    }
+
+    function getCookie(name) {
+      const prefix = `${name}=`;
+      const cookies = document.cookie ? document.cookie.split(";") : [];
+      for (const cookie of cookies) {
+        const trimmed = cookie.trim();
+        if (trimmed.startsWith(prefix)) {
+          return decodeURIComponent(trimmed.slice(prefix.length));
+        }
+      }
+      return "";
+    }
+
+    function setCookie(name, value, maxAgeSeconds) {
+      document.cookie = `${name}=${encodeURIComponent(value)}; Max-Age=${maxAgeSeconds}; Path=/gail-mobile; SameSite=Lax`;
+    }
+
+    function getSavedQuality() {
+      const saved = (getCookie(QUALITY_COOKIE_KEY) || "").toLowerCase();
+      return VALID_QUALITIES.has(saved) ? saved : DEFAULT_QUALITY;
+    }
+
+    let avatarQuality = getSavedQuality();
+    if (!getCookie(QUALITY_COOKIE_KEY)) {
+      setCookie(QUALITY_COOKIE_KEY, avatarQuality, 60 * 60 * 24 * 365);
+    }
+
+    function applyQualitySelection(nextQuality, { reload = true } = {}) {
+      const normalized = String(nextQuality || "").toLowerCase();
+      if (!VALID_QUALITIES.has(normalized)) {
+        showWarn("Use /res low, /res medium, or /res high.");
+        return false;
+      }
+      avatarQuality = normalized;
+      qualitySelect.value = normalized;
+      setCookie(QUALITY_COOKIE_KEY, normalized, 60 * 60 * 24 * 365);
+      if (reload) {
+        location.reload();
+      }
+      return true;
+    }
+
+    qualitySelect.value = avatarQuality;
+    qualitySelect.addEventListener("change", () => {
+      applyQualitySelection(qualitySelect.value, { reload: true });
+    });
+
+    let sessionId = sessionStorage.getItem(SESSION_KEY) || null;
+    let pending = false;
+    let streamBubble = null;
+    let silent = false;
+    let mediaStream = null;
+    let mediaBooted = false;
+    let avatar = null;
+
+    let warnTimer;
+    function showWarn(message) {
+      clearTimeout(warnTimer);
+      warn.textContent = message;
+      warn.classList.add("show");
+      warnTimer = setTimeout(() => warn.classList.remove("show"), 3200);
+    }
+
+    function addMessage(role, text, typing = false) {
+      const row = document.createElement("div");
+      row.className = `msg ${role}`;
+      if (typing) {
+        row.innerHTML = '<span class="typing"><span></span><span></span><span></span></span>';
+      } else {
+        row.textContent = text;
+      }
+      chatLog.appendChild(row);
+      chatLog.scrollTop = chatLog.scrollHeight;
+      return row;
+    }
+
+    function setAvatarLoading(message, visible) {
+      if (avatarLoading) {
+        if (typeof message === "string" && message.trim()) {
+          avatarLoading.textContent = message;
+        }
+        avatarLoading.classList.toggle("hidden", !visible);
+      }
+      if (visible) {
+        canvas.classList.remove("ready");
+      }
+    }
+
+    function updateComposerState() {
+      chatSend.disabled = pending || !chatInput.value.trim();
+    }
+
+    chatInput.addEventListener("input", () => {
+      chatInput.style.height = "auto";
+      chatInput.style.height = Math.min(96, chatInput.scrollHeight) + "px";
+      updateComposerState();
+    });
+
+    chatInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        if (!chatSend.disabled) {
+          void sendMessage();
+        }
+      }
+    });
+
+    composer.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!chatSend.disabled) {
+        void sendMessage();
+      }
+    });
+
+    silentToggle.addEventListener("click", () => {
+      silent = !silent;
+      silentToggle.classList.toggle("on", silent);
+      silentToggle.textContent = silent ? "🔕" : "🔔";
+
+      if (mediaStream) {
+        mediaStream.getAudioTracks().forEach((track) => {
+          track.enabled = !silent;
+        });
+      }
+
+      if (silent) {
+        speechSynthesis.cancel();
+      }
+    });
+
+    function bootstrapMedia() {
+      if (mediaBooted) {
+        return;
+      }
+      mediaBooted = true;
+      void startMedia();
+    }
+
+    window.addEventListener("touchstart", bootstrapMedia, { once: true, passive: true });
+    window.addEventListener("click", bootstrapMedia, { once: true, passive: true });
+
+    async function startMedia() {
+      if (!navigator.mediaDevices?.getUserMedia) {
+        return;
+      }
+      try {
+        mediaStream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+          video: {
+            facingMode: "user",
+            width: { ideal: 320 },
+            height: { ideal: 240 },
+          },
+        });
+        camVideo.srcObject = mediaStream;
+        camPreview.style.display = "block";
+        if (silent) {
+          mediaStream.getAudioTracks().forEach((track) => {
+            track.enabled = false;
+          });
+        }
+      } catch (error) {
+        showWarn("Camera/mic permission not granted.");
+      }
+    }
+
+    async function ensureSession() {
+      if (sessionId) {
+        return sessionId;
+      }
+      const response = await fetch("/conversation/sessions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-gail-mode": "work",
+          "x-gail-device-type": "iphone",
+        },
+        body: JSON.stringify({ title: "Mobile Portrait Chat" }),
+      });
+      if (!response.ok) {
+        const payload = await response.json().catch(() => ({}));
+        throw new Error(payload.error || `Could not start conversation (${response.status}).`);
+      }
+      const payload = await response.json();
+      sessionId = payload.id;
+      sessionStorage.setItem(SESSION_KEY, sessionId);
+      return sessionId;
+    }
+
+    async function sendMessage() {
+      const text = chatInput.value.trim();
+      if (!text || pending) {
+        return;
+      }
+
+      const qualityMatch = text.match(/^\/(?:res|resolution|quality)\s+(low|medium|high)$/i);
+      if (qualityMatch) {
+        addMessage("user", text, false);
+        const nextQuality = qualityMatch[1].toLowerCase();
+        addMessage("gail", `Switching avatar quality to ${nextQuality} on this device...`, false);
+        applyQualitySelection(nextQuality, { reload: true });
+        chatInput.value = "";
+        chatInput.style.height = "auto";
+        updateComposerState();
+        return;
+      }
+
+      pending = true;
+      chatInput.value = "";
+      chatInput.style.height = "auto";
+      updateComposerState();
+
+      addMessage("user", text, false);
+      streamBubble = addMessage("gail", "", true);
+      avatar?.setState("listen");
+
+      try {
+        const sid = await ensureSession();
+        const response = await fetch(`/conversation/sessions/${sid}/messages/stream`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-gail-mode": "work",
+            "x-gail-device-type": "iphone",
+          },
+          body: JSON.stringify({ content: text }),
+        });
+
+        if (!response.ok) {
+          const payload = await response.json().catch(() => ({}));
+          throw new Error(payload.error || `Message failed (${response.status}).`);
+        }
+
+        avatar?.setState("talk");
+        streamBubble.innerHTML = "";
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+        let full = "";
+
+        while (true) {
+          const chunk = await reader.read();
+          if (chunk.done) {
+            break;
+          }
+          buffer += decoder.decode(chunk.value, { stream: true });
+          const lines = buffer.split("\n");
+          buffer = lines.pop() || "";
+
+          for (const line of lines) {
+            if (!line.startsWith("data: ")) {
+              continue;
+            }
+            try {
+              const payload = JSON.parse(line.slice(6));
+              if (payload.delta) {
+                full += payload.delta;
+                streamBubble.textContent = full;
+                chatLog.scrollTop = chatLog.scrollHeight;
+              }
+              if (payload.reply && payload.reply.content) {
+                full = payload.reply.content;
+                streamBubble.textContent = full;
+                chatLog.scrollTop = chatLog.scrollHeight;
+              }
+            } catch {
+            }
+          }
+        }
+
+        if (!full) {
+          full = "...";
+          streamBubble.textContent = full;
+        }
+
+        if (!silent && typeof speechSynthesis !== "undefined") {
+          speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(full);
+          utterance.rate = 1.0;
+          utterance.pitch = 1.0;
+          speechSynthesis.speak(utterance);
+        }
+      } catch (error) {
+        streamBubble?.remove();
+        if (error && typeof error.message === "string" && error.message.includes("404")) {
+          sessionId = null;
+          sessionStorage.removeItem(SESSION_KEY);
+        }
+        showWarn(error?.message || "Chat failed.");
+      } finally {
+        pending = false;
+        streamBubble = null;
+        avatar?.setState("idle");
+        updateComposerState();
+      }
+    }
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", () => {
+        const keyboardHeight = Math.max(0, window.innerHeight - (window.visualViewport.offsetTop + window.visualViewport.height));
+        chatShell.style.bottom = `${keyboardHeight}px`;
+      });
+    }
+
+    function resizeCanvas(pcApp) {
+      const rect = sceneFrame.getBoundingClientRect();
+      const w = Math.max(1, Math.floor(rect.width));
+      const h = Math.max(1, Math.floor(rect.height));
+      canvas.width = w;
+      canvas.height = h;
+      canvas.style.width = `${w}px`;
+      canvas.style.height = `${h}px`;
+      pcApp.resizeCanvas(w, h);
+    }
+
+    async function loadContainerEntity(pc, app, url, name) {
+      return await new Promise((resolve, reject) => {
+        const asset = new pc.Asset(name, "container", { url });
+        app.assets.add(asset);
+        asset.once("error", (err) => reject(new Error(String(err || "Container load failed"))));
+        asset.ready(() => {
+          try {
+            const entity = asset.resource.instantiateRenderEntity();
+            resolve(entity);
+          } catch (err) {
+            reject(err);
+          }
+        });
+        app.assets.load(asset);
+      });
+    }
+
+    async function loadAnimationTrack(pc, app, url, name) {
+      return await new Promise((resolve) => {
+        const asset = new pc.Asset(name, "container", { url });
+        app.assets.add(asset);
+        asset.once("error", () => resolve(undefined));
+        asset.ready(() => {
+          try {
+            const clip = asset?.resource?.animations?.[0]?.resource;
+            resolve(clip);
+          } catch {
+            resolve(undefined);
+          }
+        });
+        app.assets.load(asset);
+      });
+    }
+
+    function collectEntityBounds(entity) {
+      const renders = entity?.findComponents?.("render") || [];
+      let minX = Number.POSITIVE_INFINITY;
+      let minY = Number.POSITIVE_INFINITY;
+      let minZ = Number.POSITIVE_INFINITY;
+      let maxX = Number.NEGATIVE_INFINITY;
+      let maxY = Number.NEGATIVE_INFINITY;
+      let maxZ = Number.NEGATIVE_INFINITY;
+
+      for (const render of renders) {
+        for (const mesh of render.meshInstances || []) {
+          const aabb = mesh?.aabb;
+          if (!aabb) {
+            continue;
+          }
+          const cx = aabb.center.x;
+          const cy = aabb.center.y;
+          const cz = aabb.center.z;
+          const ex = aabb.halfExtents.x;
+          const ey = aabb.halfExtents.y;
+          const ez = aabb.halfExtents.z;
+          minX = Math.min(minX, cx - ex);
+          minY = Math.min(minY, cy - ey);
+          minZ = Math.min(minZ, cz - ez);
+          maxX = Math.max(maxX, cx + ex);
+          maxY = Math.max(maxY, cy + ey);
+          maxZ = Math.max(maxZ, cz + ez);
+        }
+      }
+
+      if (!Number.isFinite(minX) || !Number.isFinite(maxX)) {
+        return null;
+      }
+
+      return {
+        minX,
+        minY,
+        minZ,
+        maxX,
+        maxY,
+        maxZ,
+        sizeX: Math.max(0.0001, maxX - minX),
+        sizeY: Math.max(0.0001, maxY - minY),
+        sizeZ: Math.max(0.0001, maxZ - minZ),
+        centerX: (minX + maxX) * 0.5,
+        centerY: (minY + maxY) * 0.5,
+        centerZ: (minZ + maxZ) * 0.5,
+      };
+    }
+
+    function applyStageCameraPlacement(camera, avatarEntity) {
+      const bounds = collectEntityBounds(avatarEntity);
+      if (bounds?.sizeY) {
+        const targetX = bounds.centerX;
+        const targetZ = bounds.centerZ;
+        // Keep the face centered and leave enough headroom for a stable portrait crop.
+        const cameraY = bounds.minY + bounds.sizeY * 0.83;
+        const lookAtY = bounds.minY + bounds.sizeY * 0.80;
+        const halfFramed = Math.max(0.26, bounds.sizeY * 0.30);
+        const fovRad = ((camera.camera?.fov || 38) * Math.PI) / 180;
+        const distance = Math.max(1.05, halfFramed / Math.tan(fovRad * 0.5) * 1.06);
+
+        camera.setLocalPosition(targetX, cameraY, targetZ + distance);
+        camera.lookAt(targetX, lookAtY, targetZ);
+        return;
+      }
+
+      camera.setLocalPosition(
+        MOBILE_STAGE_CAMERA_POSITION[0],
+        MOBILE_STAGE_CAMERA_POSITION[1],
+        MOBILE_STAGE_CAMERA_POSITION[2],
+      );
+      camera.lookAt(
+        MOBILE_STAGE_CAMERA_TARGET[0],
+        MOBILE_STAGE_CAMERA_TARGET[1],
+        MOBILE_STAGE_CAMERA_TARGET[2],
+      );
+    }
+
+    function placeAvatarForStage(root, avatarEntity) {
+      const candidateEuler = [
+        [0, 0, 0],
+        [-90, 0, 0],
+        [90, 0, 0],
+        [0, 90, 0],
+        [0, -90, 0],
+        [0, 180, 0],
+      ];
+
+      let best = null;
+      for (const euler of candidateEuler) {
+        root.setLocalPosition(
+          MOBILE_STAGE_AVATAR_POSITION[0],
+          MOBILE_STAGE_AVATAR_POSITION[1],
+          MOBILE_STAGE_AVATAR_POSITION[2],
+        );
+        root.setLocalEulerAngles(euler[0], euler[1], euler[2]);
+        root.setLocalScale(1, 1, 1);
+        const bounds = collectEntityBounds(avatarEntity);
+        if (!bounds) continue;
+        const score = bounds.sizeY - Math.max(bounds.sizeX, bounds.sizeZ) * 0.2;
+        if (!best || score > best.score) {
+          best = { euler, bounds, score };
+        }
+      }
+
+      if (!best) {
+        root.setLocalPosition(
+          MOBILE_STAGE_AVATAR_POSITION[0],
+          MOBILE_STAGE_AVATAR_POSITION[1],
+          MOBILE_STAGE_AVATAR_POSITION[2],
+        );
+        root.setLocalEulerAngles(
+          MOBILE_STAGE_AVATAR_ROTATION[0],
+          MOBILE_STAGE_AVATAR_ROTATION[1],
+          MOBILE_STAGE_AVATAR_ROTATION[2],
+        );
+        root.setLocalScale(
+          MOBILE_STAGE_AVATAR_SCALE[0],
+          MOBILE_STAGE_AVATAR_SCALE[1],
+          MOBILE_STAGE_AVATAR_SCALE[2],
+        );
+        return;
+      }
+
+      const targetHeight = 1.72;
+      const scale = Math.max(0.1, Math.min(3.5, targetHeight / Math.max(0.001, best.bounds.sizeY)));
+      const feetY = best.bounds.minY * scale;
+      const centerX = best.bounds.centerX * scale;
+      const centerZ = best.bounds.centerZ * scale;
+      const desiredFeetY = -0.14;
+
+      root.setLocalEulerAngles(best.euler[0], best.euler[1], best.euler[2]);
+      root.setLocalScale(scale, scale, scale);
+      root.setLocalPosition(
+        MOBILE_STAGE_AVATAR_POSITION[0] - centerX,
+        MOBILE_STAGE_AVATAR_POSITION[1] + (desiredFeetY - feetY),
+        MOBILE_STAGE_AVATAR_POSITION[2] - centerZ,
+      );
+    }
+
+    function findEntityByName(root, name) {
+      if (!root) {
+        return null;
+      }
+      if (root.name === name) {
+        return root;
+      }
+      for (const child of root.children || []) {
+        const found = findEntityByName(child, name);
+        if (found) {
+          return found;
+        }
+      }
+      return null;
+    }
+
+    function toCanonicalBoneName(name) {
+      let canonical = name;
+      while (/\.\d{3}$/.test(canonical)) {
+        canonical = canonical.replace(/\.\d{3}$/, "");
+      }
+      return canonical;
+    }
+
+    function buildSkeletonBoneLookup(root) {
+      const exact = new Map();
+      const canonical = new Map();
+      const walk = (entity) => {
+        const name = entity?.name;
+        if (name) {
+          exact.set(name, entity);
+          const canonicalName = toCanonicalBoneName(name);
+          if (!canonical.has(canonicalName)) canonical.set(canonicalName, entity);
+        }
+        for (const child of entity?.children ?? []) walk(child);
+      };
+      walk(root);
+      return { exact, canonical };
+    }
+
+    function bindGarmentToSkeleton(garmentRoot, bodyRoot, skeletonRoot) {
+      const targetRoot = skeletonRoot ?? bodyRoot;
+      const skeletonLookup = buildSkeletonBoneLookup(targetRoot);
+      // Set rootBone on all render components in the garment
+      for (const rc of garmentRoot.findComponents?.("render") ?? []) {
+        rc.rootBone = targetRoot;
+      }
+      function walk(entity) {
+        if (entity.render?.meshInstances) {
+          for (const mi of entity.render.meshInstances) {
+            if (mi.skinInstance?.skin?.boneNames) {
+              mi.skinInstance.resolve(targetRoot, entity);
+              const boneNames = mi.skinInstance.skin.boneNames;
+              const resolvedBones = mi.skinInstance.bones;
+              for (let i = 0; i < boneNames.length; i++) {
+                if (resolvedBones[i]) continue;
+                const requested = boneNames[i];
+                const replacement = skeletonLookup.exact.get(requested)
+                  ?? skeletonLookup.canonical.get(toCanonicalBoneName(requested));
+                if (replacement) resolvedBones[i] = replacement;
+              }
+            }
+          }
+        }
+        for (const child of entity.children ?? []) walk(child);
+      }
+      walk(garmentRoot);
+    }
+
+    function resolveSkeletonRoot(bodyRoot) {
+      const bones = [];
+      for (const renderComponent of bodyRoot?.findComponents?.("render") ?? []) {
+        for (const meshInstance of renderComponent.meshInstances ?? []) {
+          const skinBones = meshInstance?.skinInstance?.bones;
+          if (Array.isArray(skinBones)) {
+            for (const bone of skinBones) {
+              if (bone) bones.push(bone);
+            }
+          }
+        }
+      }
+      if (bones.length === 0) {
+        return findEntityByName(bodyRoot, "hip") ?? bodyRoot;
+      }
+      const uniqueBones = Array.from(new Set(bones));
+      const isAncestorOf = (ancestor, node) => {
+        let cursor = node;
+        while (cursor) {
+          if (cursor === ancestor) return true;
+          cursor = cursor.parent;
+        }
+        return false;
+      };
+      let candidate = uniqueBones[0];
+      while (
+        candidate?.parent &&
+        candidate.parent !== bodyRoot &&
+        uniqueBones.every((bone) => isAncestorOf(candidate.parent, bone))
+      ) {
+        candidate = candidate.parent;
+      }
+      return candidate ?? findEntityByName(bodyRoot, "hip") ?? bodyRoot;
+    }
+
+    function rebindEntityRenderRootBone(entity, rootBone) {
+      if (!entity || !rootBone) return;
+      for (const renderComponent of entity.findComponents?.("render") ?? []) {
+        renderComponent.rootBone = rootBone;
+      }
+    }
+
+    function bindAvatarAnimation(avatarEntity, idleTrack, talkTrack, listenTrack) {
+      if (!idleTrack) return null;
+      try {
+        avatarEntity.addComponent("anim", { activate: true, speed: 1 });
+      } catch {
+        return null;
+      }
+      const anim = avatarEntity.anim;
+      if (!anim) return null;
+      const skeletonRoot = resolveSkeletonRoot(avatarEntity);
+      rebindEntityRenderRootBone(avatarEntity, skeletonRoot);
+      anim.rootBone = skeletonRoot;
+      anim.assignAnimation("idle", idleTrack);
+      anim.assignAnimation("talk", talkTrack || idleTrack);
+      anim.assignAnimation("listen", listenTrack || idleTrack);
+      anim.baseLayer?.play("idle");
+      try { anim.rebind?.(); } catch { /* ignore */ }
+      return { anim, skeletonRoot };
+    }
+
+    function getMaterialUsage(name) {
+      if (!name) return "clothing";
+      const n = name.toLowerCase();
+      if (n.includes("hair") || n.includes("strand") || n.includes("eyebrow") || n.includes("eyelash")) return "hair";
+      if (n.includes("skin") || n.includes("torso") || n.includes("face") || n.includes("lips") || n.includes("ears") || n.includes("legs") || n.includes("arms")) return "body";
+      if (n.includes("ring") || n.includes("necklace") || n.includes("bracelet") || n.includes("earring") || n.includes("jewel") || n.includes("metal")) return "accessory";
+      return "clothing";
+    }
+
+    function patchAvatarMaterials(pc, entity) {
+      for (const renderComponent of entity?.findComponents?.("render") ?? []) {
+        for (const meshInstance of renderComponent.meshInstances ?? []) {
+          const sourceMaterial = meshInstance.material;
+          if (!sourceMaterial?.clone) continue;
+
+          const materialName = String(sourceMaterial.name ?? "");
+          if (SENSITIVE_FACE_MATERIAL_NAME_PATTERN.test(materialName)) {
+            continue;
+          }
+
+          const usage = getMaterialUsage(materialName);
+          const profile = MATERIAL_PROFILE_BY_USAGE[usage] || MATERIAL_PROFILE_BY_USAGE.clothing;
+          const isAlphaMaterial = typeof sourceMaterial.blendType === "number" && sourceMaterial.blendType !== pc.BLEND_NONE;
+          const material = sourceMaterial.clone();
+
+          if (typeof material.gloss === "number") {
+            material.gloss = Math.min(material.gloss, profile.glossCap);
+          }
+          if (typeof material.shininess === "number") {
+            material.shininess = Math.min(material.shininess, profile.shininessCap);
+          }
+          if (typeof material.metalness === "number") {
+            material.metalness = 0;
+          }
+          if (typeof material.useMetalness === "boolean") {
+            material.useMetalness = false;
+          }
+          if (typeof material.specularityFactor === "number") {
+            material.specularityFactor = Math.min(material.specularityFactor, profile.specularityCap);
+          }
+          if (pc?.Color && "specular" in material) {
+            material.specular = new pc.Color(profile.specularColor, profile.specularColor, profile.specularColor);
+          }
+          if (typeof material.reflectivity === "number") {
+            material.reflectivity = 0;
+          }
+          if (typeof material.clearCoat === "number") {
+            material.clearCoat = 0;
+          }
+          if (typeof material.clearCoatGloss === "number") {
+            material.clearCoatGloss = 0;
+          }
+          if (typeof material.sheen === "number") {
+            material.sheen = 0;
+          }
+          if (typeof material.sheenGloss === "number") {
+            material.sheenGloss = 0;
+          }
+          if (!profile.allowNormalMap && "normalMap" in material) {
+            material.normalMap = null;
+          }
+          if (usage === "hair") {
+            material.blendType = pc.BLEND_NONE;
+            material.alphaTest = 0.08;
+            material.opacity = 1;
+            material.depthWrite = true;
+            material.cull = pc.CULLFACE_BACK;
+          } else if (isAlphaMaterial && typeof sourceMaterial.opacity === "number") {
+            material.opacity = sourceMaterial.opacity;
+            material.blendType = pc.BLEND_NONE;
+            material.depthWrite = true;
+          } else {
+            material.blendType = pc.BLEND_NONE;
+            material.opacity = 1;
+            material.depthWrite = true;
+          }
+          if ("emissive" in material && pc?.Color) {
+            material.emissive = new pc.Color(0, 0, 0);
+          }
+
+          material.update?.();
+          meshInstance.material = material;
+        }
+      }
+    }
+
+    async function bootAvatar() {
+      setAvatarLoading("Loading avatar and outfit...", true);
+      const pc = await import("/vendor/playcanvas/build/playcanvas.mjs");
+
+      // Configure Draco decoder before any GLB loads (required for KHR_draco_mesh_compression)
+      pc.WasmModule.setConfig("DracoDecoderModule", {
+        glueUrl:    "/gail-mobile/assets/draco/draco.wasm.js",
+        wasmUrl:    "/gail-mobile/assets/draco/draco.wasm.wasm",
+        fallbackUrl: "/gail-mobile/assets/draco/draco.js",
+      });
+
+      const app = new pc.Application(canvas, {
+        graphicsDeviceOptions: {
+          alpha: true,
+          antialias: true,
+          preserveDrawingBuffer: false,
+        },
+      });
+      app.setCanvasFillMode(pc.FILLMODE_NONE);
+      app.setCanvasResolution(pc.RESOLUTION_AUTO);
+      app.start();
+      window.__pcApp = app;
+      window.__pc = pc;
+
+      const camera = new pc.Entity("mobile-camera");
+      camera.addComponent("camera", {
+        clearColor: new pc.Color(0.118, 0.118, 0.118, 0),
+        nearClip: 0.1,
+        farClip: 80,
+        fov: 38,
+      });
+      app.root.addChild(camera);
+
+      app.scene.ambientLight = new pc.Color(0.72, 0.68, 0.62);
+
+      const key = new pc.Entity("key-light");
+      key.addComponent("light", {
+        type: "directional",
+        color: new pc.Color(0.96, 0.96, 0.98),
+        intensity: 1.5,
+        castShadows: false,
+      });
+      key.setEulerAngles(36, 24, 0);
+      app.root.addChild(key);
+
+      const fill = new pc.Entity("fill-light");
+      fill.addComponent("light", {
+        type: "omni",
+        color: new pc.Color(0.35, 0.43, 0.75),
+        intensity: 1.8,
+        range: 12,
+        castShadows: false,
+      });
+      fill.setLocalPosition(-1.2, 1.65, 1.8);
+      app.root.addChild(fill);
+
+      const root = new pc.Entity("avatar-root");
+      app.root.addChild(root);
+
+      const assetRoot = await resolveAssetRoot();
+      setAvatarLoading(`Loading ${assetRoot} manifest...`, true);
+      const manifest = await fetchJson(`/client/asset-manifest?assetRoot=${encodeURIComponent(assetRoot)}`);
+      const bodyAsset = pickBundleAsset(manifest.assets ?? [], "base_avatar", "avatar", "base");
+      if (!bodyAsset?.resolvedPath) {
+        throw new Error(`Base avatar bundle missing for asset root: ${assetRoot}`);
+      }
+
+      const avatarUrl = toVersionedClientAssetUrl(bodyAsset);
+      setAvatarLoading(`Loading ${assetRoot} avatar...`, true);
+      const avatarEntity = await loadContainerEntity(pc, app, avatarUrl, `mobile-avatar-${bodyAsset.id || "base"}`);
+      root.addChild(avatarEntity);
+      patchAvatarMaterials(pc, avatarEntity);
+
+      const skeletonRoot = resolveSkeletonRoot(avatarEntity);
+      rebindEntityRenderRootBone(avatarEntity, skeletonRoot);
+
+      const displayAssets = getDisplayAssets(manifest, bodyAsset.id);
+      for (const asset of displayAssets) {
+        setAvatarLoading(`Loading ${asset.kind || "module"}: ${asset.id || "asset"}...`, true);
+        const moduleUrl = toVersionedClientAssetUrl(asset);
+        const moduleEntity = await loadContainerEntity(pc, app, moduleUrl, `mobile-module-${asset.id || "asset"}`);
+        root.addChild(moduleEntity);
+        bindGarmentToSkeleton(moduleEntity, avatarEntity, skeletonRoot);
+        patchAvatarMaterials(pc, moduleEntity);
+      }
+
+      // Defer one tick so mesh bounds and skin matrices are initialized.
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+      placeAvatarForStage(root, avatarEntity);
+      applyStageCameraPlacement(camera, avatarEntity);
+
+      const idle = await loadAnimationTrack(pc, app, IDLE_ANIM_URL, "anim-idle");
+      const talk = await loadAnimationTrack(pc, app, TALK_ANIM_URL, "anim-talk");
+      const listen = await loadAnimationTrack(pc, app, LISTEN_ANIM_URL, "anim-listen");
+
+      const idleTrack = idle || talk || listen;
+      const talkTrack = talk || idleTrack;
+      const listenTrack = listen || idleTrack;
+
+      if (!idleTrack) {
+        throw new Error("Animation tracks failed to load.");
+      }
+
+      const bound = bindAvatarAnimation(avatarEntity, idleTrack, talkTrack, listenTrack);
+      if (!bound?.anim || !bound?.skeletonRoot) {
+        throw new Error("Avatar animation bind failed.");
+      }
+      const animComponent = bound?.anim ?? null;
+
+      applyStageCameraPlacement(camera, avatarEntity);
+
+      const setState = (state) => {
+        if (!animComponent?.baseLayer) return;
+        if (state === "talk") {
+          animComponent.baseLayer.transition("talk", 0.22);
+        } else if (state === "listen") {
+          animComponent.baseLayer.transition("listen", 0.22);
+        } else {
+          animComponent.baseLayer.transition("idle", 0.22);
+        }
+      };
+
+      const ro = new ResizeObserver(() => resizeCanvas(app));
+      ro.observe(sceneFrame);
+      resizeCanvas(app);
+
+      canvas.classList.add("ready");
+      setAvatarLoading("", false);
+
+      return { setState };
+    }
+
+    addMessage("gail", "Hey. I am here.");
+    avatar = await bootAvatar().catch((error) => {
+      showWarn(error?.message || "Avatar load failed.");
+      setAvatarLoading("Avatar failed to load", true);
+      return null;
+    });
+  </script>
+</body>
+</html>

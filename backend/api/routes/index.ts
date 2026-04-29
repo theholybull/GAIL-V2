@@ -1,0 +1,18 @@
+export const routes = [
+  "health",
+  "devices",
+  "approvals",
+  "private-session",
+  "conversation",
+  "memory",
+  "projects",
+  "notes",
+  "lists",
+  "tasks",
+  "reminders",
+  "parts",
+  "cart",
+  "modes",
+  "presence",
+  "devices",
+];

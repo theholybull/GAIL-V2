@@ -1,0 +1,29 @@
+schema_version = "1.0.0"
+
+id = "gail_export_tools"
+version = "0.1.0"
+name = "Gail Export Tools"
+tagline = "Register and export Gail avatar modules and clips from Object Mode"
+maintainer = "OpenAI Codex"
+type = "add-on"
+
+tags = ["Import-Export", "Animation", "Pipeline"]
+
+blender_version_min = "4.1.0"
+blender_version_max = "5.5.999"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "*.pyc",
+  "*.pyo",
+  "*.pyd",
+  ".git/",
+  ".github/",
+  ".vscode/",
+  ".idea/",
+  "Thumbs.db",
+  ".DS_Store"
+]

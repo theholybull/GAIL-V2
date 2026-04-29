@@ -1,0 +1,98 @@
+{
+  "manifest_version": "v1",
+  "project": "gail",
+  "master_file": "gail_master_v2_direct_mixamo_idle_preview.blend",
+  "armature": {
+    "object_name": "Armature",
+    "data_name": "Armature",
+    "lock_contract": false
+  },
+  "export_profiles": [
+    {
+      "name": "playcanvas_glb",
+      "format": "glb",
+      "path_root": "blender/animation_master/exports/glb/clips",
+      "collection": "EXP_clip_preview",
+      "include_statuses": [
+        "approved"
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "clip_name": "direct_mixamo_idle_preview_v1",
+      "category": "idle",
+      "status": "pending",
+      "partition": "body",
+      "loop": true,
+      "frame_start": 1,
+      "frame_end": 251,
+      "source_glb": "",
+      "export": {
+        "profile": "playcanvas_glb",
+        "collection": "EXP_clip_preview",
+        "relative_path": "pending/idle/direct_mixamo_idle_preview_v1.glb"
+      }
+    },
+    {
+      "clip_name": "idle_base_v1",
+      "category": "idle",
+      "status": "pending",
+      "partition": "body",
+      "loop": true,
+      "frame_start": 48,
+      "frame_end": 228,
+      "source_glb": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/converted_animations_20260401/idle/27775_stand_still.glb",
+      "export": {
+        "profile": "playcanvas_glb",
+        "collection": "EXP_clip_preview",
+        "relative_path": "approved/idle/idle_base_v1.glb"
+      }
+    },
+    {
+      "clip_name": "listen_base_v1",
+      "category": "listen",
+      "status": "pending",
+      "partition": "body",
+      "loop": true,
+      "frame_start": 48,
+      "frame_end": 126,
+      "source_glb": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/converted_animations_20260401/gesture/27299_stand_and_nod.glb",
+      "export": {
+        "profile": "playcanvas_glb",
+        "collection": "EXP_clip_preview",
+        "relative_path": "approved/listen/listen_base_v1.glb"
+      }
+    },
+    {
+      "clip_name": "talk_base_v1",
+      "category": "talk",
+      "status": "pending",
+      "partition": "body",
+      "loop": true,
+      "frame_start": 48,
+      "frame_end": 532,
+      "source_glb": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/converted_animations_20260401/other/28154_explain.glb",
+      "export": {
+        "profile": "playcanvas_glb",
+        "collection": "EXP_clip_preview",
+        "relative_path": "approved/talk/talk_base_v1.glb"
+      }
+    },
+    {
+      "clip_name": "ack_nod_small_v1",
+      "category": "ack",
+      "status": "pending",
+      "partition": "body",
+      "loop": false,
+      "frame_start": 48,
+      "frame_end": 159,
+      "source_glb": "C:/Users/bate_/OneDrive/Desktop/Gail 2.1/converted_animations_20260401/gesture/26479_nod.glb",
+      "export": {
+        "profile": "playcanvas_glb",
+        "collection": "EXP_clip_preview",
+        "relative_path": "approved/ack/ack_nod_small_v1.glb"
+      }
+    }
+  ]
+}

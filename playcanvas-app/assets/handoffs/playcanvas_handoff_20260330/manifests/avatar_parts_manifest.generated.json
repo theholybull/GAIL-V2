@@ -1,0 +1,50 @@
+{
+  "armature": "Victoria 8",
+  "exports": [
+    {
+      "bucket": "body",
+      "mode": "DEFAULT",
+      "path": "D:\\Gail\\data\\runtime\\gail_final_export_restfix_20260406\\avatar_package\\parts\\body\\Victoria 8_body.glb",
+      "mesh_count": 1,
+      "scale_factor_applied": 0.9530323413348835,
+      "target_height_m": 1.7200000286102295,
+      "source_height_m": 1.8047656454145908
+    },
+    {
+      "bucket": "hair",
+      "mode": "DEFAULT",
+      "path": "D:\\Gail\\data\\runtime\\gail_final_export_restfix_20260406\\avatar_package\\parts\\hair\\Victoria 8_hair.glb",
+      "mesh_count": 2,
+      "scale_factor_applied": 0.9530323413348835,
+      "target_height_m": 1.7200000286102295,
+      "source_height_m": 1.8047656454145908
+    },
+    {
+      "bucket": "clothing",
+      "mode": "BUNDLED",
+      "path": "D:\\Gail\\data\\runtime\\gail_final_export_restfix_20260406\\avatar_package\\parts\\clothing\\Victoria 8_clothing.glb",
+      "mesh_count": 1,
+      "scale_factor_applied": 0.9530323413348835,
+      "target_height_m": 1.7200000286102295,
+      "source_height_m": 1.8047656454145908
+    },
+    {
+      "bucket": "accessories",
+      "mode": "DEFAULT",
+      "path": "D:\\Gail\\data\\runtime\\gail_final_export_restfix_20260406\\avatar_package\\parts\\accessories\\Victoria 8_accessories.glb",
+      "mesh_count": 1,
+      "scale_factor_applied": 0.9530323413348835,
+      "target_height_m": 1.7200000286102295,
+      "source_height_m": 1.8047656454145908
+    },
+    {
+      "bucket": "other",
+      "mode": "DEFAULT",
+      "path": "D:\\Gail\\data\\runtime\\gail_final_export_restfix_20260406\\avatar_package\\parts\\other\\Victoria 8_other.glb",
+      "mesh_count": 1,
+      "scale_factor_applied": 0.9530323413348835,
+      "target_height_m": 1.7200000286102295,
+      "source_height_m": 1.8047656454145908
+    }
+  ]
+}

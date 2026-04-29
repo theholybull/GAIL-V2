@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "ignoreDeprecations": "5.0",
+    "strict": true,
+    "rootDir": "..",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": [
+    "bootstrap.ts",
+    "server.ts",
+    "../shared/**/*.ts",
+    "api/**/*.ts",
+    "brokers/**/*.ts",
+    "providers/**/*.ts",
+    "services/**/*.ts",
+    "sync/**/*.ts",
+    "db/**/*.ts",
+    "schemas/**/*.ts",
+    "jobs/**/*.ts"
+  ]
+}

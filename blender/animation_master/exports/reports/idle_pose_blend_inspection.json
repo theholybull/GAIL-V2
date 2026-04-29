@@ -1,0 +1,236 @@
+{
+  "blend_file": "C:\\Users\\jbates\\Desktop\\idle pose.blend",
+  "collection_count": 1,
+  "collections": [
+    "Collection"
+  ],
+  "armature_count": 1,
+  "armatures": [
+    {
+      "name": "VAMP Laurina for G8 Female",
+      "data_name": "Genesis8Female",
+      "bone_count": 170,
+      "collections": [
+        "Collection"
+      ]
+    }
+  ],
+  "mesh_count": 11,
+  "meshes": [
+    {
+      "name": "Boho Summer Shoes.Shape",
+      "vertex_count": 16708,
+      "materials": [
+        "Straps",
+        "Soles"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Genesis 8 Female Eyelashes.Shape",
+      "vertex_count": 464,
+      "materials": [
+        "EyeMoisture_1",
+        "Eyelashes"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Meili Hair.Shape",
+      "vertex_count": 397063,
+      "materials": [
+        "Meili Hair",
+        "Meili Cap"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Urban Action Boots.Shape",
+      "vertex_count": 38106,
+      "materials": [
+        "LeftBootSole",
+        "LeftFakeStrap",
+        "LeftMainBoot",
+        "LeftBootBuckle",
+        "LeftBootHeel",
+        "RightBootSole",
+        "RightFakeStrap",
+        "RightMainBoot",
+        "RightBootBuckle",
+        "RightBootHeel"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Urban Action Bracelets (2).Shape",
+      "vertex_count": 944,
+      "materials": [
+        "LeftBracelets_1",
+        "RightBracelets_1"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Urban Action Bracelets (3).Shape",
+      "vertex_count": 944,
+      "materials": [
+        "LeftBracelets_2",
+        "RightBracelets_2"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Urban Action Bracelets.Shape",
+      "vertex_count": 944,
+      "materials": [
+        "LeftBracelets",
+        "RightBracelets"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Urban Action Pants.Shape",
+      "vertex_count": 79375,
+      "materials": [
+        "MainPants",
+        "BeltLoops",
+        "SmallLinks",
+        "Belt",
+        "BeltEnds",
+        "ChainRings"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "Urban Action Vest.Shape",
+      "vertex_count": 15749,
+      "materials": [
+        "MainVest",
+        "Buttons",
+        "ButtonThreads"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "VAMP Laurina for G8 Female.Shape",
+      "vertex_count": 16556,
+      "materials": [
+        "Torso",
+        "Face",
+        "Lips",
+        "Teeth",
+        "Ears",
+        "Legs",
+        "EyeSocket",
+        "Mouth",
+        "Arms",
+        "Pupils",
+        "EyeMoisture",
+        "Fingernails",
+        "Cornea",
+        "Irises",
+        "Sclera",
+        "Toenails"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    },
+    {
+      "name": "VAMPLaurinaBrows.Shape",
+      "vertex_count": 166028,
+      "materials": [
+        "Hair03",
+        "Hair01",
+        "Hair02"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "parent": "VAMP Laurina for G8 Female",
+      "armature_modifiers": [
+        "VAMP Laurina for G8 Female"
+      ],
+      "shape_key_count": 0,
+      "shape_keys": []
+    }
+  ]
+}

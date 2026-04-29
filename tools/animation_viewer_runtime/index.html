@@ -1,0 +1,999 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animation Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-2: #131a31;
+      --card: #161f3a;
+      --card-2: #1b2544;
+      --ink: #e7edf8;
+      --muted: #9db0d4;
+      --line: #2f3f68;
+      --accent: #2dd4bf;
+      --accent-2: #0ea5e9;
+      --danger: #fca5a5;
+      --ok: #86efac;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      --sidebar-w: 300px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #1a2650 0%, #0b1020 48%, #090d19 100%);
+    }
+    @media (min-width: 1281px) {
+      body { padding-right: calc(var(--sidebar-w) + 24px); }
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 8;
+      background: rgba(10, 16, 33, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+      padding: 12px 14px;
+    }
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .controls input, .controls select, .controls button {
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #111932;
+      color: var(--ink);
+    }
+    .controls button {
+      cursor: pointer;
+      background: linear-gradient(90deg, #0ea5e9, #2dd4bf);
+      color: #04111f;
+      border: none;
+      font-weight: 700;
+    }
+    .controls button.ghost {
+      background: #16203d;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      font-weight: 500;
+    }
+    .controls label { color: var(--muted); font-size: 13px; }
+    #stats { margin-top: 8px; font-size: 13px; color: var(--muted); }
+    #progressWrap { display: none; margin-top: 10px; }
+    #progressTrack { height: 10px; background: #111931; border-radius: 999px; overflow: hidden; border: 1px solid var(--line); }
+    #progressFill { height: 100%; width: 0%; background: linear-gradient(90deg, #0ea5e9, #2dd4bf); }
+    #progressText { margin-top: 6px; font-size: 12px; color: var(--muted); }
+
+    #previewPanel {
+      position: sticky;
+      top: 88px;
+      z-index: 6;
+      margin: 10px 12px 8px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(19, 27, 52, 0.95);
+      box-shadow: var(--shadow);
+    }
+    #previewPad { padding: 10px; }
+    #previewTitle { font-size: 13px; font-weight: 700; }
+    #previewMeta, #previewStatus { margin-top: 5px; font-size: 11px; color: var(--muted); }
+    model-viewer {
+      width: 100%;
+      height: 220px;
+      background:
+        radial-gradient(circle at 30% 18%, rgba(42, 57, 96, 0.22), rgba(12, 18, 37, 0.98)),
+        linear-gradient(180deg, #121a34, #090f1f);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-top: 8px;
+    }
+
+    #organizer {
+      margin: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(19, 27, 52, 0.95);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    #organizerHead {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(16, 23, 45, 0.75);
+    }
+    #organizerHead input, #organizerHead select, #organizerHead button, #collectionImport {
+      padding: 7px 9px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #0f1730;
+      color: var(--ink);
+    }
+    #organizerHead button {
+      cursor: pointer;
+      background: #16315f;
+    }
+    #organizerHead button.primary {
+      background: linear-gradient(90deg, #0ea5e9, #2dd4bf);
+      color: #04111f;
+      border: none;
+      font-weight: 700;
+    }
+    #organizerBody {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(360px, 2fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    .pane {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #121b36;
+      padding: 10px;
+    }
+    .pane h3 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: #c7d7f6;
+      letter-spacing: 0.02em;
+    }
+    .mini {
+      margin: 0 0 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    #basketList, #collectionsList {
+      display: grid;
+      gap: 6px;
+      max-height: 220px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+    .basket-item, .collection-item {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #182449;
+      padding: 8px;
+    }
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+    }
+    .item-meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .item-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .item-row button {
+      border: 1px solid var(--line);
+      background: #102143;
+      color: var(--ink);
+      border-radius: 8px;
+      font-size: 11px;
+      padding: 5px 8px;
+      cursor: pointer;
+    }
+    .collection-type {
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 11px;
+      border: 1px solid #3e8fce;
+      color: #8fd4ff;
+      background: #122541;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+      padding: 10px 12px 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .pad { padding: 9px; }
+    .anno { font-size: 12px; font-weight: 700; line-height: 1.3; }
+    .meta { margin-top: 3px; font-size: 11px; color: var(--muted); }
+    .row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+    .row a, .row button {
+      padding: 5px 8px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      background: #121c37;
+      color: var(--ink);
+      cursor: pointer;
+      font-size: 11px;
+    }
+    .row button.preview { background: #0f766e; color: white; border: none; }
+    .row button.add { background: #11477d; color: #def4ff; border-color: #2663a3; }
+    .row button.in-basket { background: #103523; border-color: #20603e; color: #b8f8cf; cursor: default; }
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      border-radius: 999px;
+      padding: 1px 7px;
+      border: 1px solid #2e7fb3;
+      color: #9fd9ff;
+      background: #143050;
+    }
+    .tag.converted {
+      border-color: #1f7049;
+      color: #bbf7d0;
+      background: #103223;
+    }
+    .tag.selected {
+      border-color: #2dd4bf;
+      color: #cbfbf4;
+      background: #10363a;
+    }
+
+    @media (max-width: 980px) {
+      #organizerBody { grid-template-columns: 1fr; }
+    }
+
+    #animSidebar {
+      position: fixed;
+      right: 10px;
+      top: 88px;
+      width: var(--sidebar-w);
+      max-height: calc(100vh - 100px);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(12, 18, 37, 0.96);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      z-index: 7;
+      overflow: hidden;
+    }
+    #animSidebarHead {
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(16, 23, 45, 0.9);
+    }
+    #animSidebarHead input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f1730;
+      color: var(--ink);
+      padding: 8px;
+    }
+    #animSidebarMeta {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    #animSidebarList {
+      overflow: auto;
+      padding: 6px;
+      display: grid;
+      gap: 6px;
+    }
+    .anim-nav-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #132246;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      padding: 7px;
+      font-size: 11px;
+    }
+    .anim-nav-id {
+      color: #99d7ff;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .anim-nav-cat {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+    @media (max-width: 1280px) {
+      #animSidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="controls">
+      <input id="q" placeholder="search annotation" />
+      <select id="catFilter"><option value="">all categories</option></select>
+      <select id="sortMode">
+        <option value="annotation">sort: annotation</option>
+        <option value="id_asc">sort: number asc</option>
+        <option value="id_desc">sort: number desc</option>
+      </select>
+      <label><input type="checkbox" id="onlyWithFiles" checked /> only with files</label>
+      <label><input type="checkbox" id="onlyConverted" checked /> converted only</label>
+      <label><input type="checkbox" id="showTrashed" /> show trashed</label>
+      <button id="addPicked" class="ghost">add picked</button>
+      <button id="clearPicked" class="ghost">clear picked</button>
+      <button id="reload">reload</button>
+    </div>
+    <div id="stats">loading...</div>
+    <div id="progressWrap">
+      <div id="progressTrack"><div id="progressFill"></div></div>
+      <div id="progressText"></div>
+    </div>
+  </header>
+
+  <section id="previewPanel">
+    <div id="previewPad">
+      <div id="previewTitle">Preview</div>
+      <div id="previewMeta">Hover a converted clip or click preview.</div>
+      <model-viewer id="sharedPreview" camera-controls autoplay interaction-prompt="none" exposure="0.62" shadow-intensity="0.2"></model-viewer>
+      <div id="previewStatus">No preview loaded.</div>
+    </div>
+  </section>
+
+  <section id="organizer">
+    <div id="organizerHead">
+      <select id="collectionType">
+        <option value="blend_set">blend set</option>
+        <option value="action_sequence">action sequence</option>
+      </select>
+      <input id="folderInput" placeholder="folder (e.g. standing)" />
+      <input id="subfolderInput" placeholder="subfolder (e.g. talking)" />
+      <input id="nameInput" placeholder="name (e.g. angry)" />
+      <input id="notesInput" placeholder="notes (optional)" />
+      <button id="saveCollection" class="primary">save from basket</button>
+      <button id="clearBasket">clear basket</button>
+      <button id="downloadManifest">download manifest</button>
+      <input id="collectionImport" type="file" accept=".json,application/json" />
+    </div>
+    <div id="organizerBody">
+      <div class="pane">
+        <h3>Basket (clips to combine)</h3>
+        <p class="mini">Use for grouped blend sets or ordered action sequences.</p>
+        <div id="basketList"></div>
+      </div>
+      <div class="pane">
+        <h3>Saved Collections</h3>
+        <p class="mini">Engine-friendly folders/subfolders with clip lists. Example paths: standing/talking/angry or sitting/idle/bored.</p>
+        <div id="collectionsList"></div>
+      </div>
+    </div>
+  </section>
+
+  <aside id="animSidebar">
+    <div id="animSidebarHead">
+      <input id="sidebarSearch" placeholder="quick find animation..." />
+      <div id="animSidebarMeta">0 items</div>
+    </div>
+    <div id="animSidebarList"></div>
+  </aside>
+
+  <main id="grid"></main>
+
+  <script>
+    const indexUrl = '/metadata/library_index.json';
+    const progressUrl = '/metadata/local_pipeline_progress.json';
+    const collectionsStorageKey = 'gail.animation.collections.v1';
+    const grid = document.getElementById('grid');
+    const stats = document.getElementById('stats');
+    const qInput = document.getElementById('q');
+    const catFilter = document.getElementById('catFilter');
+    const sortMode = document.getElementById('sortMode');
+    const onlyWithFiles = document.getElementById('onlyWithFiles');
+    const onlyConverted = document.getElementById('onlyConverted');
+    const showTrashed = document.getElementById('showTrashed');
+    const reloadBtn = document.getElementById('reload');
+    const addPickedBtn = document.getElementById('addPicked');
+    const clearPickedBtn = document.getElementById('clearPicked');
+    const preview = document.getElementById('sharedPreview');
+    const previewTitle = document.getElementById('previewTitle');
+    const previewMeta = document.getElementById('previewMeta');
+    const previewStatus = document.getElementById('previewStatus');
+    const progressWrap = document.getElementById('progressWrap');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const collectionType = document.getElementById('collectionType');
+    const folderInput = document.getElementById('folderInput');
+    const subfolderInput = document.getElementById('subfolderInput');
+    const nameInput = document.getElementById('nameInput');
+    const notesInput = document.getElementById('notesInput');
+    const saveCollectionBtn = document.getElementById('saveCollection');
+    const clearBasketBtn = document.getElementById('clearBasket');
+    const downloadManifestBtn = document.getElementById('downloadManifest');
+    const collectionImport = document.getElementById('collectionImport');
+    const basketList = document.getElementById('basketList');
+    const collectionsList = document.getElementById('collectionsList');
+    const sidebarSearch = document.getElementById('sidebarSearch');
+    const animSidebarMeta = document.getElementById('animSidebarMeta');
+    const animSidebarList = document.getElementById('animSidebarList');
+    const categories = ['idle', 'locomotion', 'combat', 'gesture', 'emote', 'interaction', 'traversal', 'horror', 'other'];
+    let items = [];
+    let basket = [];
+    let collections = [];
+    let picked = new Set();
+    let hoverTimer = null;
+    let currentPreview = '';
+
+    for (const cat of categories) {
+      const opt = document.createElement('option');
+      opt.value = cat;
+      opt.textContent = cat;
+      catFilter.appendChild(opt);
+    }
+
+    function esc(v) {
+      return String(v ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    }
+
+    function isConverted(item) {
+      return !!(item?.files?.glb);
+    }
+
+    function numericIdValue(item) {
+      const raw = String(item?.id ?? '');
+      const parsed = Number.parseInt(raw, 10);
+      return Number.isFinite(parsed) ? parsed : Number.MAX_SAFE_INTEGER;
+    }
+
+    function sortItems(data, mode = (sortMode?.value || 'annotation')) {
+      return [...data].sort((a, b) => {
+        const aConverted = isConverted(a) ? 1 : 0;
+        const bConverted = isConverted(b) ? 1 : 0;
+        if (aConverted !== bConverted) return bConverted - aConverted;
+        if (mode === 'id_asc') {
+          const delta = numericIdValue(a) - numericIdValue(b);
+          if (delta !== 0) return delta;
+        }
+        if (mode === 'id_desc') {
+          const delta = numericIdValue(b) - numericIdValue(a);
+          if (delta !== 0) return delta;
+        }
+        return String(a.annotation || '').localeCompare(String(b.annotation || ''));
+      });
+    }
+
+    function relFile(path) {
+      if (!path) return null;
+      const normalized = String(path).replace(/\\/g, '/');
+      if (normalized.startsWith('/')) return normalized;
+      const anchors = ['/animations/', '/converted/', '/metadata/'];
+      for (const anchor of anchors) {
+        const idx = normalized.toLowerCase().indexOf(anchor);
+        if (idx >= 0) return normalized.slice(idx);
+      }
+      return null;
+    }
+
+    function versioned(path) {
+      const rel = relFile(path);
+      if (!rel) return null;
+      return rel + '?v=' + Date.now();
+    }
+
+    function sidebarFilteredItems() {
+      const term = (sidebarSearch?.value || '').trim().toLowerCase();
+      const source = sortItems(items, 'id_asc');
+      if (!term) return source;
+      return source.filter(item => {
+        const id = String(item.id || '').toLowerCase();
+        const annotation = String(item.annotation || '').toLowerCase();
+        const cat = String(item.category || '').toLowerCase();
+        return id.includes(term) || annotation.includes(term) || cat.includes(term);
+      });
+    }
+
+    function renderSidebar() {
+      if (!animSidebarList || !animSidebarMeta) return;
+      const list = sidebarFilteredItems();
+      animSidebarMeta.textContent = `${list.length} item(s)`;
+      animSidebarList.innerHTML = list.map(item => {
+        const key = esc(itemKey(item));
+        return `
+          <button class="anim-nav-item" data-key="${key}">
+            <span class="anim-nav-id">${esc(item.id)}</span>${esc(item.annotation || '(untitled)')}
+            <div class="anim-nav-cat">${esc(item.category || 'other')}</div>
+          </button>
+        `;
+      }).join('');
+
+      for (const btn of animSidebarList.querySelectorAll('button.anim-nav-item')) {
+        const key = btn.dataset.key || '';
+        btn.addEventListener('click', () => {
+          const target = items.find(item => itemKey(item) === key);
+          if (!target) return;
+          qInput.value = String(target.id || '');
+          render();
+          const src = versioned(target?.files?.glb);
+          if (src) setPreview(target, src, 'Loaded local GLB preview.');
+          const card = grid.querySelector(`.card[data-key="${CSS.escape(key)}"]`);
+          if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+    }
+
+    function clipKey(clip) {
+      return `${clip.id}|${clip.glb}`;
+    }
+
+    function toClip(item) {
+      return {
+        id: String(item.id || ''),
+        annotation: String(item.annotation || ''),
+        category: String(item.category || 'other'),
+        glb: relFile(item?.files?.glb),
+      };
+    }
+
+    function itemKey(item) {
+      const clip = toClip(item);
+      return clipKey(clip);
+    }
+
+    function setPreview(item, src, statusText) {
+      if (src && src !== currentPreview) {
+        currentPreview = src;
+        preview.src = src;
+      }
+      previewTitle.textContent = item ? `${item.id} ${item.annotation || ''}`.trim() : 'Preview';
+      previewMeta.textContent = item ? `${item.category || 'other'}${isConverted(item) ? ' | converted' : ''}` : 'Hover a converted clip or click preview.';
+      previewStatus.textContent = statusText || (src ? 'Preview loaded.' : 'No preview loaded.');
+    }
+
+    function queueHover(item) {
+      clearTimeout(hoverTimer);
+      if (!isConverted(item)) return;
+      hoverTimer = setTimeout(() => {
+        const src = versioned(item.files.glb);
+        if (src) setPreview(item, src, 'Loaded local GLB preview.');
+      }, 120);
+    }
+
+    function loadCollections() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(collectionsStorageKey) || '[]');
+        collections = Array.isArray(parsed) ? parsed : [];
+      } catch {
+        collections = [];
+      }
+    }
+
+    function persistCollections() {
+      localStorage.setItem(collectionsStorageKey, JSON.stringify(collections));
+    }
+
+    function addItemToBasket(item, silent = false) {
+      const clip = toClip(item);
+      if (!clip.glb) return;
+      const key = clipKey(clip);
+      if (basket.some(entry => clipKey(entry) === key)) return;
+      basket.push(clip);
+      if (!silent) {
+        renderBasket();
+        render();
+      }
+    }
+
+    function addPickedToBasket() {
+      const pickedSet = new Set(Array.from(picked));
+      for (const item of items) {
+        if (pickedSet.has(itemKey(item))) {
+          addItemToBasket(item, true);
+        }
+      }
+      picked.clear();
+      renderBasket();
+      render();
+    }
+
+    function removeBasketIndex(index) {
+      basket.splice(index, 1);
+      renderBasket();
+      render();
+    }
+
+    function moveBasket(index, delta) {
+      const next = index + delta;
+      if (next < 0 || next >= basket.length) return;
+      const item = basket[index];
+      basket[index] = basket[next];
+      basket[next] = item;
+      renderBasket();
+    }
+
+    function clearBasket() {
+      basket = [];
+      renderBasket();
+      render();
+    }
+
+    function saveCollectionFromBasket() {
+      const folder = folderInput.value.trim();
+      const subfolder = subfolderInput.value.trim();
+      const name = nameInput.value.trim();
+      if (!folder || !subfolder || !name) {
+        alert('Folder, subfolder, and name are required.');
+        return;
+      }
+      if (basket.length === 0) {
+        alert('Add at least one clip to basket.');
+        return;
+      }
+      const type = collectionType.value === 'action_sequence' ? 'action_sequence' : 'blend_set';
+      const id = `${folder}_${subfolder}_${name}`.toLowerCase().replace(/[^a-z0-9]+/g, '_') + '_' + Date.now();
+      const collection = {
+        id,
+        folder,
+        subfolder,
+        name,
+        type,
+        notes: notesInput.value.trim() || '',
+        createdAt: new Date().toISOString(),
+        clips: basket.map(entry => ({ ...entry })),
+      };
+      collections.push(collection);
+      persistCollections();
+      renderCollections();
+      clearBasket();
+      previewStatus.textContent = `Saved collection: ${folder}/${subfolder}/${name}`;
+    }
+
+    function deleteCollection(id) {
+      collections = collections.filter(item => item.id !== id);
+      persistCollections();
+      renderCollections();
+    }
+
+    function loadCollectionToBasket(id) {
+      const collection = collections.find(item => item.id === id);
+      if (!collection) return;
+      basket = collection.clips.map(clip => ({ ...clip }));
+      folderInput.value = collection.folder || '';
+      subfolderInput.value = collection.subfolder || '';
+      nameInput.value = collection.name || '';
+      notesInput.value = collection.notes || '';
+      collectionType.value = collection.type || 'blend_set';
+      renderBasket();
+      render();
+    }
+
+    function buildManifest() {
+      const out = {
+        schema: 'gail.animation.collections.v1',
+        updatedAt: new Date().toISOString(),
+        collections: collections.map(item => ({
+          id: item.id,
+          folder: item.folder,
+          subfolder: item.subfolder,
+          name: item.name,
+          type: item.type,
+          notes: item.notes || '',
+          clips: item.clips.map(clip => ({
+            id: clip.id,
+            annotation: clip.annotation,
+            category: clip.category,
+            glb: clip.glb,
+          })),
+        })),
+      };
+      const byPath = {};
+      for (const item of out.collections) {
+        const key = `${item.folder}/${item.subfolder}`;
+        if (!byPath[key]) byPath[key] = [];
+        byPath[key].push({
+          id: item.id,
+          name: item.name,
+          type: item.type,
+          clipCount: item.clips.length,
+        });
+      }
+      out.byPath = byPath;
+      return out;
+    }
+
+    function downloadManifest() {
+      const blob = new Blob([JSON.stringify(buildManifest(), null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `animation_collections_${new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    async function importCollectionsFromFile(file) {
+      const text = await file.text();
+      const parsed = JSON.parse(text);
+      const incoming = Array.isArray(parsed)
+        ? parsed
+        : Array.isArray(parsed.collections)
+          ? parsed.collections
+          : [];
+      if (!Array.isArray(incoming) || incoming.length === 0) {
+        alert('No collections found in JSON.');
+        return;
+      }
+      for (const item of incoming) {
+        if (!item || !Array.isArray(item.clips)) continue;
+        collections.push({
+          id: item.id || `imported_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+          folder: item.folder || 'imported',
+          subfolder: item.subfolder || 'default',
+          name: item.name || 'unnamed',
+          type: item.type === 'action_sequence' ? 'action_sequence' : 'blend_set',
+          notes: item.notes || '',
+          createdAt: item.createdAt || new Date().toISOString(),
+          clips: item.clips
+            .map(clip => ({
+              id: String(clip.id || ''),
+              annotation: String(clip.annotation || ''),
+              category: String(clip.category || 'other'),
+              glb: relFile(clip.glb || ''),
+            }))
+            .filter(clip => clip.glb),
+        });
+      }
+      persistCollections();
+      renderCollections();
+    }
+
+    function renderBasket() {
+      if (basket.length === 0) {
+        basketList.innerHTML = '<p class="mini">Basket is empty.</p>';
+        return;
+      }
+      basketList.innerHTML = basket.map((clip, index) => `
+        <section class="basket-item">
+          <div class="item-top">
+            <strong>${esc(String(index + 1))}. ${esc(clip.annotation || clip.id)}</strong>
+            <span class="tag">${esc(clip.category || 'other')}</span>
+          </div>
+          <div class="item-meta">id ${esc(clip.id)} | ${esc(clip.glb)}</div>
+          <div class="item-row">
+            <button data-action="up" data-index="${index}">up</button>
+            <button data-action="down" data-index="${index}">down</button>
+            <button data-action="remove" data-index="${index}">remove</button>
+          </div>
+        </section>
+      `).join('');
+      for (const button of basketList.querySelectorAll('button')) {
+        const index = Number(button.dataset.index);
+        const action = button.dataset.action;
+        button.addEventListener('click', () => {
+          if (action === 'up') moveBasket(index, -1);
+          if (action === 'down') moveBasket(index, +1);
+          if (action === 'remove') removeBasketIndex(index);
+        });
+      }
+    }
+
+    function renderCollections() {
+      if (collections.length === 0) {
+        collectionsList.innerHTML = '<p class="mini">No collections saved yet.</p>';
+        return;
+      }
+      const grouped = new Map();
+      for (const item of collections) {
+        const path = `${item.folder}/${item.subfolder}`;
+        if (!grouped.has(path)) grouped.set(path, []);
+        grouped.get(path).push(item);
+      }
+      const paths = Array.from(grouped.keys()).sort((a, b) => a.localeCompare(b));
+      collectionsList.innerHTML = paths.map(path => {
+        const list = grouped.get(path) || [];
+        return `
+          <section class="collection-item">
+            <div class="item-top">
+              <strong>${esc(path)}</strong>
+              <span class="tag">${list.length} set(s)</span>
+            </div>
+            <div class="item-row">
+              ${list.map(item => `
+                <div style="width:100%;border:1px solid var(--line);border-radius:8px;padding:6px;background:#122142;">
+                  <div class="item-top">
+                    <span>${esc(item.name)}</span>
+                    <span class="collection-type">${esc(item.type || 'blend_set')}</span>
+                  </div>
+                  <div class="item-meta">${(item.clips || []).length} clip(s)</div>
+                  <div class="item-row">
+                    <button data-action="load" data-id="${esc(item.id)}">load to basket</button>
+                    <button data-action="delete" data-id="${esc(item.id)}">delete</button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+        `;
+      }).join('');
+
+      for (const button of collectionsList.querySelectorAll('button')) {
+        const id = button.dataset.id;
+        const action = button.dataset.action;
+        button.addEventListener('click', () => {
+          if (action === 'load') loadCollectionToBasket(id);
+          if (action === 'delete') deleteCollection(id);
+        });
+      }
+    }
+
+    async function loadProgress() {
+      try {
+        const res = await fetch(progressUrl + '?v=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('progress unavailable');
+        const p = await res.json();
+        const total = Number(p.total || 0);
+        const completed = Number(p.completed || 0);
+        const failed = Number(p.failed || 0);
+        const state = String(p.state || '');
+        progressWrap.style.display = 'block';
+        const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+        progressFill.style.width = pct + '%';
+        progressText.textContent = `${state || 'idle'} | ${completed}/${total} completed | ${failed} failed`;
+      } catch {
+        progressWrap.style.display = 'none';
+      }
+    }
+
+    async function loadItems() {
+      stats.textContent = 'loading...';
+      const res = await fetch(indexUrl + '?v=' + Date.now(), { cache: 'no-store' });
+      let data = await res.json();
+      if (!Array.isArray(data) && Array.isArray(data.value)) data = data.value;
+      items = Array.isArray(data) ? data : [];
+      renderSidebar();
+      render();
+    }
+
+    function render() {
+      const q = qInput.value.trim().toLowerCase();
+      const category = catFilter.value;
+      const withFiles = onlyWithFiles.checked;
+      const convertedOnly = onlyConverted.checked;
+      const includeTrashed = showTrashed.checked;
+
+      const visible = items.filter(item => {
+        const annotation = String(item.annotation || '').toLowerCase();
+        const id = String(item.id || '');
+        const hasAnyFile = !!(item?.files?.npz || item?.files?.glb || item?.files?.fbx);
+        if (q && !annotation.includes(q) && !id.includes(q)) return false;
+        if (category && String(item.category || '') !== category) return false;
+        if (!includeTrashed && String(item.status || '') === 'trashed') return false;
+        if (withFiles && !hasAnyFile) return false;
+        if (convertedOnly && !isConverted(item)) return false;
+        return true;
+      });
+      const ordered = sortItems(visible);
+
+      const itemLookup = new Map();
+      grid.innerHTML = ordered.map(item => {
+        const glb = relFile(item?.files?.glb);
+        const fbx = relFile(item?.files?.fbx);
+        const npz = relFile(item?.files?.npz);
+        const clip = toClip(item);
+        const key = clipKey(clip);
+        itemLookup.set(key, item);
+        const inBasket = glb && basket.some(entry => clipKey(entry) === clipKey(clip));
+        const selected = picked.has(key);
+        return `
+          <section class="card" data-key="${esc(key)}">
+            <div class="pad">
+              <div class="anno">${esc(item.annotation || '(untitled)')}</div>
+              <div class="meta">id ${esc(item.id)} | ${esc(item.category || 'other')} | ${esc(item.status || 'active')}</div>
+              <div class="row">
+                <span class="tag">${esc(item.category || 'other')}</span>
+                ${glb ? '<span class="tag converted">converted</span>' : ''}
+                ${selected ? '<span class="tag selected">picked</span>' : ''}
+              </div>
+              <div class="row">
+                ${glb ? `<a href="${glb}" target="_blank">glb</a>` : '<span>no glb</span>'}
+                ${fbx ? `<a href="${fbx}" target="_blank">fbx</a>` : ''}
+                ${npz ? `<a href="${npz}" target="_blank">npz</a>` : ''}
+              </div>
+              <div class="row">
+                <button class="preview" ${glb ? '' : 'disabled'}>preview</button>
+                <button class="${inBasket ? 'in-basket' : 'add'}" ${glb ? '' : 'disabled'} ${inBasket ? 'disabled' : ''}>${inBasket ? 'in basket' : '+ basket'}</button>
+                <label><input class="picker" type="checkbox" ${selected ? 'checked' : ''}/> pick</label>
+              </div>
+            </div>
+          </section>
+        `;
+      }).join('');
+
+      stats.textContent = `${ordered.length} shown / ${items.length} total | basket ${basket.length} clip(s) | collections ${collections.length}`;
+
+      for (const card of grid.querySelectorAll('.card')) {
+        const key = card.dataset.key || '';
+        const item = itemLookup.get(key);
+        if (!item) continue;
+        card.addEventListener('mouseenter', () => queueHover(item));
+        const previewButton = card.querySelector('button.preview');
+        const addButton = card.querySelector('button.add');
+        const picker = card.querySelector('input.picker');
+        if (previewButton) {
+          previewButton.addEventListener('click', () => {
+            const src = versioned(item?.files?.glb);
+            if (src) setPreview(item, src, 'Loaded local GLB preview.');
+          });
+        }
+        if (addButton) {
+          addButton.addEventListener('click', () => addItemToBasket(item));
+        }
+        if (picker) {
+          picker.addEventListener('change', () => {
+            const nextKey = itemKey(item);
+            if (picker.checked) picked.add(nextKey);
+            else picked.delete(nextKey);
+            render();
+          });
+        }
+      }
+    }
+
+    qInput.addEventListener('input', render);
+    catFilter.addEventListener('change', render);
+    sortMode.addEventListener('change', render);
+    onlyWithFiles.addEventListener('change', render);
+    onlyConverted.addEventListener('change', render);
+    showTrashed.addEventListener('change', render);
+    reloadBtn.addEventListener('click', loadItems);
+    addPickedBtn.addEventListener('click', addPickedToBasket);
+    clearPickedBtn.addEventListener('click', () => { picked.clear(); render(); });
+    saveCollectionBtn.addEventListener('click', saveCollectionFromBasket);
+    clearBasketBtn.addEventListener('click', clearBasket);
+    downloadManifestBtn.addEventListener('click', downloadManifest);
+    collectionImport.addEventListener('change', async () => {
+      const file = collectionImport.files && collectionImport.files[0];
+      if (!file) return;
+      try {
+        await importCollectionsFromFile(file);
+        previewStatus.textContent = `Imported collections from ${file.name}`;
+      } catch (error) {
+        alert(`Import failed: ${error instanceof Error ? error.message : String(error)}`);
+      } finally {
+        collectionImport.value = '';
+      }
+    });
+    sidebarSearch.addEventListener('input', renderSidebar);
+
+    const progressPollMs = 15000;
+    let progressTimer = null;
+
+    function startProgressPolling() {
+      if (progressTimer) clearInterval(progressTimer);
+      progressTimer = setInterval(() => {
+        if (document.visibilityState === 'visible') loadProgress();
+      }, progressPollMs);
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') loadProgress();
+    });
+
+    loadCollections();
+    renderCollections();
+    renderBasket();
+    renderSidebar();
+    loadItems();
+    loadProgress();
+    startProgressPolling();
+  </script>
+</body>
+</html>

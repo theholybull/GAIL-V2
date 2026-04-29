@@ -1,0 +1,49 @@
+{
+  "project": "gail",
+  "lab_file": "C:\\Users\\jbates\\Desktop\\idle pose.blend",
+  "master_file": "C:\\Users\\jbates\\Desktop\\gail_rig.blend",
+  "transfers": [
+    {
+      "clip_name": "idle_base_v1",
+      "status": "review",
+      "body_action": "idle_base_v1",
+      "face_action": "",
+      "source_owner_object": "VAMP Laurina for G8 Female",
+      "target_owner_object": "VAMP Laurina for G8 Female",
+      "frame_start": 1,
+      "frame_end": 96,
+      "source_file": "gail_rig_master.blend",
+      "promotion_mode": "append_action",
+      "approved_for_master": true,
+      "notes": "Script-generated first-pass idle loop."
+    },
+    {
+      "clip_name": "nod_small_v1",
+      "status": "review",
+      "body_action": "nod_small_v1",
+      "face_action": "",
+      "source_owner_object": "VAMP Laurina for G8 Female",
+      "target_owner_object": "VAMP Laurina for G8 Female",
+      "frame_start": 1,
+      "frame_end": 24,
+      "source_file": "gail_rig_master.blend",
+      "promotion_mode": "append_action",
+      "approved_for_master": true,
+      "notes": "Transfer body action only. Face left empty for now."
+    },
+    {
+      "clip_name": "listen_base_v1",
+      "status": "approved",
+      "body_action": "listen_base_v1",
+      "face_action": "",
+      "source_owner_object": "VAMP Laurina for G8 Female",
+      "target_owner_object": "VAMP Laurina for G8 Female",
+      "frame_start": 1,
+      "frame_end": 88,
+      "source_file": "gail_rig_master.blend",
+      "promotion_mode": "append_action",
+      "approved_for_master": true,
+      "notes": "Approved body loop from lab."
+    }
+  ]
+}

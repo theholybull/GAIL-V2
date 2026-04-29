@@ -1,0 +1,40 @@
+{
+  "clips": [
+    {
+      "clip_name": "idle_base_v1",
+      "category": "idle",
+      "status": "approved",
+      "partition": "body",
+      "loop": true,
+      "source_glb": "../converted_animations_20260401/idle/27775_stand_still.glb",
+      "relative_path": "approved/idle/idle_base_v1.glb"
+    },
+    {
+      "clip_name": "listen_base_v1",
+      "category": "listen",
+      "status": "approved",
+      "partition": "body",
+      "loop": true,
+      "source_glb": "../converted_animations_20260401/gesture/27299_stand_and_nod.glb",
+      "relative_path": "approved/listen/listen_base_v1.glb"
+    },
+    {
+      "clip_name": "talk_base_v1",
+      "category": "talk",
+      "status": "approved",
+      "partition": "body",
+      "loop": true,
+      "source_glb": "../converted_animations_20260401/other/28154_explain.glb",
+      "relative_path": "approved/talk/talk_base_v1.glb"
+    },
+    {
+      "clip_name": "ack_nod_small_v1",
+      "category": "ack",
+      "status": "approved",
+      "partition": "body",
+      "loop": false,
+      "source_glb": "../converted_animations_20260401/gesture/26479_nod.glb",
+      "relative_path": "approved/ack/ack_nod_small_v1.glb"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+﻿{
+    "package_name":  "playcanvas_handoff_20260330",
+    "generated_from":  "D:\\gail_final.blend via gail_production_workbench scale-locked export on 2026-04-06",
+    "runtime_profile":  {
+                            "orientation_angles":  [
+                                                       180,
+                                                       0,
+                                                       90
+                                                   ],
+                            "skeleton_root_hints":  [
+                                                        "Victoria 8",
+                                                        "Genesis 8 Female",
+                                                        "hip"
+                                                    ],
+                            "viewport_defaults":  {
+                                                      "modelX":  0,
+                                                      "modelY":  0,
+                                                      "modelZ":  0,
+                                                      "modelYaw":  0,
+                                                      "modelPitch":  0,
+                                                      "modelRoll":  0,
+                                                      "modelScaleMultiplier":  1,
+                                                      "cameraX":  0,
+                                                      "cameraY":  4.8,
+                                                      "cameraZ":  1.6,
+                                                      "targetX":  0,
+                                                      "targetY":  0,
+                                                      "targetZ":  1.3
+                                                  }
+                        },
+    "avatar":  {
+                   "body":  "assets/avatar/parts/body.glb",
+                   "hair":  "assets/avatar/parts/hair.glb",
+                   "clothing":  "assets/avatar/parts/clothing.glb",
+                   "accessories":  "assets/avatar/parts/accessories.glb",
+                   "flat_texture":  "assets/avatar/textures/base_avatar_flat.png",
+                   "texture_tiers":  {
+                                         "low":  "assets/avatar/textures/low",
+                                         "medium":  "assets/avatar/textures/medium",
+                                         "high":  "assets/avatar/textures/high"
+                                     }
+               },
+    "states":  {
+                   "idle":  {
+                                "default":  "assets/animations/idle_default.glb",
+                                "alt":  "assets/animations/idle_alt.glb",
+                                "cover":  "assets/animations/idle_cover.glb"
+                            },
+                   "listening":  {
+                                     "ack":  "assets/animations/listen_ack.glb",
+                                     "focus":  "assets/animations/listen_focus.glb"
+                                 },
+                   "gesture":  {
+                                   "wave_hello":  "assets/animations/wave_hello.glb"
+                               }
+               },
+    "sources":  {
+                    "idle_default":  {
+                                         "id":  "26965",
+                                         "annotation":  "stand still"
+                                     },
+                    "idle_alt":  {
+                                     "id":  "27375",
+                                     "annotation":  "stand still"
+                                 },
+                    "idle_cover":  {
+                                       "id":  "26777",
+                                       "annotation":  "cover idle"
+                                   },
+                    "listen_ack":  {
+                                       "id":  "27297",
+                                       "annotation":  "stand and nod"
+                                   },
+                    "listen_focus":  {
+                                         "id":  "27357",
+                                         "annotation":  "standing and looking around"
+                                     },
+                    "wave_hello":  {
+                                       "id":  "27016",
+                                       "annotation":  "wave hello"
+                                   }
+                },
+    "notes":  [
+                  "Avatar assets were replaced from avatar_final.blend1 using the Gail Production Workbench avatar packaging flow.",
+                  "Body, hair, clothing, and accessories were re-exported with lock-export-scale enabled to target 1.72m canonical avatar height.",
+                  "Starter animation clips remain the existing handoff set until the new action library is exported."
+              ]
+}

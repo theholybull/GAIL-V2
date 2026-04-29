@@ -1,0 +1,4343 @@
+{
+  "input": "D:\\Gail 2.1\\env.blend",
+  "output_glb": "D:\\Gail 2.1\\working_copy\\data\\environment\\candidates\\modern_country_home\\modern_country_home_optimized_2k.glb",
+  "output_blend": "D:\\Gail 2.1\\working_copy\\data\\environment\\candidates\\modern_country_home\\modern_country_home_optimized_2k.blend",
+  "max_texture_size": 2048,
+  "filter": {
+    "include_roots": [
+      "Modern Country Home.Node"
+    ],
+    "exclude_roots": [],
+    "kept_object_count": 69,
+    "removed_object_count": 20,
+    "removed_objects": [
+      "CH Modern Cruiser Motorcycle",
+      "CH Modern Cruiser Motorcycle.Shape",
+      "MCH High Chair (2).Node",
+      "MCH High Chair.Node",
+      "MCH High Chair.Shape",
+      "MCH High Chair_dup_2.Shape",
+      "MCH Island.Node",
+      "MCH Island.Shape",
+      "ML_Bathroom_Furniture.Node",
+      "ML_Bathroom_Furniture.Shape",
+      "ML_Bed.Node",
+      "ML_Bed.Shape",
+      "ML_Bedhead.Node",
+      "ML_Bedhead.Shape",
+      "ML_Pillow.Node",
+      "ML_Pillow.Shape",
+      "ML_WC.Node",
+      "ML_WC.Shape",
+      "XI Classic Cruiser Motorcycle",
+      "XI Classic Cruiser Motorcycle.Shape"
+    ]
+  },
+  "normalized_roots": [
+    {
+      "root_name": "Modern Country Home.Node",
+      "replacement_name": "Modern Country Home.Node__normalized",
+      "child_count": 34,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        0.7071068286895752,
+        0.7071067690849304,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ]
+    }
+  ],
+  "tuned_glass_materials": [
+    {
+      "name": "DoorAnd_window_glass",
+      "alpha": 0.12,
+      "blend_method": "BLEND",
+      "shadow_method": "NONE"
+    },
+    {
+      "name": "DoorAnd_window_glass.001",
+      "alpha": 0.12,
+      "blend_method": "BLEND",
+      "shadow_method": "NONE"
+    },
+    {
+      "name": "DoorAnd_window_glass.002",
+      "alpha": 0.12,
+      "blend_method": "BLEND",
+      "shadow_method": "NONE"
+    }
+  ],
+  "scaled_images": [
+    {
+      "name": "Celing1_C",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Door _C",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "DoorAnd window panel_C",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "floor_C",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "P1",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "P2",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "P3",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "P4",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "P5",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "P6",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "P7",
+      "from": [
+        3024,
+        4032
+      ],
+      "to": [
+        1536,
+        2048
+      ]
+    },
+    {
+      "name": "Wall_C",
+      "from": [
+        4096,
+        4096
+      ],
+      "to": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "pre": {
+    "stage": "opened",
+    "object_count": 89,
+    "mesh_count": 44,
+    "material_count": 146,
+    "image_count": 66,
+    "total_vertices": 1291313,
+    "total_polygons": 1234168,
+    "materials": [
+      {
+        "name": "Black",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.0,
+        "metallic": 0.0,
+        "specular": 0.0
+      },
+      {
+        "name": "book_3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Carpet1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Celing1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1001 Brake Lights",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1001 Glass",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1001 Left Indicator",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1001 Right Indicator",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1002 Glass",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1002 Headlight",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1002 Left Indicator",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1002 Right Indicator",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1004",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1005",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1006",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "CH_MCM_1007",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3_wood",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3_wood.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_4",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_4.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_leg",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_leg.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.0,
+        "metallic": 0.8582677245140076,
+        "specular": 0.5
+      },
+      {
+        "name": "Chrome.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome.004",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome.005",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Copper",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.10000000149011612,
+        "metallic": 1.0,
+        "specular": 0.22047239542007446
+      },
+      {
+        "name": "CounterTop",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.0,
+        "metallic": 0.0,
+        "specular": 0.0
+      },
+      {
+        "name": "DOOR",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Dots Stroke",
+        "use_nodes": false,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "floor",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "iceland_tabel",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.0,
+        "metallic": 0.0,
+        "specular": 0.0
+      },
+      {
+        "name": "LEDCase",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDCase.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDKitchen",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDLiving",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "light",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.111",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.112",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.113",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.114",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.115",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.116",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.117",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.118",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.119",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.120",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.121",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.122",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.123",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.124",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.125",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.126",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.127",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.132",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.133",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.134",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.144",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.208",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.209",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Material.210",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "None",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P4",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P5",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P6",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P7",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "phong52",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "phong54",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_boder",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_body",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_top",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "sofa_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "sofa_lag",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.004",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.005",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_pot",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_pot.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_steam.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3__steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3__steam.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Vent",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wire",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wire1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "XI_CCM_BODY Glass",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "XI_CCM_BODY_mat",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "XI_CCM_ENGINE_mat",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "XI_CCM_Glass",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "XI_CCM_TYRES_mat",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      }
+    ],
+    "images": [
+      {
+        "name": "alu_basecolor",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  1C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  2C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  3C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Carpet1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Celing1_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm basecolor.1003",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm basecolor.1004",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm basecolor.1005",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm basecolor.1006",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm basecolor.1007",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm blue basecolor.1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm blue basecolor.1002",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm opacity.1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm opacity.1002",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm yellow basecolor.1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "ch mcm yellow basecolor.1002",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_3_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_3_wood_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_4_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_leg_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Door _C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "DoorAnd window panel_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "floor_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "iceland_tabel_C.jpg.jpg",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "iceland_tabel_N.jpg.jpg",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P1",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P2",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P3",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P4",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P5",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P6",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P7",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "pillow 1_C",
+        "width": 600,
+        "height": 426,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "pillow 2_C",
+        "width": 453,
+        "height": 437,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "plastic_basecolor",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "porcelaine_basecolor",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Render Result",
+        "width": 0,
+        "height": 0,
+        "channels": 0,
+        "alpha_mode": "STRAIGHT",
+        "source": "VIEWER",
+        "file_format": "TARGA",
+        "packed": false
+      },
+      {
+        "name": "shelf_boder_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_body_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_top_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "sofa_1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "sofa_lag_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "tabel_lather_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "tabel_wood_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1 leaf_C",
+        "width": 475,
+        "height": 1000,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1Soiel C",
+        "width": 800,
+        "height": 800,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1Steam C",
+        "width": 300,
+        "height": 300,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Leaf C ",
+        "width": 102,
+        "height": 300,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Soiel C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Steam C",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 leaf_C",
+        "width": 411,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 spiel",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 Steam",
+        "width": 785,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Wall_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "white_marble.png.jpg",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "wood_plaint_basecolor",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_BODY_Base_color_1001 Flames",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_BODY_Base_color_1001 Teal",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_BODY_Opacity_1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_ENGINE_Base_color_1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_Glass_Base_color_1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_Glass_Opacity_1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "XI_CCM_TYRES_Base_color_1001",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      }
+    ]
+  },
+  "filtered": {
+    "stage": "filtered",
+    "object_count": 69,
+    "mesh_count": 34,
+    "material_count": 92,
+    "image_count": 40,
+    "total_vertices": 436241,
+    "total_polygons": 368069,
+    "materials": [
+      {
+        "name": "book_3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Carpet1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Celing1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3_wood",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3_wood.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_leg",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_leg.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.0,
+        "metallic": 0.8582677245140076,
+        "specular": 0.5
+      },
+      {
+        "name": "Chrome.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.07999999821186066,
+        "metallic": 0.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass.001",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.07999999821186066,
+        "metallic": 0.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass.002",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.07999999821186066,
+        "metallic": 0.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Dots Stroke",
+        "use_nodes": false,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "floor",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDCase",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDCase.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDKitchen",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDLiving",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "light",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P4",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P5",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P6",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P7",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "phong52",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "phong54",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_boder",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_body",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_top",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "sofa_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "sofa_lag",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.004",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.005",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_pot",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_pot.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_steam.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3__steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3__steam.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Vent",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wire",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wire1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      }
+    ],
+    "images": [
+      {
+        "name": "BOOK  1C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  2C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  3C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Carpet1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Celing1_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_3_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_3_wood_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_leg_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Door _C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "DoorAnd window panel_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "floor_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P1",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P2",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P3",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P4",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P5",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P6",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P7",
+        "width": 3024,
+        "height": 4032,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "pillow 1_C",
+        "width": 600,
+        "height": 426,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "pillow 2_C",
+        "width": 453,
+        "height": 437,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Render Result",
+        "width": 0,
+        "height": 0,
+        "channels": 0,
+        "alpha_mode": "STRAIGHT",
+        "source": "VIEWER",
+        "file_format": "TARGA",
+        "packed": false
+      },
+      {
+        "name": "shelf_boder_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_body_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_top_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "sofa_1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "sofa_lag_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "tabel_lather_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "tabel_wood_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1 leaf_C",
+        "width": 475,
+        "height": 1000,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1Soiel C",
+        "width": 800,
+        "height": 800,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1Steam C",
+        "width": 300,
+        "height": 300,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Leaf C ",
+        "width": 102,
+        "height": 300,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Soiel C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Steam C",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 leaf_C",
+        "width": 411,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 spiel",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 Steam",
+        "width": 785,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Wall_C",
+        "width": 4096,
+        "height": 4096,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      }
+    ]
+  },
+  "post": {
+    "stage": "optimized",
+    "object_count": 69,
+    "mesh_count": 34,
+    "material_count": 92,
+    "image_count": 40,
+    "total_vertices": 436241,
+    "total_polygons": 368069,
+    "materials": [
+      {
+        "name": "book_3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Carpet1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Celing1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3_wood",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_3_wood.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_leg",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "chair_leg.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.0,
+        "metallic": 0.8582677245140076,
+        "specular": 0.5
+      },
+      {
+        "name": "Chrome.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Chrome.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DOOR.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.07999999821186066,
+        "metallic": 0.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass.001",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.07999999821186066,
+        "metallic": 0.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_glass.002",
+        "use_nodes": true,
+        "blend_method": "BLEND",
+        "roughness": 0.07999999821186066,
+        "metallic": 0.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "DoorAnd_window_panel.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Dots Stroke",
+        "use_nodes": false,
+        "blend_method": "HASHED"
+      },
+      {
+        "name": "floor",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDCase",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDCase.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDKitchen",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "LEDLiving",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "light",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P3",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P4",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P5",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P6",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "P7",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "phong52",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "phong54",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Pillow_1.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "pillow_2.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_boder",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_body",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "shelf_top",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "sofa_1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "sofa_lag",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tabel_wood_2.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_leaf.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.004",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_pot.005",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_soial.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "tree_1_steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_pot",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_pot.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_2_steam.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3__steam",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3__steam.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_leaf",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_leaf.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_soial",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Tree_3_soial.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "Vent",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.001",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.002",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wall1.003",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wire",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      },
+      {
+        "name": "wire1",
+        "use_nodes": true,
+        "blend_method": "HASHED",
+        "roughness": 0.5527864098548889,
+        "metallic": 1.0,
+        "specular": 1.0
+      }
+    ],
+    "images": [
+      {
+        "name": "BOOK  1C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  2C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "BOOK  3C",
+        "width": 1024,
+        "height": 989,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Carpet1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Celing1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_3_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_3_wood_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "chair_leg_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Door _C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "DoorAnd window panel_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "floor_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P1",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P2",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P3",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P4",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P5",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P6",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "P7",
+        "width": 1536,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "pillow 1_C",
+        "width": 600,
+        "height": 426,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "pillow 2_C",
+        "width": 453,
+        "height": 437,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Render Result",
+        "width": 0,
+        "height": 0,
+        "channels": 0,
+        "alpha_mode": "STRAIGHT",
+        "source": "VIEWER",
+        "file_format": "TARGA",
+        "packed": false
+      },
+      {
+        "name": "shelf_boder_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_body_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "shelf_top_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "sofa_1_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "sofa_lag_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "tabel_lather_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "tabel_wood_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1 leaf_C",
+        "width": 475,
+        "height": 1000,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1Soiel C",
+        "width": 800,
+        "height": 800,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 1Steam C",
+        "width": 300,
+        "height": 300,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Leaf C ",
+        "width": 102,
+        "height": 300,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Soiel C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 2 Steam C",
+        "width": 1024,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 leaf_C",
+        "width": 411,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 spiel",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Tree 3 Steam",
+        "width": 785,
+        "height": 1024,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      },
+      {
+        "name": "Wall_C",
+        "width": 2048,
+        "height": 2048,
+        "channels": 4,
+        "alpha_mode": "STRAIGHT",
+        "source": "FILE",
+        "file_format": "JPEG",
+        "packed": false
+      }
+    ]
+  }
+}
